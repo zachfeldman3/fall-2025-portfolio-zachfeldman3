@@ -5,7 +5,7 @@ permalink: /cv/
 ---
 ## Curriculum Vitae
 
-[Download my CV](/assets/CV.pdf) in PDF format.
+[Download my CV](/fall-2025-portfolio-zachfeldman3/assets/CV.pdf) in PDF format.
 
 
 **Email:** [zlf3@cornell.edu](mailto:zlf3@cornell.edu) | | | **Phone:** +914 356 7068
@@ -20,11 +20,11 @@ Aspiring engineering student with a strong foundation in.... Passionate about ..
 #### Education
 - **Cornell University**  
   *Bachelor of Science in Mechanical and Aerospace Engineering*  
-  GPA: 3.8/4.0 | Graduation: Month, Year
+  Graduation: May, 2025
 
-- **[High School Name]**  
+- **[Scarsdale High School]**  
   *High School Diploma*  
-  Graduation: [Month, Year]
+  Graduation: [June, 2023]
 
 ---
 
