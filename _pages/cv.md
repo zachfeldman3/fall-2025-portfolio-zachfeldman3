@@ -8,7 +8,7 @@ permalink: /cv/
 [Download my CV](/fall-2025-portfolio-zachfeldman3/assets/CV.pdf) in PDF format.
 
 
-**Email:** [zlf3@cornell.edu](mailto:zlf3@cornell.edu) | | | **Phone:** +914 356 7068
+**Email:** [zlf3@cornell.edu](mailto:zlf3@cornell.edu) | | | **Phone:** +1 (914)-356-7068
 
 ---
 
