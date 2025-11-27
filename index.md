@@ -7,6 +7,7 @@ title: Zach Feldman
 
 
 ![Profile Picture](/assets/images/zachpfp.jpeg)
+![Profile Picture]({{ "/assets/images/zachpfp.jpeg" | relative_url }})
 
  
 My name is Zach Feldman, and I am a Mechanical Engineering student at Cornell University with interests in product design, manufacturing, and hands-on engineering projects. I enjoy creating practical, meaningful solutions—from carbon-fiber components for Cornell Electric Vehicles to mechanical systems built in class and personal projects. I’m passionate about learning new engineering tools, building things that work, and continuously improving my technical skills.
