@@ -24,7 +24,7 @@ Mechanical Engineering student specializing in product design, CAD modeling, com
 
 - **[Scarsdale High School]**  
   *High School Diploma*  
-  Graduation: [June, 2023]
+  Graduation: June, 2023
 
 ---
 
