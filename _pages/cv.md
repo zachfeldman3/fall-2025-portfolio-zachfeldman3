@@ -13,7 +13,7 @@ permalink: /cv/
 ---
 
 #### Objective
-Aspiring engineering student with a strong foundation in.... Passionate about ... and eager to apply my knowledge in real-world applications.
+Mechanical Engineering student specializing in product design, CAD modeling, composite fabrication, and full-cycle engineering builds. Experienced in leading manufacturing tasks for Cornell Electric Vehicles and developing functional mechanical systems for both academic and personal projects. Seeking opportunities to apply technical creativity, precision, and problem-solving to impactful engineering work
 
 ---
 
