@@ -5,8 +5,6 @@ title: Zach Feldman
 
 ## About Me
 
-
-![Profile Picture](/assets/images/zachpfp.jpeg)
 ![Profile Picture]({{ "/assets/images/zachpfp.jpeg" | relative_url }})
 
  
