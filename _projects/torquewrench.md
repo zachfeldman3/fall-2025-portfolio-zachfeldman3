@@ -12,12 +12,9 @@ permalink: /projects/torquewrench/
 
 # Torque Wrench Design Optimization
 
-
-## Torque Wrench Hand Calculations (Material: Magnesium AZ31B)
-
 ---
 
-## Material Properties
+## Material Properties (Magnesium AZ31B))
 
 $$E = 6.5 \times 10^6 \ \text{psi}$$  
 $$\sigma_y = 21 \ \text{ksi}$$  
