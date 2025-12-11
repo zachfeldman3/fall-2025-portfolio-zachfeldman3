@@ -144,10 +144,10 @@ $$\delta = 0.567 \ \text{in}$$
      style="max-width: 90%; height: auto; display: block; margin: auto;">
 
 
-## Engineering Drawing With Relevant Dimensions:
+## Engineering Drawing:
 
 <a href="https://zachfeldman3.github.io/fall-2025-portfolio-zachfeldman3/assets/images/TorqueWrench+Drawing.pdf" target="_blank">
-  <img src="https://zachfeldman3.github.io/fall-2025-portfolio-zachfeldman3/assets/images/TW-asset-6.png"
+  <img src="https://zachfeldman3.github.io/fall-2025-portfolio-zachfeldman3/assets/images/TorqueWrench+Drawing.pdf"
        alt="Engineering Drawing Preview"
        style="max-width: 90%; height: auto; display: block; margin: auto;">
 </a>
