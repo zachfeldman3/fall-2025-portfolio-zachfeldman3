@@ -154,5 +154,8 @@ $$\delta = 0.567 \ \text{in}$$
 
 ## FEM Model with Loads and Boundary Conditions
 
+<img src="https://zachfeldman3.github.io/fall-2025-portfolio-zachfeldman3/assets/images/force+displacement.png" 
+     alt="Basic Design Concept"
+     style="max-width: 90%; height: auto; display: block; margin: auto;">
 
 
