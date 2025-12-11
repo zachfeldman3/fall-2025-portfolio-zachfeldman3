@@ -208,11 +208,11 @@ The deformation plot shows the overall bending shape of the beam under the appli
      alt="Basic Design Concept"
      style="max-width: 90%; height: auto; display: block; margin: auto;">
 
-The normal bending stress reaches a peak of approximately 90 ksi, concentrated directly beneath the adapter where geometric discontinuities create stress concentrations. In contrast, hand calculations predicted a lower bending stress because the analytical model assumes a perfectly prismatic beam with no abrupt changes in cross-section. The FEM result highlights the structural penalty introduced by attaching the block: sharp corners amplify stress far beyond what beam theory predicts. This demonstrates why FEA is needed for capturing local effects while hand calculation is intended for global, averaged stress predictions.
+The normal bending stress reaches a peak of approximately 90 ksi, concentrated directly beneath the adapter where geometric discontinuities create stress concentrations. The normal stress plot shows a peak of about 90 ksi, but this value is not physical as it occurs at the sharp interface between the adapter and the wrench body, where ANSYS produces artificial stress spikes due to geometry and meshing discontinuities. Away from this edge, the true maximum bending stress is about 66.9 ksi, which is the value that should be used for comparison to the hand calculations. Still, hand calculations predicted a lower bending stress because the analytical model assumes a perfectly prismatic beam with no abrupt changes in cross-section. The FEM result highlights the structural penalty introduced by attaching the block: sharp corners amplify stress far beyond what beam theory predicts. This demonstrates why FEA is needed for capturing local effects while hand calculation is intended for global, averaged stress predictions.
 
 ## Normal Elastic Strain FEM Results:
 
-<img src="https://zachfeldman3.github.io/fall-2025-portfolio-zachfeldman3/assets/images/M-normalelasticstrainSIDE" 
+<img src="https://zachfeldman3.github.io/fall-2025-portfolio-zachfeldman3/assets/images/M-normalelasticstrainSIDE.png" 
      alt="Basic Design Concept"
      style="max-width: 90%; height: auto; display: block; margin: auto;">
 
