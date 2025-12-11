@@ -22,7 +22,6 @@ permalink: /projects/torquewrench/
 $$E = 6.5 \times 10^6 \ \text{psi}$$  
 $$\sigma_y = 21 \ \text{ksi}$$  
 $$\nu = 0.35$$  
-$$GF = 2.0$$  
 
 ---
 
@@ -40,14 +39,6 @@ $$T = 600 \ \text{in-lbf}$$
 Equivalent force:
 
 $$F = \frac{T}{L} = \frac{600}{12} = 50 \ \text{lbf}$$  
-
----
-
-## Moment at the Strain Gauge
-
-$$M = F(L - c)$$  
-
-$$M = 50(12 - 2) = 50(10) = 500 \ \text{in-lbf}$$  
 
 ---
 
@@ -136,20 +127,16 @@ $$\delta = 0.567 \ \text{in}$$
 
 ---
 
-# Final Summary (AZ31B Magnesium)
-
-# Final Summary (AZ31B Magnesium)
+## Final Summary (AZ31B Magnesium)
 
 - Maximum stress: **16.0 ksi**  
 - Yield strength: **21 ksi**  
 - Factor of safety: **1.31**  
 - Strain: **2460 μɛ**  
 - Bridge output: **1.23 mV/V**  
-- Hand-calculated deflection: **0.57 in**  
+- Deflection: **0.57 in**  
 
-All requirements satisfied:
-- **mV/V > 1.15** → ✔ 1.23 mV/V  
-- **FS > 1.25** → ✔ 1.31  
+
 
 
 
