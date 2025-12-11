@@ -88,6 +88,8 @@ $$\varepsilon = 2460 \ \mu\varepsilon$$
 
 ## Strain-Gage Bridge Output (mV/V)
 
+##Gauge Factor (GF) = 2$$
+
 Resistance change:
 
 $$\frac{\Delta R}{R} = GF \cdot \varepsilon$$  
@@ -194,6 +196,16 @@ In the model:
      alt="Basic Design Concept"
      style="max-width: 90%; height: auto; display: block; margin: auto;">
 
+## Normal Stress: 
+
+<img src="https://zachfeldman3.github.io/fall-2025-portfolio-zachfeldman3/assets/images/M-normalstressFULL.png" 
+     alt="Basic Design Concept"
+     style="max-width: 90%; height: auto; display: block; margin: auto;">
+
+<img src="https://zachfeldman3.github.io/fall-2025-portfolio-zachfeldman3/assets/images/M-normalstress.png" 
+     alt="Basic Design Concept"
+     style="max-width: 90%; height: auto; display: block; margin: auto;">
+
 ## Normal Elastic Strain FEM Results:
 
 <img src="https://zachfeldman3.github.io/fall-2025-portfolio-zachfeldman3/assets/images/M-normalelasticstrainSIDE" 
@@ -206,13 +218,14 @@ In the model:
 
 ## Maximum Principal Stress: 
 
+<img src="https://zachfeldman3.github.io/fall-2025-portfolio-zachfeldman3/assets/images/M-maximumprincipalstressFULL.png" 
+     alt="Basic Design Concept"
+     style="max-width: 90%; height: auto; display: block; margin: auto;">
+
 <img src="https://zachfeldman3.github.io/fall-2025-portfolio-zachfeldman3/assets/images/M-maximumprincipalstress.png" 
      alt="Basic Design Concept"
      style="max-width: 90%; height: auto; display: block; margin: auto;">
 
-<img src="https://zachfeldman3.github.io/fall-2025-portfolio-zachfeldman3/assets/images/M-maximumprincipalstressFULL.png" 
-     alt="Basic Design Concept"
-     style="max-width: 90%; height: auto; display: block; margin: auto;">
 
 ## Sensitivity of the torque wrench in mV/V using strain at the gauge location: 
 
@@ -221,5 +234,9 @@ In the model:
      style="max-width: 90%; height: auto; display: block; margin: auto;">
 
 In the ANSYS model, the strain probe at the gauge location reports a Z-direction strain that corresponds to a torque-wrench sensitivity of about 1.616 mV/V. This value is higher than the hand-calculated sensitivity of approximately 1.23 mV/V, but the two results are still reasonably close. The difference is expected because the finite element model captures the full 3-D deformation and localized strain distribution in the wrench, whereas the hand calculation relies on  idealized assumptions. Overall, the FEA result validates the hand-calculated estimate while providing a slightly more realistic prediction of the actual strain-based output
+
+## Strain Gauge Selected:
+
+A Vishay Micro-Measurements CEA-06-125UN-350 uniaxial foil strain gauge was selected for this design. This gauge has a 0.125-inch active grid length, a compact overall footprint of roughly 0.20 × 0.30 inches, a resistance of 350 Ω, and a gauge factor of 2.0, making it easy to bond to the 0.5-inch-wide wrench surface while providing accurate measurement of bending strains at the gauge location.
 
      
