@@ -137,6 +137,9 @@ $$\delta = 0.567 \ \text{in}$$
 - Deflection: **0.57 in**  
 
 
+##Basic Design Concept:
+
+![Profile Picture](https://zachfeldman3.github.io/fall-2025-portfolio-zachfeldman3/assets/images/TW-asset-6.png)
 
 
 
