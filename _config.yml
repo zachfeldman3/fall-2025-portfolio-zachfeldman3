@@ -1,47 +1,29 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your entire site, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# `jekyll serve`. If you change this file, please restart the server process.
+locale: "en-US"
+title: Zach Feldman
+title_separator: "-"
+subtitle:
+name: Zach Feldman
+description: Zach Feldman – Projects and CV
+baseurl: "/fall-2025-portfolio-zachfeldman3"
 
-
-# Site Settings
-locale                   : "en-US"
-title                    : Zach Feldman
-title_separator          : "-"
-subtitle                 : # site tagline that appears below site title in masthead
-name                     : Zach Feldman
-description              : Zach Feldman - Projects and CV 
-baseurl                  : "/fall-2025-portfolio-zachfeldman3" # Set this to your repo name 
-
-# Theme and Style
 theme: jekyll-theme-minimal
-color_scheme: light # light/default, dark, or aqua
+color_scheme: light
 
 sass:
   style: compressed
 
-# Outputting
-
 collections:
   pages:
     output: true
-  projects:
-    output: true
-
-collections:
+    directory: _pages
   projects:
     output: true
     directory: _projects
 
-
-# Markdown
 markdown: kramdown
 kramdown:
   input: GFM
 
-# Plugins (previously gems:)
 plugins:
   - jekyll-feed
   - jekyll-include-cache
