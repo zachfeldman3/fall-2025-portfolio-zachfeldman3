@@ -196,6 +196,8 @@ In the model:
      alt="Basic Design Concept"
      style="max-width: 90%; height: auto; display: block; margin: auto;">
 
+The deformation plot shows the overall bending shape of the beam under the applied 600 in-lbf torque. The FEM simulation predicts a tip deflection of about 0.40 in, which is slightly higher than the hand-calculated deflection. This difference is expected because the FEM model includes realistic 3D load transfer, the stiffness contribution of the adapter, and local compliance effects, none of which are captured in simple beam equations. Despite these added complexities, the deformation shape and magnitude remain consistent with classical beam theory, reinforcing that the design behaves like a rectangular cantilever under bending.
+
 ## Normal Stress: 
 
 <img src="https://zachfeldman3.github.io/fall-2025-portfolio-zachfeldman3/assets/images/M-normalstressFULL.png" 
@@ -205,6 +207,8 @@ In the model:
 <img src="https://zachfeldman3.github.io/fall-2025-portfolio-zachfeldman3/assets/images/M-normalstress.png" 
      alt="Basic Design Concept"
      style="max-width: 90%; height: auto; display: block; margin: auto;">
+
+The normal bending stress reaches a peak of approximately 90 ksi, concentrated directly beneath the adapter where geometric discontinuities create stress concentrations. In contrast, hand calculations predicted a lower bending stress because the analytical model assumes a perfectly prismatic beam with no abrupt changes in cross-section. The FEM result highlights the structural penalty introduced by attaching the block: sharp corners amplify stress far beyond what beam theory predicts. This demonstrates why FEA is needed for capturing local effects while hand calculation is intended for global, averaged stress predictions.
 
 ## Normal Elastic Strain FEM Results:
 
@@ -216,6 +220,8 @@ In the model:
      alt="Basic Design Concept"
      style="max-width: 90%; height: auto; display: block; margin: auto;">
 
+This plot shows how bending strain develops along the length of the torque wrench. The global maximum strain (~5×10⁻³ in/in) appears at sharp geometric transitions where the adapter meets the beam locations where numerical strain spikes occur because of tight corner geometry and element distortion. The strain gauge probe placed on the flat region of the beam reports a much more meaningful value of ~1.6×10⁻³ in/in, which corresponds to about 1.6 mV/V. This closely agrees with the hand-calculated gauge sensitivity of ~1.23 mV/V, confirming that the analytical model correctly predicts the operational strain while the ANSYS maximum is inflated by geometric stress concentration.
+
 ## Maximum Principal Stress: 
 
 <img src="https://zachfeldman3.github.io/fall-2025-portfolio-zachfeldman3/assets/images/M-maximumprincipalstressFULL.png" 
@@ -226,6 +232,7 @@ In the model:
      alt="Basic Design Concept"
      style="max-width: 90%; height: auto; display: block; margin: auto;">
 
+The maximum principal stress peaks at around 1.3×10⁵ psi, again occurring at the interface between the adapter and the beam. These values exceed hand-calculated stresses because principal stresses capture the combined state of multiaxial loading, including shear interactions and geometric constraint effects. In contrast, the hand calculations only consider pure bending with a uniform cross-section. The elevated principal stress values in the FEM output highlight how real-world geometry drives stress concentrations and indicates where redesign (fillets, chamfers, or smoother load transfer) would most effectively reduce peak stress.
 
 ## Sensitivity of the torque wrench in mV/V using strain at the gauge location: 
 
@@ -238,5 +245,9 @@ In the ANSYS model, the strain probe at the gauge location reports a Z-direction
 ## Strain Gauge Selected:
 
 A Vishay Micro-Measurements CEA-06-125UN-350 uniaxial foil strain gauge was selected for this design. This gauge has a 0.125-inch active grid length, a compact overall footprint of roughly 0.20 × 0.30 inches, a resistance of 350 Ω, and a gauge factor of 2.0, making it easy to bond to the 0.5-inch-wide wrench surface while providing accurate measurement of bending strains at the gauge location.
+
+## Final Conclusion of FEM Results:
+
+Overall, the finite element analysis validates the general behavior predicted by hand calculations while enriching the understanding of how the real geometry affects performance. The deformation pattern and strain in the gauge region closely match analytical predictions, confirming that the beam’s global bending response is accurately captured by simple beam theory. However, the FEM stress results reveal significant local concentrations at the adapter–beam interface that hand calculations cannot predict, underscoring the importance of FEA for assessing real structural limits and identifying critical regions. Together, the analytical and FEM results provide a complete picture: the hand calculations correctly estimate global performance and strain sensitivity, while the FEM analysis exposes localized stresses and realistic deformation behaviors essential for evaluating durability, safety factors, and potential design improvements.
 
      
