@@ -13,18 +13,18 @@ permalink: /projects/torquewrench/
 # Material Properties (M42 Steel)
 
 - Young's Modulus: $$E = 32 \times 10^6 \ \text{psi}$$
-- Yield Strength: $\sigma_y = 60 \ \text{ksi}$
-- Poisson's Ratio: $\nu = 0.30$
-- Gauge Factor: $GF = 2.0$
+- Yield Strength: $$\sigma_y = 60 \ \text{ksi}$$
+- Poisson's Ratio: $$\nu = 0.30$$
+- Gauge Factor: $$GF = 2.0$$
 
 ---
 
 # Geometry
 
-- Length: $L = 12 \ \text{in}$
-- Gage location: $c = 2 \ \text{in}$
-- Vertical thickness: $b = 0.50 \ \text{in}$
-- Horizontal width: $h = 0.75 \ \text{in}$
+- Length: $$L = 12 \ \text{in}$$
+- Gage location: $$c = 2 \ \text{in}$$
+- Vertical thickness: $$b = 0.50 \ \text{in}$$
+- Horizontal width: $$h = 0.75 \ \text{in}$$
 
 A torque of 600 in-lbf corresponds to:
 
