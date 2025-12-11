@@ -8,7 +8,10 @@ permalink: /projects/torquewrench/
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js"
     onload="renderMathInElement(document.body);"></script
 
-# Torque Wrench Design Optimization
+<h1 style="text-align:center; font-size:3rem; color:#1f4e79; font-weight:900;">
+Torque Wrench Design Optimization
+</h1>
+
 
 # Torque Wrench Hand Calculations (Material: Magnesium AZ31B)
 
