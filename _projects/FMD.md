@@ -1,6 +1,6 @@
 ---
-title: "Torque Wrench Design Optimization"
+title: "FMD"
 layout: default
-permalink: /projects/torquewrench/
+permalink: /projects/FMD/
 ---
 #Fluid Mechanical Dissection 
