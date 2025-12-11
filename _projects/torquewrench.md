@@ -16,7 +16,7 @@ permalink: /projects/torquewrench/
 
 ---
 
-### Material Properties
+## Material Properties
 
 $$E = 6.5 \times 10^6 \ \text{psi}$$  
 $$\sigma_y = 21 \ \text{ksi}$$  
