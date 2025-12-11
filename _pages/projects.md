@@ -28,8 +28,6 @@ permalink: /projects/
 
 - [Torque Wrench Design Optimization]({{ site.baseurl }}/projects/torquewrench/)
 
-{{ site.baseurl }}/projects/torquewrench/
-
 {% comment %}
     <div class="gallery-container">
       <div class="project-gallery">
