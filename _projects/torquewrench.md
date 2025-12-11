@@ -229,7 +229,7 @@ In the model:
 
 ## Sensitivity of the torque wrench in mV/V using strain at the gauge location: 
 
-<img src="https://zachfeldman3.github.io/fall-2025-portfolio-zachfeldman3/assets/images/mv:v.png" 
+<img src="https://zachfeldman3.github.io/fall-2025-portfolio-zachfeldman3/assets/images/mv:V.png" 
      alt="Basic Design Concept"
      style="max-width: 90%; height: auto; display: block; margin: auto;">
 
