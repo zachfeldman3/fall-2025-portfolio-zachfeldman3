@@ -32,6 +32,9 @@ collections:
     output: true
     permalink: /:collection/:path/
 
+permalink: /projects/torquewrench/
+
+
 # Markdown
 markdown: kramdown
 kramdown:
