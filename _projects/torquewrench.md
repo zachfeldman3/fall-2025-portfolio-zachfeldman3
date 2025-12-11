@@ -12,7 +12,7 @@ permalink: /projects/torquewrench/
 
 # Material Properties (M42 Steel)
 
-- Young's Modulus: $E = 32 \times 10^6 \ \text{psi}$
+- Young's Modulus: $$E = 32 \times 10^6 \ \text{psi}$$
 - Yield Strength: $\sigma_y = 60 \ \text{ksi}$
 - Poisson's Ratio: $\nu = 0.30$
 - Gauge Factor: $GF = 2.0$
