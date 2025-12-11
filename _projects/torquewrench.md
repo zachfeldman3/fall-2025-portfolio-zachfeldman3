@@ -14,7 +14,7 @@ permalink: /projects/torquewrench/
 
 ---
 
-## Material Properties (Magnesium AZ31B))
+## Material Properties (Magnesium AZ31B)
 
 $$E = 6.5 \times 10^6 \ \text{psi}$$  
 $$\sigma_y = 21 \ \text{ksi}$$  
