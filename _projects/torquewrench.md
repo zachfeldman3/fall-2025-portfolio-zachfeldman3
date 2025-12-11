@@ -139,11 +139,19 @@ $$\delta = 0.567 \ \text{in}$$
 
 ## Basic Design Concept:
 
-![Basic Design Concept](https://zachfeldman3.github.io/fall-2025-portfolio-zachfeldman3/assets/images/TW-asset-6.png)
+<img src="https://zachfeldman3.github.io/fall-2025-portfolio-zachfeldman3/assets/images/TW-asset-6.png" 
+     alt="Basic Design Concept"
+     style="max-width: 90%; height: auto; display: block; margin: auto;">
 
-## Enginereing Drawing With Relevant Dimensions:
 
-![Profile Picture](https://zachfeldman3.github.io/fall-2025-portfolio-zachfeldman3/assets/images/TorqueWrench+Drawing.pdf)
+## Engineering Drawing With Relevant Dimensions:
+
+<a href="https://zachfeldman3.github.io/fall-2025-portfolio-zachfeldman3/assets/images/TorqueWrench+Drawing.pdf" target="_blank">
+  <img src="https://zachfeldman3.github.io/fall-2025-portfolio-zachfeldman3/assets/images/TW-asset-6.png"
+       alt="Engineering Drawing Preview"
+       style="max-width: 90%; height: auto; display: block; margin: auto;">
+</a>
+
 
 
 
