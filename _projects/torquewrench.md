@@ -159,3 +159,36 @@ $$\delta = 0.567 \ \text{in}$$
      style="max-width: 90%; height: auto; display: block; margin: auto;">
 
 
+The image above shows the finite element model used to validate the torque wrench design under the required 600 in-lbf load. The simulation replicates the real bending condition by fixing the drive end and applying the equivalent handle force.
+
+---
+
+### **1. Boundary Condition — Fixed Support at Drive End**
+
+The yellow region represents the 3/8-inch square drive where the wrench interfaces with the socket.
+
+- This region is fully constrained: **Ux = Uy = Uz = 0**
+- This simulates the wrench being rigidly held at the bolt during tightening
+- No rotation or translation is allowed at this end
+
+This fixed support provides the reaction necessary for the wrench to develop torque.
+
+---
+
+### **2. Applied Load — 50 lbf Equivalent Force**
+
+A torque of 600 in-lbf is applied by applying a force at the handle tip:
+
+\[
+F = \frac{T}{L} = \frac{600\ \text{in-lbf}}{12\ \text{in}} = 50\ \text{lbf}
+\]
+
+In the model:
+
+- A **50 lbf** force (red arrow) is applied to the far right end face of the wrench
+- The force direction is perpendicular to the beam, generating bending
+- This creates the same moment experienced during actual wrench use
+
+---
+
+
