@@ -26,9 +26,7 @@ permalink: /projects/
 
 ## My Projects
 
-- [2021 Radio Rendering](./_projects/2021-radio-rendering.md)
-- [2022 Trig Analysis](./_projects/2022-trig-analysis.md)
-- [2023 Spaceship Design](./_projects/2023-spaceship-design.md)
+- [Torque Wrench Design Optimization](./_projects/torquewrench.md)
 
 
 {% comment %}
