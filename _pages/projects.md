@@ -26,9 +26,9 @@ permalink: /projects/
 
 ## My Projects
 
-- [Torque Wrench Design Optimization](/projects/torquewrench/)
+- [Torque Wrench Design Optimization]({{ site.baseurl }}/projects/torquewrench/)
 
-
+{{ site.baseurl }}/projects/torquewrench/
 
 {% comment %}
     <div class="gallery-container">
