@@ -152,6 +152,7 @@ $$\delta = 0.567 \ \text{in}$$
        style="max-width: 90%; height: auto; display: block; margin: auto;">
 </a>
 
+## FEM Model with Loads and Boundary Conditions
 
 
 
