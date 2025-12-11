@@ -23,7 +23,6 @@ sass:
   style: compressed
 
 # Outputting
-permalink: /:categories/:title/
 
 collections:
   pages:
@@ -32,7 +31,6 @@ collections:
     output: true
     permalink: /:collection/:path/
 
-permalink: /projects/torquewrench/
 
 
 # Markdown
