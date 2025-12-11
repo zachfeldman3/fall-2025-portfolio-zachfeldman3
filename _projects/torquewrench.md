@@ -179,9 +179,7 @@ This fixed support provides the reaction necessary for the wrench to develop tor
 
 A torque of 600 in-lbf is applied by applying a force at the handle tip:
 
-\[
-F = \frac{T}{L} = \frac{600\ \text{in-lbf}}{12\ \text{in}} = 50\ \text{lbf}
-\]
+$$F = \frac{T}{L} = \frac{600\ \text{in-lbf}}{12\ \text{in}} = 50\ \text{lbf}$$
 
 In the model:
 
