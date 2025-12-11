@@ -214,3 +214,12 @@ In the model:
      alt="Basic Design Concept"
      style="max-width: 90%; height: auto; display: block; margin: auto;">
 
+## Sensitivity of the torque wrench in mV/V using strain at the gauge location: 
+
+<img src="https://zachfeldman3.github.io/fall-2025-portfolio-zachfeldman3/assets/images/mv:v.png" 
+     alt="Basic Design Concept"
+     style="max-width: 90%; height: auto; display: block; margin: auto;">
+
+In the ANSYS model, the strain probe at the gauge location reports a Z-direction strain that corresponds to a torque-wrench sensitivity of about 1.616 mV/V. This value is higher than the hand-calculated sensitivity of approximately 1.23 mV/V, but the two results are still reasonably close. The difference is expected because the finite element model captures the full 3-D deformation and localized strain distribution in the wrench, whereas the hand calculation relies on  idealized assumptions. Overall, the FEA result validates the hand-calculated estimate while providing a slightly more realistic prediction of the actual strain-based output
+
+     
