@@ -4,7 +4,7 @@ title: <Your Name> - Portfolio
 permalink: /projects/
 ---
 
-#### Projects
+#### Resume Projects
 
 - **Automatic Basketball Return System (MAE 2250)**  
   *Engineered an automated ball-return mini-hoop system using motors, 3D-printed flywheels, laser-cut acrylic, and Arduino.*  
@@ -24,7 +24,7 @@ permalink: /projects/
 
 ---
 
-## My Projects
+## Additional Projects
 
 - [Torque Wrench Design Optimization]({{ site.baseurl }}/projects/torquewrench/)
 
