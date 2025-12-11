@@ -8,3 +8,22 @@ $color_scheme: '{{ site.color_scheme }}';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Merriweather:wght@400;700&display=swap');
 @import "custom";
 
+/* ===== CUSTOM WIDTH & ZOOM FIX FOR TORQUE WRENCH PAGE ===== */
+
+/* Make content wider and easier to read on desktops */
+.page-content,
+.post-content {
+  max-width: 1200px !important;
+  margin: 0 auto;
+  padding: 2rem;
+  font-size: 1.15rem;
+}
+
+/* Ensure it still looks clean on phones */
+@media (max-width: 768px) {
+  .page-content,
+  .post-content {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+}
