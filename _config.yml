@@ -30,6 +30,10 @@ collections:
   projects:
     output: true
 
+collections:
+  projects:
+    output: true
+    directory: _projects
 
 
 # Markdown
