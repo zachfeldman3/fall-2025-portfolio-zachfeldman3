@@ -26,9 +26,9 @@ permalink: /projects/
 
 ## Additional Projects
 
-- [Torque Wrench Design Optimization]({{ site.baseurl }}/projects/FMD/)
+- [Torque Wrench Design Optimization]({{ site.baseurl }}/projects/torquewrench/)
 
-- [Fluid Mechanical Dissection]({{ site.baseurl }}/projects/torquewrench/)
+- [Fluid Mechanical Dissection]({{ site.baseurl }}/projects/FMD/)
 
 {% comment %}
     <div class="gallery-container">
