@@ -188,5 +188,18 @@ In the model:
 - This creates the same moment experienced during actual wrench use
 
 ---
+##Total Deformation / Deflection: 
+
+## Normal Elastic Strain FEM Results:
+
+<img src="https://zachfeldman3.github.io/fall-2025-portfolio-zachfeldman3/assets/images/M-normalelasticstrainSIDE" 
+     alt="Basic Design Concept"
+     style="max-width: 90%; height: auto; display: block; margin: auto;">
+
+<img src="https://zachfeldman3.github.io/fall-2025-portfolio-zachfeldman3/assets/images/M-normalelasticstrain.png" 
+     alt="Basic Design Concept"
+     style="max-width: 90%; height: auto; display: block; margin: auto;">
+
+## Maximum Principal Stress: 
 
 
