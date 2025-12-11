@@ -200,7 +200,7 @@ The deformation plot shows the overall bending shape of the beam under the appli
 
 ## Normal Stress: 
 
-<img src="https://zachfeldman3.github.io/fall-2025-portfolio-zachfeldman3/assets/images/M-normalstressFULL.png" 
+<img src="https://zachfeldman3.github.io/fall-2025-portfolio-zachfeldman3/assets/images/M-normalstresFULL.png" 
      alt="Basic Design Concept"
      style="max-width: 90%; height: auto; display: block; margin: auto;">
 
