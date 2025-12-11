@@ -135,10 +135,18 @@ $$\delta = 0.567 \ \text{in}$$
 
 # Final Summary (AZ31B Magnesium)
 
+# Final Summary (AZ31B Magnesium)
+
 - Maximum stress: **16.0 ksi**  
 - Yield strength: **21 ksi**  
-- Factor of safety
+- Factor of safety: **1.31**  
+- Strain: **2460 μɛ**  
+- Bridge output: **1.23 mV/V**  
+- Hand-calculated deflection: **0.57 in**  
 
+All requirements satisfied:
+- **mV/V > 1.15** → ✔ 1.23 mV/V  
+- **FS > 1.25** → ✔ 1.31  
 
 
 
