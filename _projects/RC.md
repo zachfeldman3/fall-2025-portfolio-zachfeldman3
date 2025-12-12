@@ -3,20 +3,10 @@ title: "RC"
 layout: default
 permalink: /projects/RC/
 ---
-<script defer>
-  window.onload = function () {
-    if (typeof renderMathInElement !== "undefined") {
-      renderMathInElement(document.body, {
-        delimiters: [
-          { left: "$$", right: "$$", display: true },
-          { left: "$", right: "$", display: false },
-          { left: "\\(", right: "\\)", display: false }
-        ],
-        throwOnError: false
-      });
-    }
-  };
-</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body);"></script>
 
 
         
@@ -75,7 +65,7 @@ $$\dot{v} = \frac{T}{M_{eq}}$$
 
 which describes how applied torque produces forward acceleration and how inertia resists changes in speed. In the original ODE derivation, disturbance torque was neglected for simplicity, but it has been explicitly added here in the block diagram to better reflect real-world behavior.
 
-Finally, the output of the block diagram is the **angular velocity**, $\(\omega\)$. This corresponds to the angular velocity of the wheels and is related to the linear velocity by:
+Finally, the output of the block diagram is the **angular velocity**, \(\omega\). This corresponds to the angular velocity of the wheels and is related to the linear velocity by:
 
 
 $$\omega = \frac{v}{r}$$
@@ -83,5 +73,5 @@ $$\omega = \frac{v}{r}$$
 
 This output is directly measurable and serves as the quantity used later for transfer function development and state-space comparison.
 
-Although block diagrams provide an accurate representation for a simplified RC car model, several limitations should be acknowledged. First, the motor dynamics are reduced to the single relationship $\(T_u = K_t i\)$, meaning that voltage saturation, motor inductance, back-EMF, and additional resistance effects are omitted. While some of these effects appear in the full electrical ODE, they were intentionally excluded here to maintain a simple open-loop model. Second, the mechanical system uses a single equivalent inertia $\(M_{eq}\)$, which assumes rigid, lossless drivetrain components. In reality, RC cars experience internal friction that is not accounted for. Nonlinear effects such as Coulomb friction, speed-dependent motor torque, and aerodynamic drag are also neglected. Finally, the disturbance torque is modeled as a simple additive term rather than as a function of velocity or surface conditions. While these assumptions are reasonable for this analysis, they limit the model’s predictive accuracy, particularly at higher speeds where these effects become more significant.
+Although block diagrams provide an accurate representation for a simplified RC car model, several limitations should be acknowledged. First, the motor dynamics are reduced to the single relationship \(T_u = K_t i\), meaning that voltage saturation, motor inductance, back-EMF, and additional resistance effects are omitted. While some of these effects appear in the full electrical ODE, they were intentionally excluded here to maintain a simple open-loop model. Second, the mechanical system uses a single equivalent inertia \(M_{eq}\), which assumes rigid, lossless drivetrain components. In reality, RC cars experience internal friction that is not accounted for. Nonlinear effects such as Coulomb friction, speed-dependent motor torque, and aerodynamic drag are also neglected. Finally, the disturbance torque is modeled as a simple additive term rather than as a function of velocity or surface conditions. While these assumptions are reasonable for this analysis, they limit the model’s predictive accuracy, particularly at higher speeds where these effects become more significant.
 
