@@ -24,6 +24,10 @@ The block diagram of this system represents the open-loop longitudinal dynamics 
 
 The block diagram shown is based specifically on the ODEs derived by Jason earlier in the project. It uses the **torque-based ODE formulation**, and disturbance torque has been included to take into account Callum’s experimental measurements. Ultimately, the diagram simplifies the conversion of electricity into torque production and captures the mechanical vehicle dynamics by providing a clear input–output structure. Because there is no feedback control implemented in our RC car, the block diagram represents an **open-loop system**.
 
+<img src="https://zachfeldman3.github.io/fall-2025-portfolio-zachfeldman3/assets/images/BlockDiagram.png" 
+     alt="Basic Design Concept"
+     style="max-width: 50%; height: auto; display: block; margin: auto;">
+
 The block diagram structure uses **torque**, not current, to model the system. This is because the signal entering the mechanical system from the motor is torque. The car itself—including the gears, wheels, and chassis—never receives current as a physical input. Because of this, the equation inside the open-loop mechanical block must use torque as the input, leading to the governing equation:
 
 
