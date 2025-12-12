@@ -17,15 +17,15 @@ As part of the group, I contributed to the analysis, discussions, and video asse
 
 <img src="https://zachfeldman3.github.io/fall-2025-portfolio-zachfeldman3/assets/images/speaker1.png" 
      alt="Basic Design Concept"
-     style="max-width: 90%; height: auto; display: block; margin: auto;">
+     style="max-width: 50%; height: auto; display: block; margin: auto;">
 
 <img src="https://zachfeldman3.github.io/fall-2025-portfolio-zachfeldman3/assets/images/speaker2.png" 
      alt="Basic Design Concept"
-     style="max-width: 90%; height: auto; display: block; margin: auto;">
+     style="max-width: 50%; height: auto; display: block; margin: auto;">
      
 <img src="https://zachfeldman3.github.io/fall-2025-portfolio-zachfeldman3/assets/images/speaker3.png" 
      alt="Basic Design Concept"
-     style="max-width: 90%; height: auto; display: block; margin: auto;">
+     style="max-width: 50%; height: auto; display: block; margin: auto;">
 
 ## Group Video
 
