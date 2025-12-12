@@ -13,6 +13,21 @@ My individual contribution focused specifically on **creating the CAD model of t
 
 As part of the group, I contributed to the analysis, discussions, and video assembly, but my main technical responsibility was accurately recreating the diaphragm geometry so we could better understand and communicate its fluid-mechanical role within the full speaker system.
 
+## Speaker Diaphram CAD:
+
+<img src="https://zachfeldman3.github.io/fall-2025-portfolio-zachfeldman3/assets/images/speaker1.png" 
+     alt="Basic Design Concept"
+     style="max-width: 90%; height: auto; display: block; margin: auto;">
+
+<img src="https://zachfeldman3.github.io/fall-2025-portfolio-zachfeldman3/assets/images/speaker2.png" 
+     alt="Basic Design Concept"
+     style="max-width: 90%; height: auto; display: block; margin: auto;">
+     
+<img src="https://zachfeldman3.github.io/fall-2025-portfolio-zachfeldman3/assets/images/speaker 3.png" 
+     alt="Basic Design Concept"
+     style="max-width: 90%; height: auto; display: block; margin: auto;">
+
+## Group Video
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/1bhQ_YkF6kU?si=rIY44_fo_cJLPkHr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
