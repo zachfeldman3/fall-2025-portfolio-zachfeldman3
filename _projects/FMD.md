@@ -33,7 +33,7 @@ As part of the group, I contributed to the analysis, discussions, and video asse
   <iframe 
       src="https://www.youtube.com/embed/1bhQ_YkF6kU?si=8CrhWAXdHjIyZJet"
       title="YouTube video player"
-      style="width: 75%; border: none;"
+      style="width: 75%; height: 75%; border: none;"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       referrerpolicy="strict-origin-when-cross-origin"
       allowfullscreen>
