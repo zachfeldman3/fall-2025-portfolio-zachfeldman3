@@ -38,11 +38,7 @@ Additionally, the disturbance torque measured by Callum can only be considered i
 
 The first block in the diagram represents the **input voltage**, $$V$$. This voltage corresponds to the command sent from the RC controller to the car. When a signal is sent, it sets the electrical potential that drives current into the DC motor. This voltage is the user’s control input and serves as the ultimate source of mechanical motion in the system. The voltage term $$V$$ appears explicitly in the electrical ODE derived earlier in the project.
 
-Next, the **power amplifier and motor block** combines the battery power delivery, motor driver, and DC motor electrical dynamics. Within this block, electrical energy is converted into mechanical energy. The relationship
-
-$$T_u = K_t i$$
-
-is written below the block and represents the connection between motor current and produced torque. This equation allows the electrical and mechanical subsystems to be linked together. Ultimately, this block transforms the input voltage into a physically meaningful quantity—torque—that drives the drivetrain.
+Next, the **power amplifier and motor block** combines the battery power delivery, motor driver, and DC motor electrical dynamics. Within this block, electrical energy is converted into mechanical energy. The relationship $$T_u = K_t i$$ is written below the block and represents the connection between motor current and produced torque. This equation allows the electrical and mechanical subsystems to be linked together. Ultimately, this block transforms the input voltage into a physically meaningful quantity—torque—that drives the drivetrain.
 
 The next block represents the **disturbance torque**. Physically, this block captures forces arising from tire–ground interaction, drivetrain losses, and bearing and gear friction. All of these forces act as disturbances that oppose motion and slow down the vehicle. Callum measured these effects by comparing free-spinning operation, where disturbance torque is minimal, to on-ground operation, where rolling resistance (the primary source of loss) is present. The disturbance torque is added to the motor torque according to:
 
