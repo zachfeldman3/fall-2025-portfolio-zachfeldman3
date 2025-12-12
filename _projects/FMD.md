@@ -23,7 +23,7 @@ As part of the group, I contributed to the analysis, discussions, and video asse
      alt="Basic Design Concept"
      style="max-width: 90%; height: auto; display: block; margin: auto;">
      
-<img src="https://zachfeldman3.github.io/fall-2025-portfolio-zachfeldman3/assets/images/speaker 3.png" 
+<img src="https://zachfeldman3.github.io/fall-2025-portfolio-zachfeldman3/assets/images/speaker3.png" 
      alt="Basic Design Concept"
      style="max-width: 90%; height: auto; display: block; margin: auto;">
 
