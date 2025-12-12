@@ -5,7 +5,6 @@ permalink: /projects/RC/
 ---
 # RC Car Dissection  
 
-## RC Car Block Diagram  
 **Project Purpose and Role**
 
 This project focuses on modeling the open-loop longitudinal dynamics of a small RC car using ordinary differential equations (ODEs), experimental observations, and system-level modeling techniques. The objective of the project is to understand how electrical inputs to the motor are converted into mechanical motion of the vehicle and how disturbances affect the system’s behavior.
