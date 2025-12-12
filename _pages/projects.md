@@ -30,7 +30,7 @@ permalink: /projects/
 
 - [Fluid Mechanical Dissection]({{ site.baseurl }}/projects/FMD/)
 
-- - [Fluid Mechanical Dissection]({{ site.baseurl }}/projects/RC/)
+- [RC Car Dissection]({{ site.baseurl }}/projects/RC/)
 
 {% comment %}
     <div class="gallery-container">
