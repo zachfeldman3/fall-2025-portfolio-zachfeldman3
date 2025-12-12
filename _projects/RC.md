@@ -30,9 +30,9 @@ The block diagram structure uses **torque**, not current, to model the system. T
 $$\dot{v} = \frac{T}{M_{eq}}$$
 
 
-Additionally, the disturbance torque measured by Callum can only be considered in a block diagram where torque is treated as the input. This allows the disturbance torque \(T_d\) to be added before the open-loop mechanical block. If the open-loop block instead used current as its input, there would be no physically meaningful location to include the disturbance torque.
+Additionally, the disturbance torque measured by Callum can only be considered in a block diagram where torque is treated as the input. This allows the disturbance torque $$T_d$$ to be added before the open-loop mechanical block. If the open-loop block instead used current as its input, there would be no physically meaningful location to include the disturbance torque.
 
-The first block in the diagram represents the **input voltage**, \(V\). This voltage corresponds to the command sent from the RC controller to the car. When a signal is sent, it sets the electrical potential that drives current into the DC motor. This voltage is the user’s control input and serves as the ultimate source of mechanical motion in the system. The voltage term \(V\) appears explicitly in the electrical ODE derived earlier in the project.
+The first block in the diagram represents the **input voltage**, \(V\). This voltage corresponds to the command sent from the RC controller to the car. When a signal is sent, it sets the electrical potential that drives current into the DC motor. This voltage is the user’s control input and serves as the ultimate source of mechanical motion in the system. The voltage term $$V$$ appears explicitly in the electrical ODE derived earlier in the project.
 
 Next, the **power amplifier and motor block** combines the battery power delivery, motor driver, and DC motor electrical dynamics. Within this block, electrical energy is converted into mechanical energy. The relationship
 
@@ -51,7 +51,7 @@ Since disturbances physically oppose torque, their inclusion alters system accel
 $$M_{eq}\dot{v} = T$$
 
 
-The **mechanical system block** represents the combined dynamics of the motor, gear train, wheels, and car mass. This block compresses multiple rotating bodies into a single equivalent inertia, \(M_{eq}\). This simplification comes directly from Jason’s derivation:
+The **mechanical system block** represents the combined dynamics of the motor, gear train, wheels, and car mass. This block compresses multiple rotating bodies into a single equivalent inertia, $$M_{eq}$$. This simplification comes directly from Jason’s derivation:
 
 
 $$M_{eq} = \frac{J_w + m r^2 + i_g^2 J_e}{r^2}$$
@@ -65,7 +65,7 @@ $$\dot{v} = \frac{T}{M_{eq}}$$
 
 which describes how applied torque produces forward acceleration and how inertia resists changes in speed. In the original ODE derivation, disturbance torque was neglected for simplicity, but it has been explicitly added here in the block diagram to better reflect real-world behavior.
 
-Finally, the output of the block diagram is the **angular velocity**, \(\omega\). This corresponds to the angular velocity of the wheels and is related to the linear velocity by:
+Finally, the output of the block diagram is the **angular velocity**, $$\omega$$. This corresponds to the angular velocity of the wheels and is related to the linear velocity by:
 
 
 $$\omega = \frac{v}{r}$$
@@ -73,5 +73,5 @@ $$\omega = \frac{v}{r}$$
 
 This output is directly measurable and serves as the quantity used later for transfer function development and state-space comparison.
 
-Although block diagrams provide an accurate representation for a simplified RC car model, several limitations should be acknowledged. First, the motor dynamics are reduced to the single relationship \(T_u = K_t i\), meaning that voltage saturation, motor inductance, back-EMF, and additional resistance effects are omitted. While some of these effects appear in the full electrical ODE, they were intentionally excluded here to maintain a simple open-loop model. Second, the mechanical system uses a single equivalent inertia $$M_{eq}$$, which assumes rigid, lossless drivetrain components. In reality, RC cars experience internal friction that is not accounted for. Nonlinear effects such as Coulomb friction, speed-dependent motor torque, and aerodynamic drag are also neglected. Finally, the disturbance torque is modeled as a simple additive term rather than as a function of velocity or surface conditions. While these assumptions are reasonable for this analysis, they limit the model’s predictive accuracy, particularly at higher speeds where these effects become more significant.
+Although block diagrams provide an accurate representation for a simplified RC car model, several limitations should be acknowledged. First, the motor dynamics are reduced to the single relationship $$T_u = K_t i$$, meaning that voltage saturation, motor inductance, back-EMF, and additional resistance effects are omitted. While some of these effects appear in the full electrical ODE, they were intentionally excluded here to maintain a simple open-loop model. Second, the mechanical system uses a single equivalent inertia $$M_{eq}$$, which assumes rigid, lossless drivetrain components. In reality, RC cars experience internal friction that is not accounted for. Nonlinear effects such as Coulomb friction, speed-dependent motor torque, and aerodynamic drag are also neglected. Finally, the disturbance torque is modeled as a simple additive term rather than as a function of velocity or surface conditions. While these assumptions are reasonable for this analysis, they limit the model’s predictive accuracy, particularly at higher speeds where these effects become more significant.
 
