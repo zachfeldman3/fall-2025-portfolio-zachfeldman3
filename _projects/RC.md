@@ -32,7 +32,7 @@ $$\dot{v} = \frac{T}{M_{eq}}$$
 
 Additionally, the disturbance torque measured by Callum can only be considered in a block diagram where torque is treated as the input. This allows the disturbance torque $$T_d$$ to be added before the open-loop mechanical block. If the open-loop block instead used current as its input, there would be no physically meaningful location to include the disturbance torque.
 
-The first block in the diagram represents the **input voltage**, \(V\). This voltage corresponds to the command sent from the RC controller to the car. When a signal is sent, it sets the electrical potential that drives current into the DC motor. This voltage is the user’s control input and serves as the ultimate source of mechanical motion in the system. The voltage term $$V$$ appears explicitly in the electrical ODE derived earlier in the project.
+The first block in the diagram represents the **input voltage**, $$V$$. This voltage corresponds to the command sent from the RC controller to the car. When a signal is sent, it sets the electrical potential that drives current into the DC motor. This voltage is the user’s control input and serves as the ultimate source of mechanical motion in the system. The voltage term $$V$$ appears explicitly in the electrical ODE derived earlier in the project.
 
 Next, the **power amplifier and motor block** combines the battery power delivery, motor driver, and DC motor electrical dynamics. Within this block, electrical energy is converted into mechanical energy. The relationship
 
