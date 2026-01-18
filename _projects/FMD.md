@@ -1,6 +1,7 @@
 ---
 title: "FMD"
 layout: default
+image: /assets/images/speaker3.png
 permalink: /projects/FMD/
 ---
 # Fluid Mechanical Dissection 
