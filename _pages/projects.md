@@ -22,7 +22,6 @@ permalink: /projects/
 *In Development*
 
 
-{% comment %}
     <div class="gallery-container">
       <div class="project-gallery">
         {% for project in site.projects %}
@@ -35,4 +34,3 @@ permalink: /projects/
         {% endfor %}
       </div>
     </div>
-{% endcomment %}
