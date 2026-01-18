@@ -1,9 +1,10 @@
 ---
 title: "FMD"
-layout: default
+layout: project
 image: /assets/images/speaker3.png
 permalink: /projects/FMD/
 ---
+
 # Fluid Mechanical Dissection 
 
 ### Speaker Dissection Project — My Role and CAD Contribution
