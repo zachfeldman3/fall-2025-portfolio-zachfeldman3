@@ -1,7 +1,7 @@
 ---
+layout: default
 title: "Torque Wrench Design Optimization"
 description: Torque Wrench Project 
-layout: default
 category: class
 image: /assets/images/speaker3.png
 ---
