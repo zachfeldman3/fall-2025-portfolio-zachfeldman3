@@ -1,3 +1,9 @@
+---
+layout: default
+title: Projects
+permalink: /projects/
+---
+
 ## Class Projects
 
 <div class="gallery-container w-100">
