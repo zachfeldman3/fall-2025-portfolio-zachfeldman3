@@ -3,8 +3,10 @@ layout: project
 title: "FMD"
 description: Fluid Mechanics Speaker Project
 technologies: [Autodesk Fusion]
+category: class
 image: /assets/images/speaker3.png
 ---
+
 
 # Fluid Mechanical Dissection 
 
