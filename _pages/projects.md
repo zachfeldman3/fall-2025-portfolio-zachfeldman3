@@ -10,11 +10,12 @@ permalink: /projects/
   <div class="project-gallery d-flex flex-wrap justify-content-start align-items-start gap-4 w-100">
     {% assign class_projects = site.projects | where: "category", "class" %}
     {% for p in class_projects %}
-      <a class="gallery-item text-decoration-none" href="{{ p.url | relative_url }}"
+      <a class="gallery-item text-decoration-none"
+         href="{{ p.url | relative_url }}"
          style="display:block; width: 460px;">
-        
-        <!-- image box -->
-        <div style="height: 240px; display:flex; align-items:center; justify-content:center;">
+
+        <!-- fixed-height image area (bottom-aligned so caption hugs image) -->
+        <div style="height: 240px; display:flex; align-items:flex-end; justify-content:center;">
           <img
             src="{{ p.image | relative_url }}"
             alt="{{ p.imagealt | default: p.title }}"
@@ -22,10 +23,10 @@ permalink: /projects/
           >
         </div>
 
-        <p style="margin: 4px 0 0 0; white-space: normal; overflow: visible; text-align: center;">
-  {{ p.title }}
-</p>
-
+        <!-- caption -->
+        <p style="margin: 6px 0 0 0; white-space: normal; overflow: visible; text-align: center;">
+          {{ p.title }}
+        </p>
       </a>
     {% endfor %}
   </div>
