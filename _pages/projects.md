@@ -4,6 +4,8 @@ title: Projects
 permalink: /projects/
 ---
 
+<div style="margin-top:-80px;">
+
 ## Class Projects
 
 <div class="gallery-container w-100">
@@ -14,7 +16,6 @@ permalink: /projects/
          href="{{ p.url | relative_url }}"
          style="display:block; width: 460px;">
 
-        <!-- fixed-height image area (bottom-aligned so caption hugs image) -->
         <div style="height: 240px; display:flex; align-items:flex-end; justify-content:center;">
           <img
             src="{{ p.image | relative_url }}"
@@ -23,7 +24,6 @@ permalink: /projects/
           >
         </div>
 
-        <!-- caption -->
         <p style="margin: 6px 0 0 0; white-space: normal; overflow: visible; text-align: center;">
           {{ p.title }}
         </p>
@@ -33,10 +33,11 @@ permalink: /projects/
 </div>
 
 ## Personal Projects
-
 *In Development*
 
 ## Professional Projects
-
 *In Development*
+
+</div>
+
 
