@@ -5,10 +5,10 @@ description: CEV Carbon Fiber
 category: featured
 image: /assets/images/2024chassis.png
 ---
-#Introduction 
+# Introduction 
 When I first joined the team, I noticed that although our composite layups were producing solid results, many steps in the mold preparation process were unnecessarily time-consuming, tedious, or inefficient. I took initiative to analyze the workflow, identify bottlenecks, and implement process improvements to reduce labor time while maintaining—or improving—surface quality and part release performance.
 
-#Streamlining the Process
+# Streamlining the Process
 
 Once a CNC-machined mold was assembled, our standard workflow involved repairing surface defects with Bondo, hand-sanding up to 400 grit (to avoid the risk of oversanding with power tools), and then spraying Duratec surface primer to achieve a mirror finish prior to layup. After researching industry practices, I found that many groups successfully applied Duratec over lower grit finishes. I tested this by spraying Duratec on a mold sanded only to 180 grit and found that it produced better adhesion and a more uniform primer layer. This change was adopted into our standard process and saves up to six hours of hand sanding per mold, depending on size.
 The longest and most labor-intensive step in our workflow was wet sanding the cured Duratec surface up to 2000 grit. Previously, we sanded in a single direction per grit and fully dried the mold between stages to visually confirm scratch orientation before progressing. This approach was slow, wasteful, and required unnecessary sanding beyond what was technically required.
