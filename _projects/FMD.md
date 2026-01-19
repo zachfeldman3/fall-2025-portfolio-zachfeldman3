@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "FMD"
+title: "Fluid Mechanical Speaker Dissection"
 description: Fluid Mechanics Speaker Project
 technologies: [Autodesk Fusion]
 category: class
