@@ -8,7 +8,7 @@ image: /assets/images/speaker3.png
 ---
 
 
-
+# Fluid Mechanical Speaker Dissection
 
 ### Speaker Dissection Project — My Role and CAD Contribution
 
