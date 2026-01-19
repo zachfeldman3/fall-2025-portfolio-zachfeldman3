@@ -1,7 +1,9 @@
 ---
 title: "Torque Wrench Design Optimization"
+description: Torque Wrench Project 
 layout: default
-permalink: /projects/torquewrench/
+category: class
+image: /assets/images/speaker3.png
 ---
 
 
