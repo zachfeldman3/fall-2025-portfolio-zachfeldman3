@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: project
 title: "Fluid Mechanical Speaker Dissection"
 description: Fluid Mechanics Speaker Project
 technologies: [Autodesk Fusion]
@@ -8,7 +8,7 @@ image: /assets/images/speaker3.png
 ---
 
 
-# Fluid Mechanical Dissection 
+
 
 ### Speaker Dissection Project — My Role and CAD Contribution
 
