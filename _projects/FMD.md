@@ -1,8 +1,9 @@
 ---
-title: "FMD"
 layout: project
+title: "FMD"
+description: Fluid Mechanics Speaker Project
+technologies: [Autodesk Fusion]
 image: /assets/images/speaker3.png
-permalink: /projects/FMD/
 ---
 
 # Fluid Mechanical Dissection 
