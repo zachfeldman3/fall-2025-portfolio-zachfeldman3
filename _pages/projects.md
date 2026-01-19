@@ -6,20 +6,19 @@ permalink: /projects/
 
 ## Class Projects
 
-<div class="gallery-container">
-  <div class="project-gallery d-flex flex-wrap gap-4 justify-content-start">
+<div class="gallery-container w-100">
+  <div class="project-gallery d-flex flex-wrap justify-content-start align-items-start gap-4 w-100">
     {% assign class_projects = site.projects | where: "category", "class" %}
     {% for p in class_projects %}
-      <div class="gallery-item">
-        <a href="{{ p.url | relative_url }}">
-          <img src="{{ p.image | relative_url }}" alt="{{ p.imagealt | default: p.title }}" />
-          <p class="text-wrap text-break mb-0">{{ p.title }}</p>
-        </a>
-      </div>
+      <a class="gallery-item text-decoration-none" href="{{ p.url | relative_url }}">
+        <img src="{{ p.image | relative_url }}" alt="{{ p.imagealt | default: p.title }}">
+        <p class="mb-0 text-break" style="white-space: normal; overflow: visible;">
+          {{ p.title }}
+        </p>
+      </a>
     {% endfor %}
   </div>
 </div>
-
 
 
 
