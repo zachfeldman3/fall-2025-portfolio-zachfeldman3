@@ -18,11 +18,11 @@ permalink: /projects/
           <img
             src="{{ p.image | relative_url }}"
             alt="{{ p.imagealt | default: p.title }}"
-            style="max-height: 240px; max-width: 100%; width:auto; object-fit: contain; display:block;"
+            style="max-height: 240px; max-width: 100%; height:auto; width:auto; object-fit: contain; display:block;"
           >
         </div>
 
-        <p class="mb-0 text-break" style="white-space: normal; overflow: visible; margin-top: 14px;">
+        <p class="mb-0 text-break" style="white-space: normal; overflow: visible; margin-top: 4px;">
           {{ p.title }}
         </p>
       </a>
