@@ -1,10 +1,10 @@
 ---
-layout: project
+layout: default
 title: Projects
 permalink: /projects/
 ---
 
-<h2>Class Projects</h2>
+## Class Projects
 
 <div class="project-gallery">
   {% assign class_projects = site.projects | where: "category", "class" %}
@@ -16,14 +16,6 @@ permalink: /projects/
   {% endfor %}
 </div>
 
-## Class Projects
-
-- [Torque Wrench Design Optimization]({{ site.baseurl }}/projects/torquewrench/)
-
-- [Fluid Mechanical Dissection]({{ site.baseurl }}/projects/FMD/)
-
-- [RC Car Dissection]({{ site.baseurl }}/projects/RC/)
-
 ## Personal Projects
 
 *In Development*
@@ -32,15 +24,3 @@ permalink: /projects/
 
 *In Development*
 
-    <div class="gallery-container">
-      <div class="project-gallery">
-        {% for project in site.projects %}
-          <div class="gallery-item">
-            <a href="{{ project.url | relative_url }}">
-              <img src="{{ project.image | relative_url }}" alt="{{ project.title }}" />
-              <p>{{ project.title }}</p>
-            </a>
-          </div>
-        {% endfor %}
-      </div>
-    </div>
