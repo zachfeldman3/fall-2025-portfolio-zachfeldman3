@@ -16,10 +16,9 @@ permalink: /projects/
         <!-- image box -->
         <div style="height: 240px; display:flex; align-items:center; justify-content:center;">
           <img
-          <img
             src="{{ p.image | relative_url }}"
             alt="{{ p.imagealt | default: p.title }}"
-            style="height: 240px; width: auto; max-width: 100%; display: block; margin: 0 auto;"
+            style="max-height: 240px; max-width: 100%; height:auto; width:auto; object-fit: contain; display:block;"
           >
         </div>
 
@@ -30,8 +29,6 @@ permalink: /projects/
     {% endfor %}
   </div>
 </div>
-
-
 
 ## Personal Projects
 
