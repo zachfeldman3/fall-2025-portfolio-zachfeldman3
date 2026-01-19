@@ -1,5 +1,5 @@
 ---
-layout: project
+layout: default
 title: "FMD"
 description: Fluid Mechanics Speaker Project
 technologies: [Autodesk Fusion]
