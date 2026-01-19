@@ -22,9 +22,10 @@ permalink: /projects/
           >
         </div>
 
-        <p class="mb-0 text-break" style="white-space: normal; overflow: visible; margin-top: 10px;">
-          {{ p.title }}
-        </p>
+        <p style="margin: 4px 0 0 0; white-space: normal; overflow: visible; text-align: center;">
+  {{ p.title }}
+</p>
+
       </a>
     {% endfor %}
   </div>
