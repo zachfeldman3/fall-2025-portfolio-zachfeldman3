@@ -32,5 +32,15 @@ After the reinforcement and core layers are placed, we apply a peel ply layer to
 
 Finally, the entire mold is fully vacuum-sealed and placed under vacuum for the duration of the cure. Although vacuum consolidation is not strictly required for wet layups, applying vacuum significantly improves laminate quality by compacting the fiber stack, removing entrapped air, reducing void content, improving fiber-to-resin contact, and promoting more uniform thickness and surface finish. Vacuum pressure also helps minimize the risk of delamination and enhances overall mechanical performance. After the resin has fully cured, the part is carefully demolded and prepared for trimming and post-processing.
 
-
 # Vacuum Infusion 
+
+For primary structural components such as the vehicle baseplate and bulkheads, I lead the manufacturing process using vacuum infusion to achieve high fiber volume fraction, low void content, and consistent mechanical performance. These components carry the majority of the vehicle’s weight and global structural loads, making laminate quality and repeatability critical.
+
+We use a one-sided vacuum infusion process with INF-114 epoxy resin cured at room temperature. The laminate schedule consists of a symmetric [0° / 45° / 90°] layup on the mold surface, followed by a Divinycell structural foam core and a mirrored [0° / 45° / 90°] outer skin. To ensure uniform resin flow through the thick sandwich structure, I perforated the Divinycell core and machined internal flow channels throughout the core thickness. This allows resin to fully wet the lower skin, penetrate the core, and saturate the upper laminate without creating dry regions or flow blockages.
+
+Prior to infusion, all reinforcement plies and core layers are pre-cut and staged to minimize handling time and ensure accurate fiber orientation and alignment. After stacking the dry laminate, I install peel ply and green flow media to promote even in-plane resin distribution, followed by spiral wrap inlet lines and strategically placed resin distribution lines to control the flow front and reduce the risk of race-tracking. A dedicated catch pot is integrated into the system to protect the vacuum pump from excess resin during infusion.
+
+Because of the large mold size, full vacuum is not achievable; however, I tune the vacuum level as close to full vacuum as possible to maximize compaction pressure and minimize void formation. During infusion, vacuum consolidation draws resin uniformly through the laminate, removing entrapped air, improving fiber wet-out, and producing a dense, well-consolidated sandwich panel. Compared to wet layup, this process significantly improves fiber-to-resin ratio, thickness uniformity, and interlaminar bonding, resulting in stronger, lighter, and more repeatable structural components.
+
+After the resin has fully infused and cured at room temperature, the part is demolded and prepared for trimming, machining, and final integration into the vehicle chassis.
+
