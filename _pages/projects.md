@@ -36,6 +36,5 @@ permalink: /projects/
 ## Professional Projects
 *In Development*
 
-</div>
 
 
