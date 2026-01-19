@@ -3,5 +3,5 @@ layout: default
 title: "Streamlining Carbon Fiber Manufacturing"
 description: CEV Carbon Fiber
 category: featured
-image: /assets/images/M-totaldeformation.png
+image: /assets/images/2024chassis.png
 ---
