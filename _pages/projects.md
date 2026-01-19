@@ -18,7 +18,7 @@ permalink: /projects/
           <img
             src="{{ p.image | relative_url }}"
             alt="{{ p.imagealt | default: p.title }}"
-            style="height: 240px; max-width: 100%; height:auto; width:auto; object-fit: contain; display:block;"
+            style="max-height: 240px; max-width: 100%; height:auto; width:auto; object-fit: contain; display:block;"
           >
         </div>
 
