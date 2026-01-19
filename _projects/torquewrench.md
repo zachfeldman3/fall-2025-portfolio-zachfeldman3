@@ -3,7 +3,7 @@ layout: default
 title: "Torque Wrench Design Optimization"
 description: Torque Wrench Project 
 category: class
-image: /assets/images/speaker3.png
+image: /assets/images/M-totaldeformation.png
 ---
 
 
