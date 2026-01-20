@@ -15,7 +15,7 @@ Once a CNC-machined mold was assembled, our standard workflow involved repairing
 <div style="display:flex; gap:40px; justify-content:center; align-items:flex-start; margin:40px 0; flex-wrap:wrap;">
 
   <!-- Image 1 -->
-  <div style="text-align:center; max-width:45%;">
+  <div style="text-align:center; max-width:60%;">
     <img src="{{ '/assets/images/sidepartmold2.png' | relative_url }}"
          style="max-width:100%; max-height:260px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
     <p style="margin-top:10px; font-style:italic; color:#555;">
@@ -24,7 +24,7 @@ Once a CNC-machined mold was assembled, our standard workflow involved repairing
   </div>
 
   <!-- Image 2 -->
-  <div style="text-align:center; max-width:45%;">
+  <div style="text-align:center; max-width:60%;">
     <img src="{{ '/assets/images/sidepartmoldspray.png' | relative_url }}"
          style="max-width:100%; max-height:260px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
     <p style="margin-top:10px; font-style:italic; color:#555;">
