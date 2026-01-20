@@ -35,10 +35,20 @@ Once a CNC-machined mold was assembled, our standard workflow involved repairing
 </div>
 
 
-
 The longest and most labor-intensive step in our workflow was wet sanding the cured Duratec surface up to 2000 grit. Previously, we sanded in a single direction per grit and fully dried the mold between stages to visually confirm scratch orientation before progressing. This approach was slow, wasteful, and required unnecessary sanding beyond what was technically required.
 
 To improve this, I implemented the use of a dry guide coat—a fine powder that settles into the scratches from the previous grit and disappears once those scratches are removed. This eliminated the need to dry the mold between grits, removed the constraint of sanding in only one direction, and prevented oversanding once the surface was already ready to advance. In practice, this reduced sanding time by over 50% while improving consistency.
+
+<div style="display:flex; gap:40px; justify-content:center; align-items:flex-start; margin:40px 0; flex-wrap:wrap;">
+
+  <!-- Image 1 -->
+  <div style="text-align:center; max-width:45%;">
+    <img src="{{ '/assets/images/moldcoat.png' | relative_url }}"
+         style="max-width:100%; max-height:400px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
+    <p style="margin-top:10px; font-style:italic; color:#555;">
+      Fully Assembled Mold
+    </p>
+  </div>
 
 I also introduced the use of pneumatic sanding tools at higher grits. While power sanding had previously been avoided due to the risk of removing too much material, the guide coat provided clear visual feedback that mitigated this concern. Through testing, I found that pneumatic sanding was unreliable below ~800 grit due to tool size and uneven removal near partially finished regions. As a result, we now hand-sand from 320–600 grit and transition to pneumatic sanding from 800 grit onward, significantly accelerating the process while maintaining surface accuracy and finish quality.
 
