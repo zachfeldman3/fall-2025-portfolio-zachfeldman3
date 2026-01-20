@@ -146,8 +146,84 @@ main.container{
   box-shadow: 0 16px 36px rgba(0,0,0,0.22);
 }
 
-@media (max-w
+@media (max-width: 768px){
+  main.container{
+    max-width: 100% !important;
+    margin: 16px auto 22px auto;
+    padding: 22px 18px;
+    border-radius: 14px;
+  }
+}
 
+/* Typography */
+main.container h1,
+main.container h2,
+main.container h3{
+  color: var(--text);
+  font-weight: 800;
+}
+
+main.container p{
+  color: rgba(15,23,42,0.86);
+  line-height: 1.65;
+}
+
+/* Subtle section dividers */
+main.container h2{
+  margin-top: 22px;
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(15,23,42,0.10);
+}
+
+/* Links inside card */
+main.container a{
+  color: #0f172a;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(15,23,42,0.22);
+}
+main.container a:hover{
+  text-decoration-color: rgba(15,23,42,0.50);
+}
+
+em, .text-muted{ color: var(--muted) !important; }
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer.footer{
+  background: var(--bar) !important;
+  border: none !important;
+  margin-top: 34px;
+  padding: 18px 0;
+  color: var(--bar-text);
+  box-shadow: 0 -6px 20px rgba(0,0,0,0.22);
+}
+
+/* =========================
+   PROJECT GALLERY POLISH
+   ========================= */
+
+.gallery-item img{
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.10);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.14);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.gallery-item:hover img{
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.18);
+}
+
+.gallery-item p{
+  margin-top: 10px;
+  font-weight: 600;
+  text-align: center;
+  color: rgba(15,23,42,0.86);
+}
 
 
 
