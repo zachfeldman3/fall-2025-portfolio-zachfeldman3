@@ -11,6 +11,19 @@ When I first joined the team, I noticed that although our composite layups were 
 # Streamlining Mold Preparation Process
 
 Once a CNC-machined mold was assembled, our standard workflow involved repairing surface defects with Bondo, hand-sanding up to 400 grit (to avoid the risk of oversanding with power tools), and then spraying Duratec surface primer to achieve a mirror finish prior to layup. After researching industry practices, I found that many groups successfully applied Duratec over lower grit finishes. I tested this by spraying Duratec on a mold sanded only to 180 grit and found that it produced better adhesion and a more uniform primer layer. This change was adopted into our standard process and saves up to six hours of hand sanding per mold, depending on size.
+
+<div style="text-align:center; margin: 40px 0;">
+
+  <img src="https://zachfeldman3.github.io/fall-2025-portfolio-zachfeldman3/assets/images/sidepartmold.png"
+       style="max-width:70%; height:auto; border-radius:12px; display:block; margin: 0 auto;" />
+
+  <p style="margin-top:10px; font-style:italic; color:#555;">
+    Fully Assembled Mold of Side Part 
+  </p>
+
+</div>
+
+
 The longest and most labor-intensive step in our workflow was wet sanding the cured Duratec surface up to 2000 grit. Previously, we sanded in a single direction per grit and fully dried the mold between stages to visually confirm scratch orientation before progressing. This approach was slow, wasteful, and required unnecessary sanding beyond what was technically required.
 
 To improve this, I implemented the use of a dry guide coat—a fine powder that settles into the scratches from the previous grit and disappears once those scratches are removed. This eliminated the need to dry the mold between grits, removed the constraint of sanding in only one direction, and prevented oversanding once the surface was already ready to advance. In practice, this reduced sanding time by over 50% while improving consistency.
