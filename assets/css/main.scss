@@ -1,149 +1,142 @@
 ---
 ---
 
-$color_scheme: '{{ site.color_scheme }}';
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 @import "custom";
 
 /* =========================
-   LIGHT + GLOSSY CARBON THEME
-   - brighter overall
-   - more defined weave
-   - glossy sheen
-   - remove blue outlines
+   CARBON TWILL THEME (clean + lighter)
+   - real carbon weave feel
+   - no Bootstrap blue glows
+   - premium light content card
    ========================= */
 
 :root{
-  /* Carbon base (LIGHTER than before) */
-  --carbon-0: #2a2f36;   /* top */
-  --carbon-1: #1f242b;   /* bottom */
+  --bg-top: #2f363f;
+  --bg-bot: #232a33;
 
-  /* Weave lines (more defined) */
-  --weave-light: rgba(255,255,255,0.10);
-  --weave-dark:  rgba(0,0,0,0.22);
+  /* twill tiles */
+  --twill-a: rgba(255,255,255,0.055);
+  --twill-b: rgba(0,0,0,0.22);
 
-  /* Gloss sheen */
-  --sheen-1: rgba(255,255,255,0.18);
-  --sheen-2: rgba(255,255,255,0.06);
+  /* sheen */
+  --sheen-strong: rgba(255,255,255,0.20);
+  --sheen-soft: rgba(255,255,255,0.08);
 
-  /* Navbar/footer (simple, no blue) */
+  /* bars */
   --bar: #12161c;
-  --bar-text: rgba(255,255,255,0.86);
+  --bar-text: rgba(255,255,255,0.82);
   --bar-strong: rgba(255,255,255,0.96);
 
-  /* Content card (LIGHT) */
-  --card: rgba(255,255,255,0.94);
-  --card-border: rgba(0,0,0,0.08);
+  /* card */
+  --card: rgba(255,255,255,0.92);
+  --card-border: rgba(0,0,0,0.10);
 
-  /* Text */
+  /* text */
   --text: #0f172a;
-  --muted: rgba(15,23,42,0.70);
+  --muted: rgba(15,23,42,0.72);
 }
 
-html, body { height: 100%; }
+html, body{ height:100%; }
 
 body{
   font-family: 'Montserrat', sans-serif;
+  color: var(--text);
 
-  /* LIGHTER + more defined weave + gloss */
+  /* --- Carbon twill (checker/offset) + gloss --- */
   background:
-    /* glossy sweep (top-left to mid) */
-    radial-gradient(900px 600px at 20% 10%, var(--sheen-1), transparent 55%),
+    /* big glossy highlight */
+    radial-gradient(900px 650px at 25% 10%, var(--sheen-strong), transparent 55%),
+    radial-gradient(850px 600px at 85% 18%, var(--sheen-soft), transparent 62%),
 
-    /* glossy sweep (top-right) */
-    radial-gradient(700px 500px at 85% 15%, var(--sheen-2), transparent 60%),
-
-    /* weave highlight */
+    /* twill tile layer 1 */
     repeating-linear-gradient(
       135deg,
-      var(--weave-light) 0px,
-      var(--weave-light) 2px,
-      transparent 2px,
-      transparent 12px
+      var(--twill-a) 0 10px,
+      transparent 10px 20px
     ),
-
-    /* weave shadow */
+    /* twill tile layer 2 (offset look) */
     repeating-linear-gradient(
       45deg,
-      var(--weave-dark) 0px,
-      var(--weave-dark) 2px,
-      transparent 2px,
-      transparent 12px
+      var(--twill-b) 0 10px,
+      transparent 10px 20px
     ),
 
-    /* base */
-    linear-gradient(180deg, var(--carbon-0), var(--carbon-1));
+    /* subtle vignette */
+    radial-gradient(1200px 900px at 50% 30%, rgba(0,0,0,0.10), rgba(0,0,0,0.35)),
 
-  color: var(--text);
+    /* base */
+    linear-gradient(180deg, var(--bg-top), var(--bg-bot));
 }
 
-/* Kill the ugly Bootstrap blue outlines / glows everywhere */
-:focus { outline: none !important; }
-*:focus { outline: none !important; }
-.btn:focus, .btn:active,
+/* =========================
+   KILL ALL BOOTSTRAP "BLUE" GLOWS
+   ========================= */
+
+*:focus{ outline:none !important; }
+:focus-visible{ outline:none !important; }
+
+a:focus, a:active,
+.nav-link:focus, .nav-link:active,
 .navbar-toggler:focus,
-.nav-link:focus,
-a:focus,
-.form-control:focus{
+.btn:focus, .btn:active,
+button:focus, input:focus, textarea:focus, select:focus{
   outline: none !important;
   box-shadow: none !important;
 }
 
-/* Make Bootstrap “active” not add weird effects */
-.navbar *{
+/* also remove any borders/shadows that appear as blue lines */
+.navbar, header, .navbar *{
   box-shadow: none !important;
 }
 
 /* =========================
-   NAVBAR (simple + clean)
+   NAVBAR (simple, clean)
    ========================= */
 
 .navbar{
   background: var(--bar) !important;
-  border: none !important;            /* remove blue rim possibility */
-  box-shadow: 0 6px 20px rgba(0,0,0,0.28);
+  border: none !important;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.30) !important;
 }
 
 .navbar .navbar-brand{
   color: var(--bar-strong) !important;
   font-weight: 700;
-  text-decoration: none;
   letter-spacing: 0.2px;
 }
 
 .navbar .nav-link{
   color: var(--bar-text) !important;
   font-weight: 600;
-  text-decoration: none;
 }
 
-.navbar .nav-link:hover{
-  color: var(--bar-strong) !important;
-}
-
+.navbar .nav-link:hover,
 .navbar .nav-link.active{
   color: var(--bar-strong) !important;
-  font-weight: 700;
+}
+
+/* remove any accidental top borders Bootstrap might be giving */
+header{
+  border: none !important;
 }
 
 /* =========================
-   MAIN CONTENT CARD (lighter)
+   MAIN CONTENT: "GLASS" CARD
    ========================= */
 
 main.container{
   max-width: 1100px !important;
+  margin: 26px auto 34px auto;
+  padding: 44px 56px;
 
-  background: var(--card);
+  background: linear-gradient(180deg, rgba(255,255,255,0.94), rgba(255,255,255,0.90));
   border: 1px solid var(--card-border);
   border-radius: 18px;
 
-  /* tighter top spacing so it doesn’t feel “sunken” */
-  margin: 28px auto 34px auto;
-  padding: 44px 56px;
-
-  /* lighter shadow (less “dark blob”) */
-  box-shadow: 0 16px 36px rgba(0,0,0,0.22);
+  box-shadow:
+    0 22px 50px rgba(0,0,0,0.26),
+    inset 0 1px 0 rgba(255,255,255,0.55);
 }
 
 @media (max-width: 768px){
@@ -165,10 +158,9 @@ main.container h3{
 
 main.container p{
   color: rgba(15,23,42,0.86);
-  line-height: 1.65;
+  line-height: 1.7;
 }
 
-/* Subtle section dividers */
 main.container h2{
   margin-top: 22px;
   margin-bottom: 16px;
@@ -176,46 +168,33 @@ main.container h2{
   border-bottom: 2px solid rgba(15,23,42,0.10);
 }
 
-/* Links inside card */
+/* Links */
 main.container a{
   color: #0f172a;
   text-decoration: underline;
   text-underline-offset: 3px;
-  text-decoration-color: rgba(15,23,42,0.22);
+  text-decoration-color: rgba(15,23,42,0.20);
 }
 main.container a:hover{
-  text-decoration-color: rgba(15,23,42,0.50);
+  text-decoration-color: rgba(15,23,42,0.45);
 }
 
 em, .text-muted{ color: var(--muted) !important; }
 
 /* =========================
-   FOOTER
-   ========================= */
-
-footer.footer{
-  background: var(--bar) !important;
-  border: none !important;
-  margin-top: 34px;
-  padding: 18px 0;
-  color: var(--bar-text);
-  box-shadow: 0 -6px 20px rgba(0,0,0,0.22);
-}
-
-/* =========================
-   PROJECT GALLERY POLISH
+   PROJECT THUMBNAILS (more premium)
    ========================= */
 
 .gallery-item img{
   border-radius: 12px;
   border: 1px solid rgba(0,0,0,0.10);
-  box-shadow: 0 10px 24px rgba(0,0,0,0.14);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.16);
   transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
 
 .gallery-item:hover img{
-  transform: translateY(-4px);
-  box-shadow: 0 14px 30px rgba(0,0,0,0.18);
+  transform: translateY(-3px);
+  box-shadow: 0 18px 36px rgba(0,0,0,0.20);
 }
 
 .gallery-item p{
@@ -225,5 +204,16 @@ footer.footer{
   color: rgba(15,23,42,0.86);
 }
 
+/* =========================
+   FOOTER
+   ========================= */
+
+footer.footer{
+  background: var(--bar) !important;
+  border: none !important;
+  padding: 18px 0;
+  color: var(--bar-text);
+  box-shadow: 0 -10px 26px rgba(0,0,0,0.25);
+}
 
 
