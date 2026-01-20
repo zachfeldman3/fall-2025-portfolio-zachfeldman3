@@ -32,7 +32,6 @@ Once a CNC-machined mold was assembled, our standard workflow involved repairing
     </p>
   </div>
 
-</div>
 
 
 The longest and most labor-intensive step in our workflow was wet sanding the cured Duratec surface up to 2000 grit. Previously, we sanded in a single direction per grit and fully dried the mold between stages to visually confirm scratch orientation before progressing. This approach was slow, wasteful, and required unnecessary sanding beyond what was technically required.
