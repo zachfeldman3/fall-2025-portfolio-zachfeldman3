@@ -1,11 +1,11 @@
 ---
 layout: default
-title: "Streamlining Carbon Fiber Manufacturing"
+title: "Carbon Fiber Manufacturing"
 description: CEV Carbon Fiber
 category: featured
 image: /assets/images/2024chassis.png
 ---
-# Introduction 
+# Carbon Fiber Manufacturing 
 When I first joined the team, I noticed that although our composite layups were producing solid results, many steps in the mold preparation process were unnecessarily time-consuming, tedious, or inefficient. I took initiative to analyze the workflow, identify bottlenecks, and implement process improvements to reduce labor time while maintaining—or improving—surface quality and part release performance.
 
 # Streamlining Mold Preparation Process
