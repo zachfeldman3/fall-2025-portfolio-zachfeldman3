@@ -14,7 +14,7 @@ Once a CNC-machined mold was assembled, our standard workflow involved repairing
 
 <div style="text-align:center; margin: 40px 0;">
 
-  <img src="https://zachfeldman3.github.io/fall-2025-portfolio-zachfeldman3/assets/images/sidepartmold.jpg"
+  <img src="https://zachfeldman3.github.io/fall-2025-portfolio-zachfeldman3/assets/images/sidepartmold2.png"
        style="max-width:70%; height:auto; border-radius:12px; display:block; margin: 0 auto;" />
 
   <p style="margin-top:10px; font-style:italic; color:#555;">
