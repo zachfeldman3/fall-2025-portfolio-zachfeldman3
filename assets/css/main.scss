@@ -1,95 +1,228 @@
 ---
-# this ensures Jekyll reads the file to be transformed into CSS later
-# only Main files contain this front matter, not partials.
---- 
+# Jekyll front matter (required)
+---
 
 $color_scheme: '{{ site.color_scheme }}';
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Merriweather:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 @import "custom";
 
-/* ===== COLOR THEME ===== */
+/* =========================
+   CARBON FIBER THEME
+   ========================= */
 
+/* Carbon background: a layered CSS weave (no images needed) */
 :root{
-  --bg: #f2f4f8;        /* page background */
-  --card: #ffffff;    /* main content card */
-  --nav: #3f4a67;     /* navbar + footer */
-  --text: #1f2937;    /* main text */
-  --muted: #6b7280;
+  --bg-0: #07090d;
+  --bg-1: #0b0f16;
+  --card: rgba(18, 22, 30, 0.86);
+  --card-border: rgba(255,255,255,0.09);
+  --card-glow: rgba(0,0,0,0.45);
+
+  --nav: rgba(7, 9, 13, 0.92);
+  --nav-border: rgba(255,255,255,0.10);
+
+  --text: #e9edf5;
+  --muted: rgba(233,237,245,0.70);
+
+  /* Accent: “composite resin / aerospace” vibe */
+  --accent: #18c3a6;   /* change this if you want lime/red/etc */
+  --accent-soft: rgba(24,195,166,0.20);
 }
 
-/* ===== GLOBAL PAGE BACKGROUND ===== */
+html, body{
+  height: 100%;
+}
 
 body{
-  background: var(--bg);
-  color: var(--text);
   font-family: 'Montserrat', sans-serif;
+  color: var(--text);
+
+  /* Carbon fiber weave background */
+  background:
+    /* subtle top spotlight */
+    radial-gradient(1200px 700px at 50% -10%, rgba(24,195,166,0.18), transparent 60%),
+    radial-gradient(900px 500px at 10% 0%, rgba(255,255,255,0.06), transparent 55%),
+
+    /* weave layer 1 */
+    repeating-linear-gradient(
+      135deg,
+      rgba(255,255,255,0.045) 0px,
+      rgba(255,255,255,0.045) 2px,
+      transparent 2px,
+      transparent 10px
+    ),
+    /* weave layer 2 */
+    repeating-linear-gradient(
+      45deg,
+      rgba(0,0,0,0.45) 0px,
+      rgba(0,0,0,0.45) 2px,
+      transparent 2px,
+      transparent 10px
+    ),
+
+    /* base gradient */
+    linear-gradient(180deg, var(--bg-1), var(--bg-0));
 }
 
-/* ===== MAIN CONTENT CARD ===== */
+/* Links */
+a{
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover{
+  color: #6df1dd;
+  text-decoration: none;
+}
+
+/* =========================
+   NAVBAR
+   ========================= */
+
+.navbar{
+  background: var(--nav) !important;
+  border-bottom: 1px solid var(--nav-border);
+  backdrop-filter: blur(10px);
+}
+
+.navbar .navbar-brand{
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.navbar .nav-link{
+  color: rgba(233,237,245,0.78) !important;
+  font-weight: 600;
+}
+
+.navbar .nav-link:hover{
+  color: var(--text) !important;
+}
+
+.navbar .nav-link.active{
+  color: var(--text) !important;
+  position: relative;
+}
+.navbar .nav-link.active::after{
+  content:"";
+  position:absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 6px;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 999px;
+  opacity: 0.95;
+}
+
+/* =========================
+   MAIN CONTENT “CARD”
+   ========================= */
 
 main.container{
-  background: var(--card);
   max-width: 1200px !important;
-  margin: 40px auto;
-  padding: 40px 60px;
-  border-radius: 18px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-  font-size: 1.15rem;
+
+  /* Dark card (not white) */
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 20px;
+
+  margin: 34px auto;
+  padding: 44px 60px;
+
+  box-shadow:
+    0 18px 40px rgba(0,0,0,0.45),
+    0 1px 0 rgba(255,255,255,0.04) inset;
+
+  backdrop-filter: blur(14px);
 }
 
-/* Mobile layout */
+/* Mobile */
 @media (max-width: 768px) {
   main.container{
     max-width: 100% !important;
     margin: 18px auto;
     padding: 22px 18px;
-    border-radius: 14px;
-    font-size: 1rem;
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
   }
 }
 
-/* ===== NAVBAR ===== */
-
-.navbar{
-  background: var(--nav) !important;
+/* Typography */
+main.container h1, main.container h2, main.container h3{
+  color: var(--text);
+  font-weight: 800;
 }
 
-/* ===== FOOTER ===== */
+main.container p{
+  color: rgba(233,237,245,0.86);
+  line-height: 1.65;
+}
+
+/* Section headers (clean + carbon vibe) */
+main.container h2{
+  margin-top: 20px;
+  margin-bottom: 22px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+
+main.container h2::after{
+  content:"";
+  display:block;
+  width: 90px;
+  height: 3px;
+  margin-top: 12px;
+  background: linear-gradient(90deg, var(--accent), transparent);
+  border-radius: 999px;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
 
 footer.footer{
   background: var(--nav) !important;
+  border-top: 1px solid var(--nav-border);
   padding: 18px 0;
   margin-top: 40px;
+  color: rgba(233,237,245,0.75);
 }
 
-/* ===== SECTION HEADINGS ===== */
-
-main.container h2{
-  border-bottom: 3px solid rgba(63,74,103,0.22);
-  padding-bottom: 10px;
-  margin-bottom: 28px;
-}
-
-/* ===== PROJECT GALLERY POLISH ===== */
+/* =========================
+   PROJECT GALLERY POLISH
+   ========================= */
 
 .gallery-item img{
-  border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.10);
+  box-shadow: 0 10px 26px rgba(0,0,0,0.45);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
 }
 
 .gallery-item:hover img{
-  transform: translateY(-4px);
-  box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+  transform: translateY(-5px);
+  box-shadow: 0 16px 38px rgba(0,0,0,0.55);
+  border-color: rgba(24,195,166,0.35);
 }
 
 .gallery-item p{
   margin-top: 10px;
-  font-weight: 500;
+  font-weight: 600;
+  color: rgba(233,237,245,0.88);
   text-align: center;
 }
 
+/* Muted text */
+em, .text-muted{
+  color: var(--muted) !important;
+}
+
+/* Optional: make horizontal rules look nice on dark */
+hr{
+  border-color: rgba(255,255,255,0.12);
+  opacity: 1;
+}
 
 
 
