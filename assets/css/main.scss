@@ -8,75 +8,66 @@ $color_scheme: '{{ site.color_scheme | default: "custom" }}';
 @import "custom";
 
 /* =========================
-   CARBON TWILL THEME (clean + lighter)
-   - real carbon weave feel
-   - no Bootstrap blue glows
-   - premium light content card
+   APPLE-LIKE CARBON THEME (subtle, clean, premium)
+   - no harsh carbon border frames
+   - no Bootstrap blue outlines
+   - soft, modern surfaces
    ========================= */
 
 :root{
-  --bg-top: #2f363f;
-  --bg-bot: #232a33;
-
-  /* twill tiles */
-  --twill-a: rgba(255,255,255,0.055);
-  --twill-b: rgba(0,0,0,0.22);
-
-  /* sheen */
-  --sheen-strong: rgba(255,255,255,0.20);
-  --sheen-soft: rgba(255,255,255,0.08);
-
-  /* bars */
-  --bar: #12161c;
-  --bar-text: rgba(255,255,255,0.82);
-  --bar-strong: rgba(255,255,255,0.96);
-
-  /* card */
-  --card-border: rgba(0,0,0,0.10);
-
-  /* text */
+  --bg: #f3f4f6;            /* light neutral */
+  --bg2: #eef1f4;           /* slight depth */
   --text: #0f172a;
-  --muted: rgba(15,23,42,0.72);
+  --muted: rgba(15,23,42,0.70);
+
+  --nav: rgba(17, 24, 39, 0.92);     /* charcoal */
+  --navText: rgba(255,255,255,0.86);
+  --navTextStrong: rgba(255,255,255,0.98);
+
+  --surface: rgba(255,255,255,0.92); /* “paper” */
+  --surface2: rgba(255,255,255,0.86);
+  --border: rgba(15,23,42,0.10);
+
+  --shadow: 0 18px 45px rgba(15,23,42,0.12);
+  --shadow2: 0 10px 24px rgba(15,23,42,0.10);
 }
 
-html, body{ height:100%; }
+html, body { height: 100%; }
 
 body{
   font-family: 'Montserrat', sans-serif;
   color: var(--text);
 
-  /* --- Carbon twill (checker/offset) + gloss --- */
+  /* Subtle carbon weave (VERY low contrast) + soft gradient */
   background:
-    /* big glossy highlight */
-    radial-gradient(900px 650px at 25% 10%, var(--sheen-strong), transparent 55%),
-    radial-gradient(850px 600px at 85% 18%, var(--sheen-soft), transparent 62%),
+    /* soft top light */
+    radial-gradient(900px 650px at 20% 0%, rgba(255,255,255,0.85), transparent 55%),
+    radial-gradient(900px 650px at 80% 10%, rgba(255,255,255,0.55), transparent 60%),
 
-    /* twill tile layer 1 */
+    /* ultra-subtle carbon twill */
     repeating-linear-gradient(
       135deg,
-      var(--twill-a) 0 10px,
+      rgba(15,23,42,0.035) 0 10px,
       transparent 10px 20px
     ),
-    /* twill tile layer 2 (offset look) */
     repeating-linear-gradient(
       45deg,
-      var(--twill-b) 0 10px,
+      rgba(15,23,42,0.020) 0 10px,
       transparent 10px 20px
     ),
 
-    /* subtle vignette */
-    radial-gradient(1200px 900px at 50% 30%, rgba(0,0,0,0.10), rgba(0,0,0,0.35)),
-
-    /* base */
-    linear-gradient(180deg, var(--bg-top), var(--bg-bot));
+    linear-gradient(180deg, var(--bg), var(--bg2));
 }
 
 /* =========================
-   KILL ALL BOOTSTRAP "BLUE" GLOWS
+   REMOVE ALL BOOTSTRAP BLUE OUTLINES / RINGS
    ========================= */
 
-*:focus{ outline:none !important; }
-:focus-visible{ outline:none !important; }
+*:focus,
+*:focus-visible{
+  outline: none !important;
+  box-shadow: none !important;
+}
 
 a:focus, a:active,
 .nav-link:focus, .nav-link:active,
@@ -87,73 +78,113 @@ button:focus, input:focus, textarea:focus, select:focus{
   box-shadow: none !important;
 }
 
-.navbar, header, .navbar *{
+/* Kill any borders Bootstrap adds */
+header, .navbar, .navbar *{
+  border: none !important;
+  outline: none !important;
+}
+
+/* Toggler border (commonly shows as a bright/blue-ish ring) */
+.navbar-toggler{
+  border: 0 !important;
   box-shadow: none !important;
 }
 
 /* =========================
-   NAVBAR (simple, clean)
+   NAVBAR (simple, premium, not messy)
    ========================= */
 
 .navbar{
-  background: var(--bar) !important;
-  border: none !important;
-  box-shadow: 0 10px 26px rgba(0,0,0,0.30) !important;
+  background: var(--nav) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  /* clean depth */
+  box-shadow: 0 10px 26px rgba(0,0,0,0.22) !important;
 }
 
 .navbar .navbar-brand{
-  color: var(--bar-strong) !important;
+  color: var(--navTextStrong) !important;
   font-weight: 700;
   letter-spacing: 0.2px;
 }
 
 .navbar .nav-link{
-  color: var(--bar-text) !important;
+  color: var(--navText) !important;
   font-weight: 600;
+  opacity: 0.95;
 }
 
-.navbar .nav-link:hover,
+.navbar .nav-link:hover{
+  color: var(--navTextStrong) !important;
+  opacity: 1;
+}
+
+/* Active link: clean underline (NO blue) */
 .navbar .nav-link.active{
-  color: var(--bar-strong) !important;
+  color: var(--navTextStrong) !important;
+  text-decoration: none;
+  position: relative;
 }
 
-header{
-  border: none !important;
+.navbar .nav-link.active::after{
+  content: "";
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  bottom: -6px;
+  height: 2px;
+  background: rgba(255,255,255,0.55);
+  border-radius: 999px;
 }
 
 /* =========================
-   MAIN CONTENT: "GLASS" CARD
+   MAIN LAYOUT (smooth, not a harsh white box)
    ========================= */
 
 main.container{
   max-width: 1100px !important;
-  margin: 26px auto 34px auto;
-  padding: 44px 56px;
+  margin: 28px auto 34px auto;
+  padding: 28px 32px;
 
-  background: linear-gradient(180deg, rgba(255,255,255,0.94), rgba(255,255,255,0.90));
-  border: 1px solid var(--card-border);
+  /* “floating” surface, but blended (not stark) */
+  background: linear-gradient(180deg, var(--surface), var(--surface2));
+  border: 1px solid var(--border);
   border-radius: 18px;
 
-  box-shadow:
-    0 22px 50px rgba(0,0,0,0.26),
-    inset 0 1px 0 rgba(255,255,255,0.55);
+  box-shadow: var(--shadow);
+}
+
+/* Reduce “too much white” by keeping content closer to top */
+main.container > :first-child{
+  margin-top: 0 !important;
 }
 
 @media (max-width: 768px){
   main.container{
     max-width: 100% !important;
     margin: 16px auto 22px auto;
-    padding: 22px 18px;
+    padding: 18px 16px;
     border-radius: 14px;
+    box-shadow: var(--shadow2);
   }
 }
 
-/* Typography */
+/* Override Bootstrap container width everywhere */
+.container{
+  max-width: 1100px !important;
+}
+
+/* =========================
+   TYPOGRAPHY (clean, modern)
+   ========================= */
+
 main.container h1,
 main.container h2,
 main.container h3{
   color: var(--text);
   font-weight: 800;
+  letter-spacing: -0.2px;
 }
 
 main.container p{
@@ -163,14 +194,14 @@ main.container p{
 
 main.container h2{
   margin-top: 22px;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
   padding-bottom: 10px;
-  border-bottom: 2px solid rgba(15,23,42,0.10);
+  border-bottom: 1px solid rgba(15,23,42,0.10);
 }
 
-/* Links */
+/* Links (subtle, not loud) */
 main.container a{
-  color: #0f172a;
+  color: rgba(15,23,42,0.90);
   text-decoration: underline;
   text-underline-offset: 3px;
   text-decoration-color: rgba(15,23,42,0.20);
@@ -182,39 +213,44 @@ main.container a:hover{
 em, .text-muted{ color: var(--muted) !important; }
 
 /* =========================
-   PROJECT THUMBNAILS (more premium)
+   PROJECT THUMBNAILS (Apple-ish cards)
    ========================= */
 
+.gallery-item{
+  text-decoration: none !important;
+}
+
 .gallery-item img{
-  border-radius: 12px;
-  border: 1px solid rgba(0,0,0,0.10);
-  box-shadow: 0 14px 28px rgba(0,0,0,0.16);
+  border-radius: 14px;
+  border: 1px solid rgba(15,23,42,0.10);
+  box-shadow: 0 14px 28px rgba(15,23,42,0.10);
   transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
 
 .gallery-item:hover img{
   transform: translateY(-3px);
-  box-shadow: 0 18px 36px rgba(0,0,0,0.20);
+  box-shadow: 0 18px 36px rgba(15,23,42,0.14);
 }
 
 .gallery-item p{
   margin-top: 10px;
   font-weight: 600;
   text-align: center;
-  color: rgba(15,23,42,0.86);
+  color: rgba(15,23,42,0.82);
 }
 
 /* =========================
-   FOOTER
+   FOOTER (simple + clean)
    ========================= */
 
 footer.footer{
-  background: var(--bar) !important;
+  background: var(--nav) !important;
+  color: var(--navText) !important;
   border: none !important;
   padding: 18px 0;
-  color: var(--bar-text);
-  box-shadow: 0 -10px 26px rgba(0,0,0,0.25);
+  box-shadow: 0 -10px 26px rgba(0,0,0,0.18);
 }
+
 
 
 
