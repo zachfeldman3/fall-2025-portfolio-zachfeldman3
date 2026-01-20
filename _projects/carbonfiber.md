@@ -25,7 +25,7 @@ Once a CNC-machined mold was assembled, our standard workflow involved repairing
 
   <!-- Image 2 -->
   <div style="text-align:center; max-width:45%;">
-    <img src="{{ '/assets/images/sidepartmold2.png' | relative_url }}"
+    <img src="{{ '/assets/images/sidepartmoldspray.png' | relative_url }}"
          style="max-width:100%; max-height:260px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
     <p style="margin-top:10px; font-style:italic; color:#555;">
       Mold Sprayed with Duratec Primer
