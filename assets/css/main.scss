@@ -8,133 +8,121 @@ $color_scheme: '{{ site.color_scheme }}';
 @import "custom";
 
 /* =========================
-   CARBON FIBER THEME
+   CLEAN CARBON FIBER THEME
+   - More defined weave
+   - Simpler navbar
+   - Lighter overall
    ========================= */
 
-/* Carbon background: a layered CSS weave (no images needed) */
 :root{
-  --bg-0: #07090d;
-  --bg-1: #0b0f16;
-  --card: rgba(18, 22, 30, 0.86);
-  --card-border: rgba(255,255,255,0.09);
-  --card-glow: rgba(0,0,0,0.45);
+  /* Lighter carbon background */
+  --bg0: #151a22;
+  --bg1: #1b2230;
 
-  --nav: rgba(7, 9, 13, 0.92);
-  --nav-border: rgba(255,255,255,0.10);
+  /* Content card (lighter than before) */
+  --card: rgba(255,255,255,0.92);
+  --card-border: rgba(0,0,0,0.08);
 
-  --text: #e9edf5;
-  --muted: rgba(233,237,245,0.70);
+  /* Text on light card */
+  --text: #111827;
+  --muted: rgba(17,24,39,0.72);
 
-  /* Accent: “composite resin / aerospace” vibe */
-  --accent: #18c3a6;   /* change this if you want lime/red/etc */
-  --accent-soft: rgba(24,195,166,0.20);
+  /* Simple neutral navbar/footer (no “messy blue”) */
+  --bar: #0f141c;
+  --bar-text: rgba(255,255,255,0.86);
+  --bar-text-strong: rgba(255,255,255,0.96);
 }
 
-html, body{
-  height: 100%;
-}
+html, body { height: 100%; }
 
 body{
   font-family: 'Montserrat', sans-serif;
-  color: var(--text);
 
-  /* Carbon fiber weave background */
+  /* More defined carbon weave (two crisp layers + base) */
   background:
-    /* subtle top spotlight */
-    radial-gradient(1200px 700px at 50% -10%, rgba(24,195,166,0.18), transparent 60%),
-    radial-gradient(900px 500px at 10% 0%, rgba(255,255,255,0.06), transparent 55%),
-
-    /* weave layer 1 */
+    /* weave highlight */
     repeating-linear-gradient(
       135deg,
-      rgba(255,255,255,0.045) 0px,
-      rgba(255,255,255,0.045) 2px,
+      rgba(255,255,255,0.10) 0px,
+      rgba(255,255,255,0.10) 2px,
       transparent 2px,
-      transparent 10px
+      transparent 12px
     ),
-    /* weave layer 2 */
+    /* weave shadow */
     repeating-linear-gradient(
       45deg,
-      rgba(0,0,0,0.45) 0px,
-      rgba(0,0,0,0.45) 2px,
+      rgba(0,0,0,0.26) 0px,
+      rgba(0,0,0,0.26) 2px,
       transparent 2px,
-      transparent 10px
+      transparent 12px
     ),
+    /* subtle diagonal sheen */
+    linear-gradient(135deg, rgba(255,255,255,0.06), transparent 55%),
+    /* base */
+    linear-gradient(180deg, var(--bg1), var(--bg0));
 
-    /* base gradient */
-    linear-gradient(180deg, var(--bg-1), var(--bg-0));
+  color: var(--text);
 }
 
-/* Links */
+/* Links inside content card */
 a{
-  color: var(--accent);
-  text-decoration: none;
+  color: #111827;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(17,24,39,0.25);
 }
 a:hover{
-  color: #6df1dd;
-  text-decoration: none;
+  text-decoration-color: rgba(17,24,39,0.55);
 }
 
 /* =========================
-   NAVBAR
+   NAVBAR (simple + clean)
    ========================= */
 
 .navbar{
-  background: var(--nav) !important;
-  border-bottom: 1px solid var(--nav-border);
-  backdrop-filter: blur(10px);
+  background: var(--bar) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.10);
+  backdrop-filter: none; /* keep it simple */
 }
 
 .navbar .navbar-brand{
+  color: var(--bar-text-strong) !important;
   font-weight: 700;
   letter-spacing: 0.2px;
+  text-decoration: none;
 }
 
 .navbar .nav-link{
-  color: rgba(233,237,245,0.78) !important;
+  color: var(--bar-text) !important;
   font-weight: 600;
+  text-decoration: none;
 }
 
 .navbar .nav-link:hover{
-  color: var(--text) !important;
+  color: var(--bar-text-strong) !important;
 }
 
+/* Minimal active state: just bold + brighter (no underline bar) */
 .navbar .nav-link.active{
-  color: var(--text) !important;
-  position: relative;
-}
-.navbar .nav-link.active::after{
-  content:"";
-  position:absolute;
-  left: 10px;
-  right: 10px;
-  bottom: 6px;
-  height: 2px;
-  background: var(--accent);
-  border-radius: 999px;
-  opacity: 0.95;
+  color: var(--bar-text-strong) !important;
+  font-weight: 700;
 }
 
 /* =========================
-   MAIN CONTENT “CARD”
+   MAIN CONTENT CARD (lighter)
    ========================= */
 
 main.container{
   max-width: 1200px !important;
 
-  /* Dark card (not white) */
   background: var(--card);
   border: 1px solid var(--card-border);
-  border-radius: 20px;
+  border-radius: 18px;
 
   margin: 34px auto;
   padding: 44px 60px;
 
-  box-shadow:
-    0 18px 40px rgba(0,0,0,0.45),
-    0 1px 0 rgba(255,255,255,0.04) inset;
-
-  backdrop-filter: blur(14px);
+  box-shadow: 0 14px 34px rgba(0,0,0,0.28);
 }
 
 /* Mobile */
@@ -143,84 +131,72 @@ main.container{
     max-width: 100% !important;
     margin: 18px auto;
     padding: 22px 18px;
-    border-radius: 16px;
-    backdrop-filter: blur(10px);
+    border-radius: 14px;
   }
 }
 
-/* Typography */
-main.container h1, main.container h2, main.container h3{
+/* Typography inside card */
+main.container h1,
+main.container h2,
+main.container h3{
   color: var(--text);
   font-weight: 800;
 }
 
 main.container p{
-  color: rgba(233,237,245,0.86);
+  color: rgba(17,24,39,0.86);
   line-height: 1.65;
 }
 
-/* Section headers (clean + carbon vibe) */
+/* Simple section header style (no color “mess”) */
 main.container h2{
-  margin-top: 20px;
-  margin-bottom: 22px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid rgba(255,255,255,0.12);
-}
-
-main.container h2::after{
-  content:"";
-  display:block;
-  width: 90px;
-  height: 3px;
-  margin-top: 12px;
-  background: linear-gradient(90deg, var(--accent), transparent);
-  border-radius: 999px;
+  margin-top: 22px;
+  margin-bottom: 18px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(17,24,39,0.10);
 }
 
 /* =========================
-   FOOTER
+   FOOTER (simple + clean)
    ========================= */
 
 footer.footer{
-  background: var(--nav) !important;
-  border-top: 1px solid var(--nav-border);
+  background: var(--bar) !important;
+  border-top: 1px solid rgba(255,255,255,0.10);
   padding: 18px 0;
   margin-top: 40px;
-  color: rgba(233,237,245,0.75);
+  color: var(--bar-text);
 }
 
 /* =========================
-   PROJECT GALLERY POLISH
+   PROJECT GALLERY (clean polish)
    ========================= */
 
 .gallery-item img{
-  border-radius: 14px;
-  border: 1px solid rgba(255,255,255,0.10);
-  box-shadow: 0 10px 26px rgba(0,0,0,0.45);
-  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.10);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.16);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
 
 .gallery-item:hover img{
-  transform: translateY(-5px);
-  box-shadow: 0 16px 38px rgba(0,0,0,0.55);
-  border-color: rgba(24,195,166,0.35);
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.22);
 }
 
 .gallery-item p{
   margin-top: 10px;
   font-weight: 600;
-  color: rgba(233,237,245,0.88);
   text-align: center;
+  color: rgba(17,24,39,0.88);
 }
 
-/* Muted text */
 em, .text-muted{
   color: var(--muted) !important;
 }
 
-/* Optional: make horizontal rules look nice on dark */
 hr{
-  border-color: rgba(255,255,255,0.12);
+  border-color: rgba(17,24,39,0.12);
   opacity: 1;
 }
 
