@@ -1,5 +1,4 @@
 ---
-# Jekyll front matter (required)
 ---
 
 $color_scheme: '{{ site.color_scheme }}';
@@ -8,29 +7,38 @@ $color_scheme: '{{ site.color_scheme }}';
 @import "custom";
 
 /* =========================
-   CLEAN CARBON FIBER THEME
-   - More defined weave
-   - Simpler navbar
-   - Lighter overall
+   LIGHT + GLOSSY CARBON THEME
+   - brighter overall
+   - more defined weave
+   - glossy sheen
+   - remove blue outlines
    ========================= */
 
 :root{
-  /* Lighter carbon background */
-  --bg0: #151a22;
-  --bg1: #1b2230;
+  /* Carbon base (LIGHTER than before) */
+  --carbon-0: #2a2f36;   /* top */
+  --carbon-1: #1f242b;   /* bottom */
 
-  /* Content card (lighter than before) */
-  --card: rgba(255,255,255,0.92);
+  /* Weave lines (more defined) */
+  --weave-light: rgba(255,255,255,0.10);
+  --weave-dark:  rgba(0,0,0,0.22);
+
+  /* Gloss sheen */
+  --sheen-1: rgba(255,255,255,0.18);
+  --sheen-2: rgba(255,255,255,0.06);
+
+  /* Navbar/footer (simple, no blue) */
+  --bar: #12161c;
+  --bar-text: rgba(255,255,255,0.86);
+  --bar-strong: rgba(255,255,255,0.96);
+
+  /* Content card (LIGHT) */
+  --card: rgba(255,255,255,0.94);
   --card-border: rgba(0,0,0,0.08);
 
-  /* Text on light card */
-  --text: #111827;
-  --muted: rgba(17,24,39,0.72);
-
-  /* Simple neutral navbar/footer (no “messy blue”) */
-  --bar: #0f141c;
-  --bar-text: rgba(255,255,255,0.86);
-  --bar-text-strong: rgba(255,255,255,0.96);
+  /* Text */
+  --text: #0f172a;
+  --muted: rgba(15,23,42,0.70);
 }
 
 html, body { height: 100%; }
@@ -38,41 +46,53 @@ html, body { height: 100%; }
 body{
   font-family: 'Montserrat', sans-serif;
 
-  /* More defined carbon weave (two crisp layers + base) */
+  /* LIGHTER + more defined weave + gloss */
   background:
+    /* glossy sweep (top-left to mid) */
+    radial-gradient(900px 600px at 20% 10%, var(--sheen-1), transparent 55%),
+
+    /* glossy sweep (top-right) */
+    radial-gradient(700px 500px at 85% 15%, var(--sheen-2), transparent 60%),
+
     /* weave highlight */
     repeating-linear-gradient(
       135deg,
-      rgba(255,255,255,0.10) 0px,
-      rgba(255,255,255,0.10) 2px,
+      var(--weave-light) 0px,
+      var(--weave-light) 2px,
       transparent 2px,
       transparent 12px
     ),
+
     /* weave shadow */
     repeating-linear-gradient(
       45deg,
-      rgba(0,0,0,0.26) 0px,
-      rgba(0,0,0,0.26) 2px,
+      var(--weave-dark) 0px,
+      var(--weave-dark) 2px,
       transparent 2px,
       transparent 12px
     ),
-    /* subtle diagonal sheen */
-    linear-gradient(135deg, rgba(255,255,255,0.06), transparent 55%),
+
     /* base */
-    linear-gradient(180deg, var(--bg1), var(--bg0));
+    linear-gradient(180deg, var(--carbon-0), var(--carbon-1));
 
   color: var(--text);
 }
 
-/* Links inside content card */
-a{
-  color: #111827;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  text-decoration-color: rgba(17,24,39,0.25);
+/* Kill the ugly Bootstrap blue outlines / glows everywhere */
+:focus { outline: none !important; }
+*:focus { outline: none !important; }
+.btn:focus, .btn:active,
+.navbar-toggler:focus,
+.nav-link:focus,
+a:focus,
+.form-control:focus{
+  outline: none !important;
+  box-shadow: none !important;
 }
-a:hover{
-  text-decoration-color: rgba(17,24,39,0.55);
+
+/* Make Bootstrap “active” not add weird effects */
+.navbar *{
+  box-shadow: none !important;
 }
 
 /* =========================
@@ -81,15 +101,15 @@ a:hover{
 
 .navbar{
   background: var(--bar) !important;
-  border-bottom: 1px solid rgba(255,255,255,0.10);
-  backdrop-filter: none; /* keep it simple */
+  border: none !important;            /* remove blue rim possibility */
+  box-shadow: 0 6px 20px rgba(0,0,0,0.28);
 }
 
 .navbar .navbar-brand{
-  color: var(--bar-text-strong) !important;
+  color: var(--bar-strong) !important;
   font-weight: 700;
-  letter-spacing: 0.2px;
   text-decoration: none;
+  letter-spacing: 0.2px;
 }
 
 .navbar .nav-link{
@@ -99,12 +119,11 @@ a:hover{
 }
 
 .navbar .nav-link:hover{
-  color: var(--bar-text-strong) !important;
+  color: var(--bar-strong) !important;
 }
 
-/* Minimal active state: just bold + brighter (no underline bar) */
 .navbar .nav-link.active{
-  color: var(--bar-text-strong) !important;
+  color: var(--bar-strong) !important;
   font-weight: 700;
 }
 
@@ -113,92 +132,22 @@ a:hover{
    ========================= */
 
 main.container{
-  max-width: 1200px !important;
+  max-width: 1100px !important;
 
   background: var(--card);
   border: 1px solid var(--card-border);
   border-radius: 18px;
 
-  margin: 34px auto;
-  padding: 44px 60px;
+  /* tighter top spacing so it doesn’t feel “sunken” */
+  margin: 28px auto 34px auto;
+  padding: 44px 56px;
 
-  box-shadow: 0 14px 34px rgba(0,0,0,0.28);
+  /* lighter shadow (less “dark blob”) */
+  box-shadow: 0 16px 36px rgba(0,0,0,0.22);
 }
 
-/* Mobile */
-@media (max-width: 768px) {
-  main.container{
-    max-width: 100% !important;
-    margin: 18px auto;
-    padding: 22px 18px;
-    border-radius: 14px;
-  }
-}
+@media (max-w
 
-/* Typography inside card */
-main.container h1,
-main.container h2,
-main.container h3{
-  color: var(--text);
-  font-weight: 800;
-}
-
-main.container p{
-  color: rgba(17,24,39,0.86);
-  line-height: 1.65;
-}
-
-/* Simple section header style (no color “mess”) */
-main.container h2{
-  margin-top: 22px;
-  margin-bottom: 18px;
-  padding-bottom: 10px;
-  border-bottom: 2px solid rgba(17,24,39,0.10);
-}
-
-/* =========================
-   FOOTER (simple + clean)
-   ========================= */
-
-footer.footer{
-  background: var(--bar) !important;
-  border-top: 1px solid rgba(255,255,255,0.10);
-  padding: 18px 0;
-  margin-top: 40px;
-  color: var(--bar-text);
-}
-
-/* =========================
-   PROJECT GALLERY (clean polish)
-   ========================= */
-
-.gallery-item img{
-  border-radius: 12px;
-  border: 1px solid rgba(0,0,0,0.10);
-  box-shadow: 0 10px 22px rgba(0,0,0,0.16);
-  transition: transform 0.18s ease, box-shadow 0.18s ease;
-}
-
-.gallery-item:hover img{
-  transform: translateY(-4px);
-  box-shadow: 0 14px 28px rgba(0,0,0,0.22);
-}
-
-.gallery-item p{
-  margin-top: 10px;
-  font-weight: 600;
-  text-align: center;
-  color: rgba(17,24,39,0.88);
-}
-
-em, .text-muted{
-  color: var(--muted) !important;
-}
-
-hr{
-  border-color: rgba(17,24,39,0.12);
-  opacity: 1;
-}
 
 
 
