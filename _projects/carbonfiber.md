@@ -54,6 +54,18 @@ I also introduced the use of pneumatic sanding tools at higher grits. While powe
 
 Finally, I investigated whether we could stop sanding at a lower grit while still achieving acceptable layup release. Since the tactile difference between 1000- and 2000-grit finishes is minimal, I performed a trial layup on a mold sanded only to 1000 grit and followed by wool buffing with a heavy-cut compound and foam buffing with a fine polish. However, the part exhibited poor release and excessive adhesion to the mold, indicating that the surface roughness was still too high. Based on this result, we retained sanding to 2000 grit as a necessary step for reliable release performance.
 
+<div style="display:flex; gap:40px; justify-content:center; align-items:flex-start; margin:40px 0; flex-wrap:wrap;">
+
+  <!-- Image 1 -->
+  <div style="text-align:center; max-width:45%;">
+    <img src="{{ '/assets/images/badrelease.png' | relative_url }}"
+         style="max-width:100%; max-height:400px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
+    <p style="margin-top:10px; font-style:italic; color:#555;">
+      Bad Release On Test Piece Sanded To 1000 Grit
+    </p>
+  </div>
+  </div>
+
 # Wet Layup 
 
 Within Cornell Electric Vehicles (CEV), we use wet layup manufacturing for smaller, non-structural composite components. While wet layups generally produce reduced mechanical performance compared to our vacuum infusion parts, they are well-suited for low-load components and offer greater flexibility for complex geometries and large molds. Many of our “small” parts are still physically large, so we select an extra-slow-curing epoxy system to provide sufficient working time during layup. A representative application of this process is the vehicle side panels, which experience minimal structural loading.
