@@ -19,7 +19,7 @@ Once a CNC-machined mold was assembled, our standard workflow involved repairing
     <img src="{{ '/assets/images/sidepartmold2.png' | relative_url }}"
          style="max-width:100%; max-height:350px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
     <p style="margin-top:10px; font-style:italic; color:#555;">
-      Fully Assembled Mold
+      Fully Assembled Side Part Mold
     </p>
   </div>
 
@@ -46,7 +46,7 @@ To improve this, I implemented the use of a dry guide coat—a fine powder that 
     <img src="{{ '/assets/images/moldcoat.png' | relative_url }}"
          style="max-width:100%; max-height:400px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
     <p style="margin-top:10px; font-style:italic; color:#555;">
-      Fully Assembled Mold
+      Mold Coated in Orange Dry Guide Coat
     </p>
   </div>
 
