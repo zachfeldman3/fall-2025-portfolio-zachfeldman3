@@ -12,8 +12,8 @@ When I first joined the team, I noticed that although our composite layups were 
 
 Once a CNC-machined mold was assembled, our standard workflow involved repairing surface defects with Bondo, hand-sanding up to 400 grit (to avoid the risk of oversanding with power tools), and then spraying Duratec surface primer to achieve a mirror finish prior to layup. After researching industry practices, I found that many groups successfully applied Duratec over lower grit finishes. I tested this by spraying Duratec on a mold sanded only to 180 grit and found that it produced better adhesion and a more uniform primer layer. This change was adopted into our standard process and saves up to six hours of hand sanding per mold, depending on size.
 
-<a href="https://zachfeldman3.github.io/fall-2025-portfolio-zachfeldman3/assets/images/TorqueWrench+Drawing.pdf" target="_blank">
-  <img src="https://zachfeldman3.github.io/fall-2025-portfolio-zachfeldman3/assets/images/TorqueWrench+Drawing.pdf"
+<a href="https://zachfeldman3.github.io/fall-2025-portfolio-zachfeldman3/assets/images/sidepartmold.png" target="_blank">
+  <img src="https://zachfeldman3.github.io/fall-2025-portfolio-zachfeldman3/assets/images/sidepartmold.png"
        alt="Engineering Drawing Preview"
        style="max-width: 90%; height: auto; display: block; margin: auto;">
 </a>
