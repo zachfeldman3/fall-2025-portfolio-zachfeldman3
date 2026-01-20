@@ -1,255 +1,95 @@
 ---
----
+# this ensures Jekyll reads the file to be transformed into CSS later
+# only Main files contain this front matter, not partials.
+--- 
 
-/* Some templates expect this var to exist inside _sass/custom.scss */
-$color_scheme: '{{ site.color_scheme | default: "custom" }}';
+$color_scheme: '{{ site.color_scheme }}';
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Merriweather:wght@400;700&display=swap');
 @import "custom";
 
-/* =========================
-   APPLE-LIKE CARBON THEME (subtle, clean, premium)
-   - no harsh carbon border frames
-   - no Bootstrap blue outlines
-   - soft, modern surfaces
-   ========================= */
+/* ===== COLOR THEME ===== */
 
 :root{
-  --bg: #f3f4f6;            /* light neutral */
-  --bg2: #eef1f4;           /* slight depth */
-  --text: #0f172a;
-  --muted: rgba(15,23,42,0.70);
-
-  --nav: rgba(17, 24, 39, 0.92);     /* charcoal */
-  --navText: rgba(255,255,255,0.86);
-  --navTextStrong: rgba(255,255,255,0.98);
-
-  --surface: rgba(255,255,255,0.92); /* “paper” */
-  --surface2: rgba(255,255,255,0.86);
-  --border: rgba(15,23,42,0.10);
-
-  --shadow: 0 18px 45px rgba(15,23,42,0.12);
-  --shadow2: 0 10px 24px rgba(15,23,42,0.10);
+  --bg: #f2f4f8;        /* page background */
+  --card: #ffffff;    /* main content card */
+  --nav: #3f4a67;     /* navbar + footer */
+  --text: #1f2937;    /* main text */
+  --muted: #6b7280;
 }
 
-html, body { height: 100%; }
+/* ===== GLOBAL PAGE BACKGROUND ===== */
 
 body{
-  font-family: 'Montserrat', sans-serif;
+  background: var(--bg);
   color: var(--text);
-
-  /* Subtle carbon weave (VERY low contrast) + soft gradient */
-  background:
-    /* soft top light */
-    radial-gradient(900px 650px at 20% 0%, rgba(255,255,255,0.85), transparent 55%),
-    radial-gradient(900px 650px at 80% 10%, rgba(255,255,255,0.55), transparent 60%),
-
-    /* ultra-subtle carbon twill */
-    repeating-linear-gradient(
-      135deg,
-      rgba(15,23,42,0.035) 0 10px,
-      transparent 10px 20px
-    ),
-    repeating-linear-gradient(
-      45deg,
-      rgba(15,23,42,0.020) 0 10px,
-      transparent 10px 20px
-    ),
-
-    linear-gradient(180deg, var(--bg), var(--bg2));
+  font-family: 'Montserrat', sans-serif;
 }
 
-/* =========================
-   REMOVE ALL BOOTSTRAP BLUE OUTLINES / RINGS
-   ========================= */
-
-*:focus,
-*:focus-visible{
-  outline: none !important;
-  box-shadow: none !important;
-}
-
-a:focus, a:active,
-.nav-link:focus, .nav-link:active,
-.navbar-toggler:focus,
-.btn:focus, .btn:active,
-button:focus, input:focus, textarea:focus, select:focus{
-  outline: none !important;
-  box-shadow: none !important;
-}
-
-/* Kill any borders Bootstrap adds */
-header, .navbar, .navbar *{
-  border: none !important;
-  outline: none !important;
-}
-
-/* Toggler border (commonly shows as a bright/blue-ish ring) */
-.navbar-toggler{
-  border: 0 !important;
-  box-shadow: none !important;
-}
-
-/* =========================
-   NAVBAR (simple, premium, not messy)
-   ========================= */
-
-.navbar{
-  background: var(--nav) !important;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-
-  /* clean depth */
-  box-shadow: 0 10px 26px rgba(0,0,0,0.22) !important;
-}
-
-.navbar .navbar-brand{
-  color: var(--navTextStrong) !important;
-  font-weight: 700;
-  letter-spacing: 0.2px;
-}
-
-.navbar .nav-link{
-  color: var(--navText) !important;
-  font-weight: 600;
-  opacity: 0.95;
-}
-
-.navbar .nav-link:hover{
-  color: var(--navTextStrong) !important;
-  opacity: 1;
-}
-
-/* Active link: clean underline (NO blue) */
-.navbar .nav-link.active{
-  color: var(--navTextStrong) !important;
-  text-decoration: none;
-  position: relative;
-}
-
-.navbar .nav-link.active::after{
-  content: "";
-  position: absolute;
-  left: 10%;
-  right: 10%;
-  bottom: -6px;
-  height: 2px;
-  background: rgba(255,255,255,0.55);
-  border-radius: 999px;
-}
-
-/* =========================
-   MAIN LAYOUT (smooth, not a harsh white box)
-   ========================= */
+/* ===== MAIN CONTENT CARD ===== */
 
 main.container{
-  max-width: 1100px !important;
-  margin: 28px auto 34px auto;
-  padding: 28px 32px;
-
-  /* “floating” surface, but blended (not stark) */
-  background: linear-gradient(180deg, var(--surface), var(--surface2));
-  border: 1px solid var(--border);
+  background: var(--card);
+  max-width: 1200px !important;
+  margin: 40px auto;
+  padding: 40px 60px;
   border-radius: 18px;
-
-  box-shadow: var(--shadow);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  font-size: 1.15rem;
 }
 
-/* Reduce “too much white” by keeping content closer to top */
-main.container > :first-child{
-  margin-top: 0 !important;
-}
-
-@media (max-width: 768px){
+/* Mobile layout */
+@media (max-width: 768px) {
   main.container{
     max-width: 100% !important;
-    margin: 16px auto 22px auto;
-    padding: 18px 16px;
+    margin: 18px auto;
+    padding: 22px 18px;
     border-radius: 14px;
-    box-shadow: var(--shadow2);
+    font-size: 1rem;
   }
 }
 
-/* Override Bootstrap container width everywhere */
-.container{
-  max-width: 1100px !important;
+/* ===== NAVBAR ===== */
+
+.navbar{
+  background: var(--nav) !important;
 }
 
-/* =========================
-   TYPOGRAPHY (clean, modern)
-   ========================= */
+/* ===== FOOTER ===== */
 
-main.container h1,
-main.container h2,
-main.container h3{
-  color: var(--text);
-  font-weight: 800;
-  letter-spacing: -0.2px;
+footer.footer{
+  background: var(--nav) !important;
+  padding: 18px 0;
+  margin-top: 40px;
 }
 
-main.container p{
-  color: rgba(15,23,42,0.86);
-  line-height: 1.7;
-}
+/* ===== SECTION HEADINGS ===== */
 
 main.container h2{
-  margin-top: 22px;
-  margin-bottom: 14px;
+  border-bottom: 3px solid rgba(63,74,103,0.22);
   padding-bottom: 10px;
-  border-bottom: 1px solid rgba(15,23,42,0.10);
+  margin-bottom: 28px;
 }
 
-/* Links (subtle, not loud) */
-main.container a{
-  color: rgba(15,23,42,0.90);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  text-decoration-color: rgba(15,23,42,0.20);
-}
-main.container a:hover{
-  text-decoration-color: rgba(15,23,42,0.45);
-}
-
-em, .text-muted{ color: var(--muted) !important; }
-
-/* =========================
-   PROJECT THUMBNAILS (Apple-ish cards)
-   ========================= */
-
-.gallery-item{
-  text-decoration: none !important;
-}
+/* ===== PROJECT GALLERY POLISH ===== */
 
 .gallery-item img{
-  border-radius: 14px;
-  border: 1px solid rgba(15,23,42,0.10);
-  box-shadow: 0 14px 28px rgba(15,23,42,0.10);
-  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .gallery-item:hover img{
-  transform: translateY(-3px);
-  box-shadow: 0 18px 36px rgba(15,23,42,0.14);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.12);
 }
 
 .gallery-item p{
   margin-top: 10px;
-  font-weight: 600;
+  font-weight: 500;
   text-align: center;
-  color: rgba(15,23,42,0.82);
 }
 
-/* =========================
-   FOOTER (simple + clean)
-   ========================= */
-
-footer.footer{
-  background: var(--nav) !important;
-  color: var(--navText) !important;
-  border: none !important;
-  padding: 18px 0;
-  box-shadow: 0 -10px 26px rgba(0,0,0,0.18);
-}
 
 
 
