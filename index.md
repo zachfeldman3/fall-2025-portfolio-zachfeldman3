@@ -1,7 +1,10 @@
 ---
-layout: default
-title: Home
+layout: single
+title: ""
+permalink: /
+classes: wide
 ---
+
 
 <div class="zf-home">
 
