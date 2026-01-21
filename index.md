@@ -29,11 +29,10 @@ permalink: /
   </div>
 
 
-   <div class="zf-grid">
+  <div class="zf-grid">
 
     <a class="zf-tile" href="{{ '/about/' | relative_url }}">
       <h3>Interests</h3>
-      <p class="meta">Advanced manufacturing, composites, additive manufacturing, and product development.</p>
       <div class="zf-tags">
         <span class="zf-tag">Manufacturing</span>
         <span class="zf-tag">Composites</span>
@@ -44,7 +43,6 @@ permalink: /
 
     <a class="zf-tile" href="{{ '/projects/' | relative_url }}">
       <h3>Skills</h3>
-      <p class="meta">CAD, DFM, prototyping, testing, and iteration—focused on building real hardware.</p>
       <div class="zf-tags">
         <span class="zf-tag">CAD</span>
         <span class="zf-tag">DFM</span>
@@ -54,19 +52,17 @@ permalink: /
     </a>
 
     <a class="zf-tile" href="{{ '/projects/' | relative_url }}">
-      <h3>Core Capabilities</h3>
-      <p class="meta">Tooling + fixtures, composite layups (wet + infusion), process development, and execution.</p>
+      <h3>What I’m Doing Now</h3>
       <div class="zf-tags">
-        <span class="zf-tag">Tooling</span>
+        <span class="zf-tag">Cornell EV</span>
+        <span class="zf-tag">Chassis Lead</span>
         <span class="zf-tag">Composites</span>
-        <span class="zf-tag">Process</span>
-        <span class="zf-tag">Execution</span>
+        <span class="zf-tag">Manufacturing</span>
       </div>
     </a>
 
     <a class="zf-tile" href="{{ '/cv/' | relative_url }}">
       <h3>What I’m Looking For</h3>
-      <p class="meta">Hands-on engineering roles where I’m building, learning fast, and shipping tangible results.</p>
       <div class="zf-tags">
         <span class="zf-tag">Hands-on</span>
         <span class="zf-tag">Manufacturing</span>
@@ -76,6 +72,7 @@ permalink: /
     </a>
 
   </div>
+
 
 
   <hr/>
