@@ -7,7 +7,7 @@ permalink: /
 <div class="zf-home">
 
   <div class="zf-hero">
-    <h1 class="zf-title">Zach Feldman
+    <h1 class="zf-title">Zach Feldman</h1>
 
     <p class="zf-subtitle">
       Mechanical Engineering Junior at Cornell University
