@@ -3,6 +3,48 @@ layout: default
 title: Zach Feldman
 ---
 
+---
+layout: default
+title: Home
+permalink: /
+---
+
+<div class="z-hero">
+  <h1 class="z-hero-title">
+    <span class="z-underline">Zach Feldman</span><br/>
+    Manufacturing + Composites + Product Engineering
+  </h1>
+
+  <p class="z-sub">
+    Mechanical Engineering @ Cornell. Chassis Lead on Cornell Electric Vehicles — I build structural composite hardware,
+    design for manufacturing, and ship real parts under real constraints.
+  </p>
+
+  <div class="z-btns">
+    <a class="z-btn primary" href="{{ '/projects/' | relative_url }}">View Projects →</a>
+    <a class="z-btn" href="{{ '/cv/' | relative_url }}">Resume</a>
+    <a class="z-btn" href="{{ '/about/' | relative_url }}">About</a>
+  </div>
+</div>
+
+<div class="z-grid">
+  <a class="z-card" href="{{ '/projects/vacuum-infusion-baseplate/' | relative_url }}">
+    <h3>Vacuum Infused Structural Baseplate</h3>
+    <div class="z-meta">One-sided infusion • Divinycell core • 0/±45/90 • INF-114</div>
+    <div class="z-tags">
+      <span class="z-tag">Composites</span><span class="z-tag">Process</span><span class="z-tag">Leadership</span>
+    </div>
+  </a>
+
+  <a class="z-card" href="{{ '/projects/wet-layup/' | relative_url }}">
+    <h3>Wet Layup Non-Structural Components</h3>
+    <div class="z-meta">Fast iteration • Lightweight parts • Tooling + finish quality</div>
+    <div class="z-tags">
+      <span class="z-tag">Carbon Fiber</span><span class="z-tag">DFM</span><span class="z-tag">Prototyping</span>
+    </div>
+  </a>
+</div>
+
 
 ## About Me
 
