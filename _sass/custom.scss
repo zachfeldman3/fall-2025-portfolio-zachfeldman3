@@ -250,3 +250,94 @@ a:hover{ filter: brightness(1.08); }
 @media (prefers-reduced-motion: reduce){
   *{ animation: none !important; transition: none !important; }
 }
+
+
+
+
+
+
+
+/* =========================
+   Projects grid (no Bootstrap)
+   ========================= */
+
+.zf-page-title{
+  margin: 1.2rem 0 1.0rem;
+  font-size: clamp(2.0rem, 3.4vw, 2.6rem);
+  line-height: 1.1;
+}
+
+.zf-section-title{
+  margin-top: 1.8rem;
+  margin-bottom: 1rem;
+  font-size: clamp(1.45rem, 2.2vw, 1.9rem);
+}
+
+.zf-projects-grid{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2rem;
+  align-items: stretch;
+}
+
+.zf-project-card{
+  display: block;
+  border-radius: var(--r-lg);
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(255,255,255,.05);
+  box-shadow: var(--shadow2);
+  overflow: hidden;
+  text-decoration: none !important;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+
+.zf-project-card:hover{
+  transform: translateY(-3px);
+  border-color: rgba(86,240,255,.35);
+  box-shadow: 0 22px 55px rgba(0,0,0,.55);
+}
+
+.zf-project-media{
+  height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(520px 180px at 18% 10%, rgba(86,240,255,.10), transparent 62%),
+    radial-gradient(520px 180px at 88% 18%, rgba(139,92,246,.10), transparent 62%),
+    rgba(255,255,255,.03);
+  border-bottom: 1px solid rgba(255,255,255,.10);
+}
+
+.zf-project-media img{
+  max-height: 220px;
+  max-width: 92%;
+  height: auto;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.zf-project-body{
+  padding: .9rem 1.0rem 1.05rem;
+}
+
+.zf-project-name{
+  font-family: "Merriweather", Georgia, serif;
+  color: var(--text);
+  font-size: 1.15rem;
+  line-height: 1.25;
+}
+
+.zf-project-sub{
+  margin-top: .35rem;
+  color: var(--muted);
+  font-size: .95rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 980px){
+  .zf-projects-grid{ grid-template-columns: 1fr; }
+  .zf-project-media{ height: 220px; }
+}
+
