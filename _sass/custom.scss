@@ -1,296 +1,275 @@
-/* ===============================
-   Zach — Pro / Dark / “Wow”
-   Paste entire file into custom.css
-   =============================== */
+/* =========================
+   Apple-ish Portfolio Theme
+   Single source of truth.
+   ========================= */
 
-/* ---------- Tokens ---------- */
+/* -------- Theme tokens -------- */
 :root{
-  --bg0:#05060a;
-  --bg1:#070a12;
-  --bg2:#0b1120;
-  --text:#eaf0ff;
-  --muted:rgba(234,240,255,.72);
+  --bg: #f5f6f8;
+  --text: #0f172a;
+  --muted: rgba(15, 23, 42, 0.65);
 
-  /* Accent palette (pick 1-2, these feel “tech / aerospace”) */
-  --a1:#56f0ff;  /* cyan */
-  --a2:#8b5cf6;  /* violet */
-  --a3:#22c55e;  /* green (optional highlight) */
+  --card: rgba(255, 255, 255, 0.80);
+  --border: rgba(15, 23, 42, 0.10);
 
-  --card: rgba(255,255,255,.06);
-  --card2: rgba(255,255,255,.10);
-  --border: rgba(255,255,255,.14);
-  --border2: rgba(86,240,255,.28);
+  --nav: rgba(17, 24, 39, 0.72);
+  --navBorder: rgba(255, 255, 255, 0.12);
 
-  --shadow: 0 24px 80px rgba(0,0,0,.55);
-  --shadow2: 0 14px 38px rgba(0,0,0,.45);
+  --shadow-lg: 0 22px 60px rgba(15, 23, 42, 0.18);
+  --shadow-md: 0 14px 38px rgba(15, 23, 42, 0.12);
+  --shadow-sm: 0 8px 18px rgba(15, 23, 42, 0.10);
 
-  --r-xl: 26px;
-  --r-lg: 18px;
-  --r-md: 12px;
+  --radius-lg: 22px;
+  --radius-md: 14px;
 
-  --max: 1120px;
+  --maxw: 1120px;
 }
 
-/* ---------- Hard reset / base ---------- */
-html { scroll-behavior:smooth; }
+/* -------- Base typography -------- */
 body{
+  background: var(--bg);
+  color: var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  letter-spacing: -0.01em;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Soft “Apple” ambient glow */
+body::before{
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
   background:
-    radial-gradient(900px 520px at 12% 5%, color-mix(in srgb, var(--a1) 18%, transparent), transparent 60%),
-    radial-gradient(780px 460px at 88% 10%, color-mix(in srgb, var(--a2) 18%, transparent), transparent 60%),
-    radial-gradient(700px 420px at 55% 115%, color-mix(in srgb, var(--a1) 10%, transparent), transparent 60%),
-    linear-gradient(180deg, var(--bg0), var(--bg2));
-  color: var(--text);
+    radial-gradient(900px 500px at 20% 5%, rgba(59,130,246,0.10), transparent 60%),
+    radial-gradient(900px 500px at 80% 10%, rgba(99,102,241,0.08), transparent 62%),
+    radial-gradient(900px 520px at 50% 110%, rgba(15,23,42,0.06), transparent 55%);
+  opacity: 0.9;
+  z-index: -1;
 }
 
-/* subtle grid */
-body:before{
-  content:"";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  opacity: .22;
-  background-image:
-    linear-gradient(to right, rgba(255,255,255,.06) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255,255,255,.06) 1px, transparent 1px);
-  background-size: 72px 72px;
-  mask-image: radial-gradient(60% 48% at 50% 10%, black, transparent 70%);
+/* Remove Bootstrap blue focus rings */
+:focus{ outline: none !important; }
+a:focus, button:focus, .navbar-toggler:focus{
+  box-shadow: none !important;
 }
 
-/* film grain */
-body:after{
-  content:"";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  opacity: .055;
-  mix-blend-mode: overlay;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='170' height='170'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='170' height='170' filter='url(%23n)' opacity='.45'/%3E%3C/svg%3E");
-  background-size: 260px 260px;
-}
-
-/* ---------- Layout width ---------- */
-.page__content, .archive, .page, .masthead__inner-wrap, .footer{
-  max-width: var(--max) !important;
-}
-
-/* kill big “white sheet” containers */
-.page, .archive{
-  background: transparent !important;
-}
-.page__inner-wrap, .archive__wrap, .page__content{
-  background: transparent !important;
-}
-
-/* ---------- Typography ---------- */
-body, p, li { line-height: 1.75; }
-h1,h2,h3{
-  letter-spacing: -0.02em;
-  color: var(--text);
-}
-h1{
-  font-size: clamp(2.6rem, 4.8vw, 3.8rem);
-  line-height: 1.05;
-}
-h2{
-  font-size: clamp(1.55rem, 2.6vw, 2.15rem);
-  margin-top: 2.2rem;
-}
-h3{
-  font-size: 1.15rem;
-}
-
-/* better section dividers */
-hr{
-  border: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,.18), transparent);
-  margin: 1.6rem 0;
-}
-
-/* ---------- Links ---------- */
-a{
-  color: color-mix(in srgb, var(--a1) 88%, white);
-  text-decoration: none;
-}
-a:hover{ filter: brightness(1.08); }
-
-/* ---------- Nav / header (glass) ---------- */
-.masthead{
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  background: color-mix(in srgb, var(--bg1) 75%, transparent) !important;
+/* -------- Navbar (clean glass) -------- */
+.navbar{
+  background: var(--nav) !important;
+  border-bottom: 1px solid var(--navBorder);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border-bottom: 1px solid rgba(255,255,255,.10);
 }
-.masthead__inner-wrap{ padding: .85rem 1.1rem; }
-.site-title{
+
+.navbar .navbar-brand{
+  font-family: "Merriweather", serif;
   font-weight: 700;
-  letter-spacing: .02em;
+  letter-spacing: -0.02em;
+  color: rgba(255,255,255,0.92) !important;
 }
-.greedy-nav a{
-  color: var(--text) !important;
-  opacity: .86;
-}
-.greedy-nav a:hover{ opacity: 1; }
-.greedy-nav .visible-links a:before{ display:none !important; }
 
-/* nav “pill” hover */
-.greedy-nav .visible-links li a{
+.navbar .nav-link{
+  color: rgba(255,255,255,0.78) !important;
+  font-weight: 600;
+  padding: 0.65rem 0.9rem;
   border-radius: 999px;
-  padding: .45rem .75rem;
-  transition: background .18s ease, transform .18s ease, opacity .18s ease;
-}
-.greedy-nav .visible-links li a:hover{
-  background: rgba(255,255,255,.08);
-  transform: translateY(-1px);
 }
 
-/* ---------- Main “hero” (works even if you don’t edit HTML) ---------- */
-/* If your homepage has a first h1, we’ll style it like a hero */
-.page__content > h1:first-child{
-  padding: 1.4rem 1.4rem 1.15rem;
-  margin-top: 1.8rem;
-  border-radius: var(--r-xl);
-  border: 1px solid rgba(255,255,255,.14);
-  background:
-    radial-gradient(720px 240px at 16% 10%, color-mix(in srgb, var(--a1) 20%, transparent), transparent 62%),
-    radial-gradient(720px 240px at 86% 18%, color-mix(in srgb, var(--a2) 22%, transparent), transparent 62%),
-    linear-gradient(180deg, rgba(255,255,255,.09), rgba(255,255,255,.05));
-  box-shadow: var(--shadow);
+.navbar .nav-link:hover{
+  color: rgba(255,255,255,0.92) !important;
+  background: rgba(255,255,255,0.08);
+}
+
+.navbar .nav-link.active{
+  color: rgba(255,255,255,0.96) !important;
+  background: rgba(255,255,255,0.12);
+}
+
+/* -------- Main layout surface -------- */
+/* Your default.html currently uses <main class="container"> */
+main.container{
+  max-width: var(--maxw) !important;
+  margin: 26px auto;
+  padding: 34px 44px;
+
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   position: relative;
-  overflow: hidden;
-}
-.page__content > h1:first-child:after{
-  content:"";
-  position:absolute;
-  inset:-2px;
-  pointer-events:none;
-  background:
-    linear-gradient(90deg, transparent, rgba(86,240,255,.10), transparent);
-  transform: translateX(-60%);
-  animation: sheen 6.5s ease-in-out infinite;
-  opacity: .85;
-}
-@keyframes sheen{
-  0%{ transform: translateX(-60%); }
-  55%{ transform: translateX(60%); }
-  100%{ transform: translateX(60%); }
 }
 
-/* ---------- Cards / project tiles (THIS is the big change) ---------- */
-/* Applies to common theme “cards”, and also to plain images + captions */
-.feature__wrapper, .grid__wrapper, .archive__item, .list__item, .card{
-  background: transparent !important;
+/* subtle highlight edge like Apple panels */
+main.container::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-lg);
+  pointer-events: none;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.55), transparent 35%);
+  opacity: 0.55;
 }
 
-/* If your projects are links with images, make them feel like product tiles */
-.page__content a img{
-  border-radius: var(--r-lg);
-  border: 1px solid rgba(255,255,255,.14);
-  box-shadow: var(--shadow2);
-  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease, filter .18s ease;
-}
-.page__content a:hover img{
-  transform: translateY(-3px);
-  border-color: color-mix(in srgb, var(--a1) 40%, rgba(255,255,255,.14));
-  box-shadow: 0 22px 55px rgba(0,0,0,.55);
-  filter: saturate(1.06) contrast(1.02);
+@media (max-width: 768px){
+  main.container{
+    margin: 14px auto;
+    padding: 20px 16px;
+    border-radius: 16px;
+  }
 }
 
-/* If captions are below images, style them like labels */
-.page__content img + em,
-.page__content img + p em{
-  display: inline-block;
-  margin-top: .55rem;
-  padding: .38rem .65rem;
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,.14);
-  background: rgba(255,255,255,.06);
-  color: var(--muted);
-  font-style: normal;
-  font-size: .92rem;
+/* -------- Headings -------- */
+h1, h2, h3, h4, h5, h6{
+  letter-spacing: -0.03em;
 }
 
-/* Make “sections” look like panels, not white rectangles */
-.page__content > h2{
-  display:flex;
-  align-items:center;
-  gap:.65rem;
-}
-.page__content > h2:before{
-  content:"";
-  width: 12px;
-  height: 12px;
-  border-radius: 999px;
-  background: linear-gradient(135deg, var(--a1), var(--a2));
-  box-shadow: 0 0 0 6px rgba(86,240,255,.08);
+h1{
+  font-family: "Merriweather", serif;
+  font-weight: 800;
+  font-size: clamp(1.75rem, 2.2vw, 2.35rem);
+  margin-bottom: 0.6rem;
 }
 
-/* Give any generic “box” containers depth */
-.page__content > div,
-.page__content > section{
-  background: transparent;
+h2{
+  font-family: "Merriweather", serif;
+  font-weight: 800;
+  font-size: clamp(1.25rem, 1.7vw, 1.65rem);
+  margin-top: 1.8rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid rgba(15,23,42,0.10);
 }
 
-/* ---------- Buttons (if theme uses them) ---------- */
-.btn, .button, .btn--primary, .btn--inverse{
-  border-radius: 999px !important;
-  border: 1px solid rgba(255,255,255,.16) !important;
-  background: rgba(255,255,255,.06) !important;
-  color: var(--text) !important;
-  box-shadow: 0 12px 28px rgba(0,0,0,.35);
-  transition: transform .18s ease, background .18s ease, border-color .18s ease, box-shadow .18s ease;
-}
-.btn:hover, .button:hover{
-  transform: translateY(-2px);
-  border-color: color-mix(in srgb, var(--a1) 45%, rgba(255,255,255,.16)) !important;
-  background: rgba(255,255,255,.10) !important;
-  box-shadow: 0 18px 45px rgba(0,0,0,.48);
+p{
+  color: rgba(15,23,42,0.78);
 }
 
-/* ---------- Tables / code blocks for “engineer credibility” ---------- */
-table{
-  border-collapse: separate;
-  border-spacing: 0;
-  border-radius: var(--r-lg);
-  overflow: hidden;
-  border: 1px solid rgba(255,255,255,.14);
-  background: rgba(255,255,255,.05);
-}
-thead th{
-  background: rgba(255,255,255,.08);
+/* -------- Links (clean) -------- */
+a{
   color: var(--text);
+  text-decoration: none;
 }
-tbody td, thead th{
-  border-bottom: 1px solid rgba(255,255,255,.10);
-}
-pre, code{
-  border-radius: var(--r-md);
-}
-pre{
-  border: 1px solid rgba(255,255,255,.14);
-  background: rgba(255,255,255,.05);
+a:hover{
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(15,23,42,0.25);
 }
 
-/* ---------- Footer ---------- */
-.page__footer{
-  background: transparent !important;
-  border-top: 1px solid rgba(255,255,255,.10);
-}
-.page__footer-follow, .page__footer-copyright{
-  color: var(--muted) !important;
+/* -------- Gallery (your Projects page tiles) -------- */
+.gallery-container{
+  display: flex;
+  justify-content: center;
+  margin: auto;
 }
 
-/* ---------- Mobile tweaks ---------- */
-@media (max-width: 900px){
-  .page__content > h1:first-child{ padding: 1.15rem; }
+/* Use flex instead of grid so tiles feel “product-gallery” */
+.project-gallery{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 10px 0;
 }
 
-/* ---------- Reduced motion ---------- */
+.gallery-item{
+  width: 340px;
+  max-width: 100%;
+  padding: 14px 14px 12px;
+
+  border-radius: var(--radius-lg);
+  background: rgba(255,255,255,0.62);
+  border: 1px solid rgba(15,23,42,0.10);
+  box-shadow: var(--shadow-sm);
+
+  transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
+  overflow: hidden;
+}
+
+.gallery-item:hover{
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(59,130,246,0.18);
+}
+
+.gallery-item a{
+  text-decoration: none;
+}
+
+/* Consistent tile image height, no cropping */
+.gallery-item img{
+  display: block;
+  width: 100%;
+  height: 190px;
+  object-fit: contain; /* no crop */
+  background: rgba(15,23,42,0.04);
+  border-radius: var(--radius-md);
+}
+
+/* Caption tight to image */
+.gallery-item p{
+  margin: 10px 0 0;
+  text-align: center;
+  font-weight: 700;
+  color: rgba(15,23,42,0.86);
+  line-height: 1.25;
+  text-wrap: balance;
+}
+
+/* -------- Figures (project pages) -------- */
+figure{
+  margin: 1.2rem auto;
+  text-align: center;
+}
+
+figure img{
+  border-radius: 16px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(15,23,42,0.08);
+}
+
+figcaption{
+  margin-top: 10px;
+  color: rgba(15,23,42,0.62);
+  font-size: 0.95rem;
+}
+
+/* Side-by-side helper */
+.two-up{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin: 1.2rem 0;
+}
+@media (max-width: 768px){
+  .two-up{ grid-template-columns: 1fr; }
+}
+
+/* -------- Footer -------- */
+footer.footer{
+  background: rgba(17,24,39,0.72) !important;
+  border-top: 1px solid rgba(255,255,255,0.10);
+  color: rgba(255,255,255,0.78) !important;
+  padding: 16px 0;
+  margin-top: 26px;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+/* -------- Reduce motion if requested -------- */
 @media (prefers-reduced-motion: reduce){
-  *{ animation: none !important; transition: none !important; }
+  *{
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 
