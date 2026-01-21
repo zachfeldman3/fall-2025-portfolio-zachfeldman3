@@ -1,7 +1,5 @@
 
 ---
-layout: single
-classes: wide
 ---
 
 <div class="zf-home">
