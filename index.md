@@ -6,19 +6,28 @@ permalink: /
 
 <div class="zf-home">
 
-  <div class="zf-hero">
-    <h1 class="zf-title">Zach Feldman</h1>
+    <div class="zf-hero zf-hero-split">
 
-    <p class="zf-subtitle">
-      Mechanical Engineering Junior at Cornell University
-    </p>
+    <div class="zf-hero-text">
+      <h1 class="zf-title">Zach Feldman</h1>
 
-    <div class="zf-actions">
-      <a class="zf-btn primary" href="{{ '/projects/' | relative_url }}">View Projects →</a>
-      <a class="zf-btn" href="{{ '/cv/' | relative_url }}">CV</a>
-      <a class="zf-btn" href="{{ '/about/' | relative_url }}">About</a>
+      <p class="zf-subtitle">
+        Mechanical Engineering Junior at Cornell University
+      </p>
+
+      <div class="zf-actions">
+        <a class="zf-btn primary" href="{{ '/projects/' | relative_url }}">View Projects →</a>
+        <a class="zf-btn" href="{{ '/cv/' | relative_url }}">CV</a>
+        <a class="zf-btn" href="{{ '/about/' | relative_url }}">About</a>
+      </div>
     </div>
+
+    <div class="zf-hero-image">
+      <img src="{{ '/assets/images/zachpfp.jpeg' | relative_url }}" alt="Zach Feldman" />
+    </div>
+
   </div>
+
 
    <div class="zf-grid">
 
