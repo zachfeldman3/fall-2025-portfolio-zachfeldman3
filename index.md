@@ -2,6 +2,7 @@
 layout: default
 title: Zach Feldman
 ---
+
 <div class="z-hero">
   <h1><span class="z-underline">Zach Feldman</span><br/>Manufacturing + Composites + Product Engineering</h1>
   <p class="z-sub">
@@ -33,6 +34,7 @@ title: Zach Feldman
     </div>
   </a>
 </div>
+
 
 
 ## About Me
