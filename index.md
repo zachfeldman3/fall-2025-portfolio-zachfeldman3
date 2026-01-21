@@ -1,9 +1,12 @@
 ---
-layout: single
+layout: splash
 title: ""
 permalink: /
+header:
+  overlay_filter: 0.0
 classes: wide
 ---
+
 
 <div class="zf-home">
 
