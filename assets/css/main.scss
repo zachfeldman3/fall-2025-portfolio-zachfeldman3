@@ -1,95 +1,349 @@
 ---
 # this ensures Jekyll reads the file to be transformed into CSS later
 # only Main files contain this front matter, not partials.
---- 
+---
 
-$color_scheme: '{{ site.color_scheme }}';
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Merriweather:wght@400;700&display=swap');
 @import "custom";
 
-/* ===== COLOR THEME ===== */
+/* =========================
+   Apple-ish Design System
+   ========================= */
 
 :root{
-  --bg: #f2f4f8;        /* page background */
-  --card: #ffffff;    /* main content card */
-  --nav: #3f4a67;     /* navbar + footer */
-  --text: #1f2937;    /* main text */
-  --muted: #6b7280;
+  /* neutrals */
+  --bg: #f5f6f8;
+  --text: #0f172a;
+  --muted: rgba(15, 23, 42, 0.65);
+
+  /* surfaces */
+  --card: rgba(255, 255, 255, 0.78);
+  --cardSolid: #ffffff;
+  --border: rgba(15, 23, 42, 0.10);
+
+  /* nav */
+  --nav: rgba(17, 24, 39, 0.72);
+  --navBorder: rgba(255, 255, 255, 0.12);
+
+  /* accents (very restrained, “Apple”) */
+  --accent: #3b82f6;
+  --accentSoft: rgba(59, 130, 246, 0.12);
+
+  /* shadows */
+  --shadow-lg: 0 22px 60px rgba(15, 23, 42, 0.18);
+  --shadow-md: 0 14px 38px rgba(15, 23, 42, 0.12);
+  --shadow-sm: 0 8px 18px rgba(15, 23, 42, 0.10);
+
+  --radius-lg: 22px;
+  --radius-md: 14px;
+
+  --maxw: 1120px;
 }
 
-/* ===== GLOBAL PAGE BACKGROUND ===== */
-
+/* Typography: SF-like */
 body{
   background: var(--bg);
   color: var(--text);
-  font-family: 'Montserrat', sans-serif;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  letter-spacing: -0.01em;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
-/* ===== MAIN CONTENT CARD ===== */
-
-main.container{
-  background: var(--card);
-  max-width: 1200px !important;
-  margin: 40px auto;
-  padding: 40px 60px;
-  border-radius: 18px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-  font-size: 1.15rem;
+/* Subtle paper + glow (not busy) */
+body::before{
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(900px 500px at 20% 5%, rgba(59,130,246,0.11), transparent 60%),
+    radial-gradient(900px 500px at 80% 10%, rgba(99,102,241,0.09), transparent 62%),
+    radial-gradient(900px 520px at 50% 110%, rgba(15,23,42,0.07), transparent 55%);
+  opacity: 0.9;
+  z-index: -2;
 }
 
-/* Mobile layout */
-@media (max-width: 768px) {
-  main.container{
-    max-width: 100% !important;
-    margin: 18px auto;
-    padding: 22px 18px;
-    border-radius: 14px;
-    font-size: 1rem;
-  }
+/* Extra glow layers from layout */
+.bg-glow{
+  position: fixed;
+  inset: auto;
+  pointer-events: none;
+  filter: blur(70px);
+  opacity: 0.65;
+  z-index: -3;
+}
+.bg-glow-1{
+  width: 520px;
+  height: 520px;
+  left: -140px;
+  top: 120px;
+  background: radial-gradient(circle at 30% 30%, rgba(59,130,246,0.40), transparent 60%);
+}
+.bg-glow-2{
+  width: 560px;
+  height: 560px;
+  right: -180px;
+  top: 160px;
+  background: radial-gradient(circle at 60% 40%, rgba(99,102,241,0.30), transparent 60%);
 }
 
-/* ===== NAVBAR ===== */
+/* Kill “blue outline” everywhere */
+:focus{
+  outline: none !important;
+}
+a:focus, button:focus, .navbar-toggler:focus{
+  box-shadow: none !important;
+}
+
+/* =========================
+   Navbar (glass, sticky, sleek)
+   ========================= */
+
+.site-header{
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
 
 .navbar{
   background: var(--nav) !important;
+  border-bottom: 1px solid var(--navBorder);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 }
 
-/* ===== FOOTER ===== */
-
-footer.footer{
-  background: var(--nav) !important;
-  padding: 18px 0;
-  margin-top: 40px;
+.navbar .navbar-brand{
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: rgba(255,255,255,0.92) !important;
 }
 
-/* ===== SECTION HEADINGS ===== */
+.navbar .nav-link{
+  color: rgba(255,255,255,0.78) !important;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  position: relative;
+  padding: 0.65rem 0.9rem;
+  border-radius: 999px;
+}
+
+.navbar .nav-link:hover{
+  color: rgba(255,255,255,0.92) !important;
+  background: rgba(255,255,255,0.08);
+}
+
+.navbar .nav-link.active{
+  color: rgba(255,255,255,0.96) !important;
+  background: rgba(255,255,255,0.12);
+}
+
+/* =========================
+   Main content card (clean, not plain)
+   ========================= */
+
+main.container.site-main{
+  max-width: var(--maxw) !important;
+  margin: 26px auto;
+  padding: 34px 44px;
+
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Inner “depth” edge like Apple panels */
+main.container.site-main{
+  position: relative;
+}
+main.container.site-main::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-lg);
+  pointer-events: none;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.55), transparent 35%);
+  opacity: 0.55;
+}
+
+/* Mobile */
+@media (max-width: 768px){
+  main.container.site-main{
+    margin: 14px auto;
+    padding: 20px 16px;
+    border-radius: 16px;
+  }
+}
+
+/* =========================
+   Headings (crisp, modern)
+   ========================= */
+
+h1, h2, h3{
+  letter-spacing: -0.03em;
+}
+
+main.container h1{
+  font-weight: 800;
+  font-size: clamp(1.75rem, 2.2vw, 2.35rem);
+  margin-bottom: 0.6rem;
+}
 
 main.container h2{
-  border-bottom: 3px solid rgba(63,74,103,0.22);
-  padding-bottom: 10px;
-  margin-bottom: 28px;
+  font-weight: 800;
+  font-size: clamp(1.25rem, 1.7vw, 1.65rem);
+  margin-top: 1.8rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid rgba(15,23,42,0.10);
 }
 
-/* ===== PROJECT GALLERY POLISH ===== */
-
-.gallery-item img{
-  border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+main.container p{
+  color: rgba(15,23,42,0.78);
+  line-height: 1.7;
 }
 
-.gallery-item:hover img{
+/* Links: clean */
+a{
+  color: var(--text);
+  text-decoration: none;
+}
+a:hover{
+  color: var(--text);
+}
+
+/* =========================
+   Gallery: looks “designed”
+   ========================= */
+
+.project-gallery{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  align-items: flex-start;
+}
+
+.gallery-item{
+  display: block;
+  width: 340px; /* consistent tile width; adjust if you want bigger */
+  max-width: 100%;
+}
+
+/* Tile surface */
+.gallery-item{
+  padding: 14px 14px 12px;
+  border-radius: var(--radius-lg);
+  background: rgba(255,255,255,0.62);
+  border: 1px solid rgba(15,23,42,0.10);
+  box-shadow: var(--shadow-sm);
+  transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
+}
+
+.gallery-item:hover{
   transform: translateY(-4px);
-  box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(59,130,246,0.18);
 }
 
+/* Image “frame” so different aspect ratios still feel uniform */
+.gallery-item img{
+  display: block;
+  width: 100%;
+  height: 190px;         /* same height across tiles */
+  object-fit: contain;   /* NO crop */
+  background: rgba(15,23,42,0.04);
+  border-radius: var(--radius-md);
+}
+
+/* Caption right under image, no weird gaps */
 .gallery-item p{
-  margin-top: 10px;
-  font-weight: 500;
+  margin: 10px 0 0;
+  text-align: center;
+  font-weight: 700;
+  color: rgba(15,23,42,0.86);
+  line-height: 1.25;
+}
+
+/* Optional: make long titles wrap nicely */
+.gallery-item p{
+  text-wrap: balance;
+}
+
+/* =========================
+   Nice “section spacing”
+   ========================= */
+
+hr{
+  border: none;
+  height: 1px;
+  background: rgba(15,23,42,0.10);
+  margin: 1.8rem 0;
+}
+
+/* =========================
+   Images inside project pages (Apple-ish)
+   ========================= */
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+figure{
+  margin: 1.2rem auto;
   text-align: center;
 }
 
+figure img{
+  border-radius: 16px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(15,23,42,0.08);
+}
+
+figcaption{
+  margin-top: 10px;
+  color: rgba(15,23,42,0.62);
+  font-size: 0.95rem;
+}
+
+/* Two images side-by-side helper (if you use it) */
+.two-up{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin: 1.2rem 0;
+}
+@media (max-width: 768px){
+  .two-up{ grid-template-columns: 1fr; }
+}
+
+/* =========================
+   Footer (quiet, premium)
+   ========================= */
+
+footer.footer{
+  background: rgba(17,24,39,0.72) !important;
+  border-top: 1px solid rgba(255,255,255,0.10);
+  color: rgba(255,255,255,0.78) !important;
+  padding: 16px 0;
+  margin-top: 26px;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+/* =========================
+   Motion safety
+   ========================= */
+
+@media (prefers-reduced-motion: reduce){
+  *{
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
 
 
 
