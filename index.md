@@ -1,7 +1,3 @@
----
-layout: default
-title: Zach Feldman
----
 
 ---
 layout: single
