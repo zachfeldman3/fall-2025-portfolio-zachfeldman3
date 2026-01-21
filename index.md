@@ -7,11 +7,10 @@ permalink: /
 <div class="zf-home">
 
   <div class="zf-hero">
-    <h1 class="zf-title">Zach Feldman<br/>Manufacturing + Composites + Product Engineering</h1>
+    <h1 class="zf-title">Zach Feldman
 
     <p class="zf-subtitle">
-      Mechanical Engineering @ Cornell. Chassis Lead on Cornell Electric Vehicles — I build structural composite hardware,
-      design for manufacturing, and ship real parts under real constraints.
+      Mechanical Engineering Junior at Cornell University
     </p>
 
     <div class="zf-actions">
