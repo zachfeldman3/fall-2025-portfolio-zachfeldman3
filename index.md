@@ -20,27 +20,54 @@ permalink: /
     </div>
   </div>
 
-  <div class="zf-grid">
-    <a class="zf-tile" href="{{ '/projects/vacuum-infused-baseplate/' | relative_url }}">
-      <h3>Vacuum Infused Structural Baseplate</h3>
-      <p class="meta">One-sided infusion • Divinycell core • 0/±45/90 • INF-114</p>
+   <div class="zf-grid">
+
+    <a class="zf-tile" href="{{ '/about/' | relative_url }}">
+      <h3>Interests</h3>
+      <p class="meta">Advanced manufacturing, composites, additive manufacturing, and product development.</p>
       <div class="zf-tags">
+        <span class="zf-tag">Manufacturing</span>
         <span class="zf-tag">Composites</span>
-        <span class="zf-tag">Process</span>
-        <span class="zf-tag">Leadership</span>
+        <span class="zf-tag">Additive</span>
+        <span class="zf-tag">Product Design</span>
       </div>
     </a>
 
-    <a class="zf-tile" href="{{ '/projects/wet-layup/' | relative_url }}">
-      <h3>Wet Layup Non-Structural Components</h3>
-      <p class="meta">Fast iteration • Lightweight parts • Tooling + finish quality</p>
+    <a class="zf-tile" href="{{ '/projects/' | relative_url }}">
+      <h3>Skills</h3>
+      <p class="meta">CAD, DFM, prototyping, testing, and iteration—focused on building real hardware.</p>
       <div class="zf-tags">
-        <span class="zf-tag">Carbon Fiber</span>
+        <span class="zf-tag">CAD</span>
         <span class="zf-tag">DFM</span>
         <span class="zf-tag">Prototyping</span>
+        <span class="zf-tag">Testing</span>
       </div>
     </a>
+
+    <a class="zf-tile" href="{{ '/projects/' | relative_url }}">
+      <h3>Core Capabilities</h3>
+      <p class="meta">Tooling + fixtures, composite layups (wet + infusion), process development, and execution.</p>
+      <div class="zf-tags">
+        <span class="zf-tag">Tooling</span>
+        <span class="zf-tag">Composites</span>
+        <span class="zf-tag">Process</span>
+        <span class="zf-tag">Execution</span>
+      </div>
+    </a>
+
+    <a class="zf-tile" href="{{ '/cv/' | relative_url }}">
+      <h3>What I’m Looking For</h3>
+      <p class="meta">Hands-on engineering roles where I’m building, learning fast, and shipping tangible results.</p>
+      <div class="zf-tags">
+        <span class="zf-tag">Hands-on</span>
+        <span class="zf-tag">Manufacturing</span>
+        <span class="zf-tag">R&amp;D</span>
+        <span class="zf-tag">Impact</span>
+      </div>
+    </a>
+
   </div>
+
 
   <hr/>
 
