@@ -701,3 +701,96 @@ footer, .site-footer {
   body::before, body::after { animation: none !important; }
 }
 
+
+
+
+/* =========================================================
+   OVERRIDE LAYER (put at VERY BOTTOM of custom.scss)
+   - Increases specificity so theme CSS can’t easily beat it
+   - Keeps it clean (minimal !important)
+   ========================================================= */
+
+:root {
+  --bg: #060812;
+  --text: rgba(255,255,255,0.92);
+  --muted: rgba(255,255,255,0.65);
+}
+
+/* Force page background + text */
+html body {
+  background: var(--bg) !important;
+  color: var(--text);
+}
+
+/* Theme wrappers that often set background to white */
+html body .page-content,
+html body .wrapper,
+html body main,
+html body .container,
+html body .content,
+html body .post,
+html body .post-content,
+html body .page,
+html body .page__content {
+  background: transparent !important;
+}
+
+/* Cards/projects commonly get overridden by theme “post list” styles */
+html body .card,
+html body .project,
+html body .project-card,
+html body .post-item,
+html body .post-preview,
+html body .collection-item,
+html body li.project,
+html body article.project {
+  border-radius: 22px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03)) !important;
+  border: 1px solid rgba(255,255,255,0.11) !important;
+  box-shadow: 0 16px 50px rgba(0,0,0,0.35) !important;
+  overflow: hidden;
+}
+
+/* Make headings keep the “hero” vibe */
+html body h1,
+html body h2,
+html body h3 {
+  color: rgba(255,255,255,0.94);
+  letter-spacing: -0.03em;
+}
+
+/* Links in many themes get recolored */
+html body a {
+  color: inherit;
+}
+
+/* Sticky header override if theme forces solid background */
+html body header,
+html body .site-header,
+html body .navbar {
+  background: linear-gradient(to bottom, rgba(6, 8, 18, 0.78), rgba(6, 8, 18, 0.55)) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.08) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* If your projects page wrapper exists, force it to look like homepage */
+html body .projects-page .page-hero,
+html body .projects .page-hero,
+html body .projects-page .hero-card,
+html body .projects .hero-card {
+  border-radius: 28px !important;
+  border: 1px solid rgba(255,255,255,0.10) !important;
+  background: linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03)) !important;
+  box-shadow: 0 22px 70px rgba(0,0,0,0.55) !important;
+  overflow: hidden;
+}
+
+/* Optional: if theme sets body to white via !important somewhere */
+@media (prefers-color-scheme: light) {
+  html body {
+    background: var(--bg) !important;
+  }
+}
+
+
