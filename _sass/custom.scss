@@ -294,72 +294,92 @@ h2{ margin-top: 2.0rem; }
 
 
 
-/* ==========================================
-   Projects: cleaner, image-first cards
-   (overrides the previous gallery styling)
-   ========================================== */
+/* =========================================================
+   FORCE: Projects page = image-first tiles (NOT cards)
+   ========================================================= */
 
-/* tighter grid spacing */
+/* 1) Force the layout into a clean grid */
 .project-gallery{
-  gap: 1.15rem !important;
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 1.25rem !important;
+  align-items: start !important;
 }
 
-/* make each project card simpler + smoother */
-.gallery-item{
-  padding: 12px !important;
-  border-radius: 22px !important;
-  background: rgba(255,255,255,.04) !important;
-  border: 1px solid rgba(255,255,255,.10) !important;
-  box-shadow: 0 16px 40px rgba(0,0,0,.35) !important;
-}
-
-/* remove the “inner framed box” look */
-.gallery-item > div:first-child{
-  height: 240px !important;
-  border-radius: 16px !important;
-  border: 0 !important;
+/* 2) Kill any “card” look on the link wrapper */
+a.gallery-item{
   background: transparent !important;
-  overflow: hidden !important;
-  margin-bottom: 10px !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  overflow: visible !important;
+  transform: none !important;
+  filter: none !important;
 }
 
-/* make the image the main thing (full-bleed, fills the box) */
-.gallery-item img{
+/* 3) The image container: just spacing, no framed box */
+a.gallery-item > div:first-child{
+  height: 260px !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 18px !important; /* image radius */
+  overflow: hidden !important;
+  margin: 0 0 10px 0 !important;
+  padding: 0 !important;
+  display: block !important;
+}
+
+/* 4) Image is the hero: full-bleed, fills the container */
+a.gallery-item img{
   width: 100% !important;
   height: 100% !important;
   max-width: none !important;
   max-height: none !important;
   object-fit: cover !important;
-  border-radius: 16px !important;
   display: block !important;
-  filter: saturate(1.04) contrast(1.02);
+
+  border-radius: 18px !important;
+  border: 1px solid rgba(255,255,255,.12) !important;
+  box-shadow: 0 18px 55px rgba(0,0,0,.45) !important;
+
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease, filter .18s ease !important;
 }
 
-/* title: clean, minimal, not oversized */
-.gallery-item p{
-  margin: 8px 2px 2px !important;
+/* 5) Caption: minimal + clean */
+a.gallery-item p{
+  margin: 0 !important;
+  padding: 0 2px !important;
   text-align: left !important;
+
   font-family: "Merriweather", Georgia, serif !important;
   font-size: 1.05rem !important;
   line-height: 1.25 !important;
   color: var(--text) !important;
-  opacity: .95;
+  opacity: .92 !important;
 }
 
-/* hover: subtle, smooth */
-.gallery-item{
-  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease, background .18s ease !important;
-}
-.gallery-item:hover{
-  transform: translateY(-3px) !important;
-  border-color: rgba(86,240,255,.22) !important;
-  box-shadow: 0 22px 55px rgba(0,0,0,.45) !important;
-  background: rgba(255,255,255,.055) !important;
+/* 6) Hover: subtle lift on the IMAGE only (not a card) */
+a.gallery-item:hover{
+  transform: none !important;
 }
 
-/* mobile */
+a.gallery-item:hover img{
+  transform: translateY(-3px) scale(1.01) !important;
+  border-color: rgba(86,240,255,.28) !important;
+  box-shadow: 0 26px 75px rgba(0,0,0,.55) !important;
+  filter: saturate(1.04) contrast(1.02) !important;
+}
+
+/* Mobile */
 @media (max-width: 980px){
-  .gallery-item > div:first-child{ height: 220px !important; }
+  .project-gallery{
+    grid-template-columns: 1fr !important;
+  }
+  a.gallery-item > div:first-child{
+    height: 230px !important;
+  }
 }
+
 
 
