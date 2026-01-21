@@ -1,240 +1,180 @@
-/* =========================
-   ZACH — sleek + wow (minimal)
-   Drop-in overrides for Jekyll/Minimal Mistakes
-   ========================= */
+/* ===============================
+   Zach — Pro / Dark / “Wow”
+   Paste entire file into custom.css
+   =============================== */
 
-/* ---- Theme tokens ---- */
+/* ---------- Tokens ---------- */
 :root{
-  --bg: #070A0F;
-  --bg2:#0B1020;
-  --text:#EAF0FF;
-  --muted: rgba(234,240,255,.72);
+  --bg0:#05060a;
+  --bg1:#070a12;
+  --bg2:#0b1120;
+  --text:#eaf0ff;
+  --muted:rgba(234,240,255,.72);
 
-  /* pick ONE accent. This one feels “CEV-ish” but sleek */
-  --accent:#6AE4FF;
-  --accent2:#8B5CF6;
+  /* Accent palette (pick 1-2, these feel “tech / aerospace”) */
+  --a1:#56f0ff;  /* cyan */
+  --a2:#8b5cf6;  /* violet */
+  --a3:#22c55e;  /* green (optional highlight) */
 
   --card: rgba(255,255,255,.06);
   --card2: rgba(255,255,255,.10);
   --border: rgba(255,255,255,.14);
-  --shadow: 0 18px 60px rgba(0,0,0,.55);
+  --border2: rgba(86,240,255,.28);
 
-  --r-xl: 22px;
-  --r-lg: 16px;
+  --shadow: 0 24px 80px rgba(0,0,0,.55);
+  --shadow2: 0 14px 38px rgba(0,0,0,.45);
+
+  --r-xl: 26px;
+  --r-lg: 18px;
   --r-md: 12px;
 
   --max: 1120px;
 }
 
-/* Light mode (optional) */
-@media (prefers-color-scheme: light){
-  :root{
-    --bg:#F7F8FC;
-    --bg2:#EEF1FA;
-    --text:#0B1220;
-    --muted: rgba(11,18,32,.72);
-    --card: rgba(0,0,0,.04);
-    --card2: rgba(0,0,0,.06);
-    --border: rgba(0,0,0,.10);
-    --shadow: 0 18px 60px rgba(0,0,0,.12);
-  }
-}
-
-/* ---- Global base ---- */
-html { scroll-behavior: smooth; }
+/* ---------- Hard reset / base ---------- */
+html { scroll-behavior:smooth; }
 body{
-  background: radial-gradient(1200px 900px at 15% 0%, color-mix(in srgb, var(--accent) 10%, transparent), transparent 60%),
-              radial-gradient(1000px 800px at 90% 10%, color-mix(in srgb, var(--accent2) 12%, transparent), transparent 55%),
-              linear-gradient(180deg, var(--bg), var(--bg2));
+  background:
+    radial-gradient(900px 520px at 12% 5%, color-mix(in srgb, var(--a1) 18%, transparent), transparent 60%),
+    radial-gradient(780px 460px at 88% 10%, color-mix(in srgb, var(--a2) 18%, transparent), transparent 60%),
+    radial-gradient(700px 420px at 55% 115%, color-mix(in srgb, var(--a1) 10%, transparent), transparent 60%),
+    linear-gradient(180deg, var(--bg0), var(--bg2));
   color: var(--text);
 }
 
-/* subtle grid + noise overlay */
+/* subtle grid */
 body:before{
   content:"";
   position: fixed;
-  inset:0;
-  pointer-events:none;
-  opacity:.30;
+  inset: 0;
+  pointer-events: none;
+  opacity: .22;
   background-image:
     linear-gradient(to right, rgba(255,255,255,.06) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(255,255,255,.06) 1px, transparent 1px);
-  background-size: 64px 64px;
-  mask-image: radial-gradient(60% 45% at 50% 10%, black, transparent 70%);
+  background-size: 72px 72px;
+  mask-image: radial-gradient(60% 48% at 50% 10%, black, transparent 70%);
 }
+
+/* film grain */
 body:after{
   content:"";
   position: fixed;
-  inset:0;
-  pointer-events:none;
-  opacity:.05;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.4'/%3E%3C/svg%3E");
-  background-size: 240px 240px;
+  inset: 0;
+  pointer-events: none;
+  opacity: .055;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='170' height='170'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='170' height='170' filter='url(%23n)' opacity='.45'/%3E%3C/svg%3E");
+  background-size: 260px 260px;
 }
 
-/* keep content width tight & premium */
+/* ---------- Layout width ---------- */
 .page__content, .archive, .page, .masthead__inner-wrap, .footer{
   max-width: var(--max) !important;
 }
-.page__content{
-  font-size: 1.02rem;
-  line-height: 1.75;
+
+/* kill big “white sheet” containers */
+.page, .archive{
+  background: transparent !important;
+}
+.page__inner-wrap, .archive__wrap, .page__content{
+  background: transparent !important;
 }
 
-/* ---- Links / selection ---- */
-a{ color: color-mix(in srgb, var(--accent) 92%, white); text-decoration: none; }
-a:hover{ text-decoration: none; filter: brightness(1.08); }
-::selection{ background: color-mix(in srgb, var(--accent) 35%, transparent); }
+/* ---------- Typography ---------- */
+body, p, li { line-height: 1.75; }
+h1,h2,h3{
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+h1{
+  font-size: clamp(2.6rem, 4.8vw, 3.8rem);
+  line-height: 1.05;
+}
+h2{
+  font-size: clamp(1.55rem, 2.6vw, 2.15rem);
+  margin-top: 2.2rem;
+}
+h3{
+  font-size: 1.15rem;
+}
 
-/* ---- Masthead / nav (glass) ---- */
+/* better section dividers */
+hr{
+  border: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.18), transparent);
+  margin: 1.6rem 0;
+}
+
+/* ---------- Links ---------- */
+a{
+  color: color-mix(in srgb, var(--a1) 88%, white);
+  text-decoration: none;
+}
+a:hover{ filter: brightness(1.08); }
+
+/* ---------- Nav / header (glass) ---------- */
 .masthead{
   position: sticky;
   top: 0;
   z-index: 50;
+  background: color-mix(in srgb, var(--bg1) 75%, transparent) !important;
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  background: color-mix(in srgb, var(--bg) 78%, transparent) !important;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid rgba(255,255,255,.10);
 }
-.masthead__inner-wrap{ padding: .85rem 1.2rem; }
-.greedy-nav a{ color: var(--text) !important; opacity:.92; }
-.greedy-nav a:hover{ opacity:1; }
+.masthead__inner-wrap{ padding: .85rem 1.1rem; }
 .site-title{
+  font-weight: 700;
   letter-spacing: .02em;
-  font-weight: 650;
 }
-
-/* ---- Headings (big, clean, “wow”) ---- */
-h1,h2,h3{
-  letter-spacing:-0.02em;
-}
-h1{ font-size: clamp(2.4rem, 4.8vw, 3.6rem); line-height: 1.05; }
-h2{ font-size: clamp(1.55rem, 2.8vw, 2.1rem); margin-top: 2.2rem; }
-h3{ font-size: 1.2rem; opacity:.96; }
-
-/* gradient underline helper */
-.z-underline{
-  display:inline-block;
-  position:relative;
-}
-.z-underline:after{
-  content:"";
-  position:absolute;
-  left:0; right:0;
-  height:10px;
-  bottom:-6px;
-  border-radius: 999px;
-  background: linear-gradient(90deg, var(--accent), var(--accent2));
-  opacity:.22;
-  filter: blur(.2px);
-}
-
-/* ---- Hero block ---- */
-.z-hero{
-  margin: 2.2rem 0 1.6rem;
-  padding: 1.6rem 1.6rem 1.4rem;
-  border-radius: var(--r-xl);
-  border: 1px solid var(--border);
-  background: linear-gradient(180deg, color-mix(in srgb, var(--card2) 55%, transparent), color-mix(in srgb, var(--card) 70%, transparent));
-  box-shadow: var(--shadow);
-  overflow:hidden;
-  position:relative;
-}
-.z-hero:before{
-  content:"";
-  position:absolute;
-  inset:-1px;
-  background: radial-gradient(700px 280px at 15% 5%, color-mix(in srgb, var(--accent) 22%, transparent), transparent 60%),
-              radial-gradient(600px 260px at 85% 15%, color-mix(in srgb, var(--accent2) 24%, transparent), transparent 60%);
-  opacity:.9;
-  pointer-events:none;
-}
-.z-hero > *{ position:relative; }
-
-.z-sub{
-  color: var(--muted);
-  font-size: 1.05rem;
-  max-width: 70ch;
-  margin-top: .7rem;
-}
-
-/* ---- Buttons (pill, premium) ---- */
-.z-btns{ display:flex; gap:.7rem; flex-wrap:wrap; margin-top: 1rem; }
-.z-btn{
-  display:inline-flex;
-  align-items:center;
-  gap:.55rem;
-  padding:.70rem 1.0rem;
-  border-radius: 999px;
-  border: 1px solid var(--border);
-  background: color-mix(in srgb, var(--card2) 55%, transparent);
+.greedy-nav a{
   color: var(--text) !important;
-  box-shadow: 0 10px 28px rgba(0,0,0,.25);
-  transition: transform .16s ease, background .16s ease, border-color .16s ease, box-shadow .16s ease;
+  opacity: .86;
 }
-.z-btn:hover{
-  transform: translateY(-2px);
-  border-color: color-mix(in srgb, var(--accent) 45%, var(--border));
-  background: color-mix(in srgb, var(--card2) 70%, transparent);
-  box-shadow: 0 18px 40px rgba(0,0,0,.35);
-}
-.z-btn.primary{
-  border-color: color-mix(in srgb, var(--accent) 55%, var(--border));
-  background: linear-gradient(90deg, color-mix(in srgb, var(--accent) 26%, transparent), color-mix(in srgb, var(--accent2) 22%, transparent));
-}
+.greedy-nav a:hover{ opacity: 1; }
+.greedy-nav .visible-links a:before{ display:none !important; }
 
-/* ---- Project cards grid ---- */
-.z-grid{
-  display:grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 1rem;
-  margin: 1.1rem 0 0;
-}
-.z-card{
-  grid-column: span 6;
-  padding: 1.1rem 1.1rem;
-  border-radius: var(--r-lg);
-  border: 1px solid var(--border);
-  background: color-mix(in srgb, var(--card) 72%, transparent);
-  box-shadow: 0 10px 34px rgba(0,0,0,.22);
-  transition: transform .18s ease, border-color .18s ease, background .18s ease;
-}
-.z-card:hover{
-  transform: translateY(-3px);
-  border-color: color-mix(in srgb, var(--accent) 40%, var(--border));
-  background: color-mix(in srgb, var(--card2) 55%, transparent);
-}
-.z-card h3{ margin: 0 0 .35rem; }
-.z-meta{ color: var(--muted); font-size:.95rem; margin:.2rem 0 .55rem; }
-.z-tags{
-  display:flex; flex-wrap:wrap; gap:.45rem;
-}
-.z-tag{
-  font-size:.82rem;
-  color: var(--muted);
-  padding:.28rem .55rem;
+/* nav “pill” hover */
+.greedy-nav .visible-links li a{
   border-radius: 999px;
-  border:1px solid var(--border);
-  background: color-mix(in srgb, var(--card2) 35%, transparent);
+  padding: .45rem .75rem;
+  transition: background .18s ease, transform .18s ease, opacity .18s ease;
+}
+.greedy-nav .visible-links li a:hover{
+  background: rgba(255,255,255,.08);
+  transform: translateY(-1px);
 }
 
-/* responsive */
-@media (max-width: 900px){
-  .z-card{ grid-column: span 12; }
-  .z-hero{ padding: 1.25rem; }
+/* ---------- Main “hero” (works even if you don’t edit HTML) ---------- */
+/* If your homepage has a first h1, we’ll style it like a hero */
+.page__content > h1:first-child{
+  padding: 1.4rem 1.4rem 1.15rem;
+  margin-top: 1.8rem;
+  border-radius: var(--r-xl);
+  border: 1px solid rgba(255,255,255,.14);
+  background:
+    radial-gradient(720px 240px at 16% 10%, color-mix(in srgb, var(--a1) 20%, transparent), transparent 62%),
+    radial-gradient(720px 240px at 86% 18%, color-mix(in srgb, var(--a2) 22%, transparent), transparent 62%),
+    linear-gradient(180deg, rgba(255,255,255,.09), rgba(255,255,255,.05));
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
 }
+.page__content > h1:first-child:after{
+  content:"";
+  position:absolute;
+  inset:-2px;
+  pointer-events:none;
+  background:
+    linear-gradient(90deg, transparent, rgba(86,240,255,.10), transparent);
+  transform: translateX(-60%);
+  animation: sheen 6.5s ease-in-out infinite;
+  opacity: .85;
+}
+@keyframes sheen{
+  0%{ transform: translateX(-60%); }
+  55%{ transfor
 
-/* ---- Images look intentional ---- */
-img{
-  border-radius: var(--r-lg);
-}
-.page__content img{
-  border: 1px solid var(--border);
-  box-shadow: 0 18px 50px rgba(0,0,0,.35);
-}
-
-/* ---- Code blocks clean ---- */
-pre, code{
-  border-radius: var(--r-md);
-}
 
