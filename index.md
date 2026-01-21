@@ -1,8 +1,6 @@
 
 ---
 layout: single
-title: ""
-permalink: /
 classes: wide
 ---
 
