@@ -295,45 +295,52 @@ h2{ margin-top: 2.0rem; }
 
 
 /* =========================================================
-   FORCE OVERRIDE (element-agnostic): Projects image-first tiles
+   FORCE OVERRIDE: Projects = 3-up sleek professional tiles
+   (no outline, whole tile lifts on hover)
    ========================================================= */
 
-/* DEBUG: if you don't see this outline, the CSS isn't loading */
-.gallery-item{ outline: 2px solid rgba(86,240,255,.35) !important; outline-offset: 6px !important; }
-
-/* grid wrapper */
+/* Grid wrapper: 3 per row */
 .project-gallery{
   display: grid !important;
-  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-  gap: 1.25rem !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 1.05rem !important;
   align-items: start !important;
 }
 
-/* kill card look on the tile wrapper (whatever it is) */
+/* Tile wrapper (whatever element has .gallery-item) */
 .gallery-item{
-  background: transparent !important;
-  border: 0 !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-  border-radius: 0 !important;
-  overflow: visible !important;
-  transform: none !important;
-  filter: none !important;
+  background: rgba(255,255,255,.03) !important;
+  border: 1px solid rgba(255,255,255,.10) !important;
+  box-shadow: 0 14px 42px rgba(0,0,0,.35) !important;
+  border-radius: 18px !important;
+  padding: 12px !important;
+  overflow: hidden !important;
+
+  transform: translateZ(0) !important;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease, background .18s ease !important;
 }
 
-/* the FIRST div inside the gallery item is your image box in your markup */
+/* Make the WHOLE tile lift/enlarge on hover */
+.gallery-item:hover{
+  transform: translateY(-6px) scale(1.02) !important;
+  border-color: rgba(86,240,255,.18) !important;
+  background: rgba(255,255,255,.045) !important;
+  box-shadow: 0 26px 80px rgba(0,0,0,.55) !important;
+}
+
+/* Image box: slightly shorter so 3-up feels balanced */
 .gallery-item > div:first-child{
-  height: 260px !important;
+  height: 190px !important;
   background: transparent !important;
   border: 0 !important;
-  border-radius: 18px !important;
+  border-radius: 14px !important;
   overflow: hidden !important;
   margin: 0 0 10px 0 !important;
   padding: 0 !important;
   display: block !important;
 }
 
-/* image as the hero */
+/* Image: hero, clean */
 .gallery-item img{
   width: 100% !important;
   height: 100% !important;
@@ -342,38 +349,49 @@ h2{ margin-top: 2.0rem; }
   object-fit: cover !important;
   display: block !important;
 
-  border-radius: 18px !important;
-  border: 1px solid rgba(255,255,255,.12) !important;
-  box-shadow: 0 18px 55px rgba(0,0,0,.45) !important;
+  border-radius: 14px !important;
+  border: 1px solid rgba(255,255,255,.08) !important;
+  box-shadow: 0 18px 55px rgba(0,0,0,.38) !important;
+  filter: saturate(1.03) contrast(1.02);
 
-  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease, filter .18s ease !important;
+  transition: transform .18s ease, filter .18s ease !important;
 }
 
-/* caption */
+/* On hover, keep image subtle (tile is doing the movement) */
+.gallery-item:hover img{
+  transform: scale(1.01) !important;
+  filter: saturate(1.05) contrast(1.03) !important;
+}
+
+/* Caption: smaller + professional */
 .gallery-item p{
   margin: 0 !important;
-  padding: 0 2px !important;
+  padding: 0 2px 2px !important;
   text-align: left !important;
 
   font-family: "Merriweather", Georgia, serif !important;
-  font-size: 1.05rem !important;
+  font-size: .98rem !important;
   line-height: 1.25 !important;
-  color: var(--text) !important;
-  opacity: .92 !important;
+  letter-spacing: -0.01em !important;
+  color: rgba(234,240,255,.92) !important;
 }
 
-/* hover on image only */
-.gallery-item:hover img{
-  transform: translateY(-3px) scale(1.01) !important;
-  border-color: rgba(86,240,255,.28) !important;
-  box-shadow: 0 26px 75px rgba(0,0,0,.55) !important;
-  filter: saturate(1.04) contrast(1.02) !important;
+/* If your link has underline / decoration anywhere */
+.gallery-item, .gallery-item *{
+  text-decoration: none !important;
 }
 
-@media (max-width: 980px){
+/* Responsive: 2-up on medium screens, 1-up on mobile */
+@media (max-width: 1100px){
+  .project-gallery{ grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  .gallery-item > div:first-child{ height: 210px !important; }
+}
+
+@media (max-width: 700px){
   .project-gallery{ grid-template-columns: 1fr !important; }
-  .gallery-item > div:first-child{ height: 230px !important; }
+  .gallery-item > div:first-child{ height: 220px !important; }
 }
+
 
 
 
