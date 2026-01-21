@@ -1,348 +1,296 @@
-/* =========================================================
-   Custom SCSS — Upgraded theme + animations (keeps color_scheme)
-   ========================================================= */
+/* ===============================
+   Zach — Pro / Dark / “Wow”
+   Paste entire file into custom.css
+   =============================== */
 
-/* ---------- Theme variables ---------- */
-// Default to light theme
-$primary-color: #3a3f58;
-$background-color: #f7f8fa;
-$text-color: #333;
-
-// Set theme colors based on the color_scheme variable
-@if $color_scheme == 'dark' {
-  $primary-color: #121526;
-  $background-color: #060812;
-  $text-color: rgba(255,255,255,0.92);
-} @else if $color_scheme == 'aqua' {
-  $primary-color: #2a7286;
-  $background-color: #061018;
-  $text-color: rgba(255,255,255,0.92);
-} @else if $color_scheme == 'desert' {
-  $primary-color: #925959;
-  $background-color: #120b0a;
-  $text-color: rgba(255,255,255,0.92);
-}
-
-/* Accent system (works regardless of scheme) */
+/* ---------- Tokens ---------- */
 :root{
-  --aqua:#41d1ff;
-  --violet:#8b5cff;
-  --pink:#ff4fd8;
-  --cyan:#3df2d0;
+  --bg0:#05060a;
+  --bg1:#070a12;
+  --bg2:#0b1120;
+  --text:#eaf0ff;
+  --muted:rgba(234,240,255,.72);
 
-  --glass: rgba(255,255,255,0.06);
-  --glass2: rgba(255,255,255,0.035);
-  --stroke: rgba(255,255,255,0.12);
-  --shadow: 0 22px 70px rgba(0,0,0,0.55);
-  --shadow-soft: 0 16px 50px rgba(0,0,0,0.35);
-  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  /* Accent palette (pick 1-2, these feel “tech / aerospace”) */
+  --a1:#56f0ff;  /* cyan */
+  --a2:#8b5cf6;  /* violet */
+  --a3:#22c55e;  /* green (optional highlight) */
+
+  --card: rgba(255,255,255,.06);
+  --card2: rgba(255,255,255,.10);
+  --border: rgba(255,255,255,.14);
+  --border2: rgba(86,240,255,.28);
+
+  --shadow: 0 24px 80px rgba(0,0,0,.55);
+  --shadow2: 0 14px 38px rgba(0,0,0,.45);
+
+  --r-xl: 26px;
+  --r-lg: 18px;
+  --r-md: 12px;
+
+  --max: 1120px;
 }
 
-/* ---------- Base reset ---------- */
-*,
-*::before,
-*::after { box-sizing: border-box; }
-
-html, body { height: 100%; }
-html:focus-within { scroll-behavior: smooth; }
-
-body {
-  font-family: "Open Sans", 'Montserrat', 'Helvetica Neue', sans-serif;
-  line-height: 1.6;
-  background-color: $background-color;
-  color: $text-color;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* ---------- Hard reset / base ---------- */
+html { scroll-behavior:smooth; }
+body{
+  background:
+    radial-gradient(900px 520px at 12% 5%, color-mix(in srgb, var(--a1) 18%, transparent), transparent 60%),
+    radial-gradient(780px 460px at 88% 10%, color-mix(in srgb, var(--a2) 18%, transparent), transparent 60%),
+    radial-gradient(700px 420px at 55% 115%, color-mix(in srgb, var(--a1) 10%, transparent), transparent 60%),
+    linear-gradient(180deg, var(--bg0), var(--bg2));
+  color: var(--text);
 }
 
-/* IMPORTANT: make sure no wrapper paints over the body aurora */
-.page-content, .wrapper, main, .container, .post, .post-content, .page, .page__content {
+/* subtle grid */
+body:before{
+  content:"";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: .22;
+  background-image:
+    linear-gradient(to right, rgba(255,255,255,.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,.06) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: radial-gradient(60% 48% at 50% 10%, black, transparent 70%);
+}
+
+/* film grain */
+body:after{
+  content:"";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: .055;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='170' height='170'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='170' height='170' filter='url(%23n)' opacity='.45'/%3E%3C/svg%3E");
+  background-size: 260px 260px;
+}
+
+/* ---------- Layout width ---------- */
+.page__content, .archive, .page, .masthead__inner-wrap, .footer{
+  max-width: var(--max) !important;
+}
+
+/* kill big “white sheet” containers */
+.page, .archive{
+  background: transparent !important;
+}
+.page__inner-wrap, .archive__wrap, .page__content{
   background: transparent !important;
 }
 
-/* ---------- Animated aurora background (global) ---------- */
-body::before,
-body::after {
-  content: "";
-  position: fixed;
-  inset: -40vmax;
-  z-index: -3;
-  pointer-events: none;
-  transform: translate3d(0,0,0);
-}
-
-body::before {
-  opacity: 0.75;
-  background:
-    radial-gradient(60vmax 40vmax at 20% 15%, rgba(65, 209, 255, 0.24), transparent 70%),
-    radial-gradient(55vmax 45vmax at 80% 20%, rgba(139, 92, 255, 0.22), transparent 68%),
-    radial-gradient(55vmax 55vmax at 70% 85%, rgba(255, 79, 216, 0.18), transparent 70%),
-    radial-gradient(50vmax 45vmax at 25% 85%, rgba(61, 242, 208, 0.18), transparent 70%);
-  filter: blur(40px) saturate(120%);
-  animation: auroraDrift 18s var(--ease) infinite alternate;
-}
-
-body::after {
-  opacity: 0.22;
-  background:
-    radial-gradient(80vmax 60vmax at 50% 10%, rgba(0,0,0,0.0), rgba(0,0,0,0.55) 70%),
-    repeating-linear-gradient(
-      0deg,
-      rgba(255,255,255,0.025) 0px,
-      rgba(255,255,255,0.025) 1px,
-      rgba(0,0,0,0.0) 2px,
-      rgba(0,0,0,0.0) 6px
-    );
-  mix-blend-mode: overlay;
-  animation: grainShift 10s linear infinite;
-}
-
-@keyframes auroraDrift {
-  0% { transform: translate3d(-2%, -1%, 0) rotate(-2deg); }
-  100% { transform: translate3d(2%, 1%, 0) rotate(2deg); }
-}
-@keyframes grainShift {
-  0% { transform: translate3d(0,0,0); }
-  50% { transform: translate3d(2%, -1%, 0); }
-  100% { transform: translate3d(-2%, 1%, 0); }
-}
-
 /* ---------- Typography ---------- */
-.navbar, h1, h2, h3, h4, h5, h6 {
-  font-family: 'Merriweather', serif;
-  font-weight: 700;
+body, p, li { line-height: 1.75; }
+h1,h2,h3{
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+h1{
+  font-size: clamp(2.6rem, 4.8vw, 3.8rem);
+  line-height: 1.05;
+}
+h2{
+  font-size: clamp(1.55rem, 2.6vw, 2.15rem);
+  margin-top: 2.2rem;
+}
+h3{
+  font-size: 1.15rem;
 }
 
-h1 { margin-bottom: 18px; letter-spacing: -0.03em; }
-h2, h3 { letter-spacing: -0.02em; }
-
-/* ---------- Header / Footer -> glass + sticky + glow ---------- */
-header, footer {
-  padding: 14px 12px;
-  color: rgba(255,255,255,0.92);
-  background: linear-gradient(
-    to bottom,
-    rgba(6, 8, 18, 0.78),
-    rgba(6, 8, 18, 0.55)
-  );
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+/* better section dividers */
+hr{
+  border: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.18), transparent);
+  margin: 1.6rem 0;
 }
 
-header {
+/* ---------- Links ---------- */
+a{
+  color: color-mix(in srgb, var(--a1) 88%, white);
+  text-decoration: none;
+}
+a:hover{ filter: brightness(1.08); }
+
+/* ---------- Nav / header (glass) ---------- */
+.masthead{
   position: sticky;
   top: 0;
   z-index: 50;
-  margin-bottom: 28px;
+  background: color-mix(in srgb, var(--bg1) 75%, transparent) !important;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255,255,255,.10);
 }
-
-footer {
-  text-align: center;
-  margin-top: 44px;
-  font-size: 0.95em;
-  border-top: 1px solid rgba(255,255,255,0.08);
-  border-bottom: none;
+.masthead__inner-wrap{ padding: .85rem 1.1rem; }
+.site-title{
+  font-weight: 700;
+  letter-spacing: .02em;
 }
-
-/* ---------- Container: make it wider + more “portfolio” ---------- */
-.container {
-  max-width: 1100px;
-  padding: 0 18px;
+.greedy-nav a{
+  color: var(--text) !important;
+  opacity: .86;
 }
+.greedy-nav a:hover{ opacity: 1; }
+.greedy-nav .visible-links a:before{ display:none !important; }
 
-/* ---------- Project / Gallery styling (your real classes) ---------- */
-.project-item img,
-.project-image,
-.profile-image {
-  border-radius: 16px;
-  box-shadow: 0 18px 60px rgba(0,0,0,0.35);
-}
-
-.project-item h3 {
-  margin-top: 14px;
-  font-size: 1.25em;
-}
-
-/* Gallery wrapper */
-.gallery-container {
-  display: flex;
-  justify-content: center;
-  margin: auto;
-}
-
-/* Grid becomes “cards” */
-.project-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-  gap: 18px;
-  padding: 18px;
-  margin: 0 auto;
-  max-width: 100%;
-}
-
-/* Card */
-.gallery-item {
-  position: relative;
-  overflow: hidden;
-  text-align: left;
-  max-width: 320px;
-  max-height: none;
-  border-radius: 22px;
-  border: 1px solid var(--stroke);
-  background: linear-gradient(135deg, var(--glass), var(--glass2));
-  box-shadow: var(--shadow-soft);
-  transform: translateZ(0);
-  transition: transform 280ms var(--ease), box-shadow 280ms var(--ease), border-color 280ms var(--ease);
-}
-
-/* Glow edge */
-.gallery-item::before {
-  content: "";
-  position: absolute;
-  inset: -1px;
-  background: linear-gradient(90deg, rgba(65,209,255,0.35), rgba(139,92,255,0.28), rgba(255,79,216,0.18));
-  opacity: 0;
-  filter: blur(12px);
-  transition: opacity 280ms var(--ease);
-  pointer-events: none;
-}
-
-/* Shimmer sweep */
-.gallery-item::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(110deg, transparent 0%, rgba(255,255,255,0.16) 20%, transparent 40%);
-  transform: translateX(-140%);
-  transition: transform 780ms var(--ease);
-  opacity: 0.7;
-  pointer-events: none;
-}
-
-.gallery-item:hover {
-  transform: translateY(-6px) scale(1.02);
-  box-shadow: 0 26px 80px rgba(0,0,0,0.50);
-  border-color: rgba(255,255,255,0.18);
-}
-.gallery-item:hover::before { opacity: 0.65; }
-.gallery-item:hover::after { transform: translateX(140%); }
-
-.gallery-item a { text-decoration: none; display: block; }
-
-.gallery-item img {
-  width: 100%;
-  height: 210px;
-  display: block;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 18px;
-  margin: 12px 12px 0 12px;
-  box-shadow: 0 14px 40px rgba(0,0,0,0.35);
-}
-
-.gallery-item p {
-  margin: 12px 14px 14px 14px;
-  font-size: 0.95rem;
-  color: rgba(255,255,255,0.82);
-}
-
-/* ---------- Buttons (your .btn class) ---------- */
-.btn {
-  display: inline-block;
-  padding: 10px 18px;
-  color: rgba(255,255,255,0.92);
-  text-decoration: none;
+/* nav “pill” hover */
+.greedy-nav .visible-links li a{
   border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.14);
-  background: rgba(255,255,255,0.06);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-  transition: transform 220ms var(--ease), box-shadow 220ms var(--ease), background 220ms var(--ease);
+  padding: .45rem .75rem;
+  transition: background .18s ease, transform .18s ease, opacity .18s ease;
+}
+.greedy-nav .visible-links li a:hover{
+  background: rgba(255,255,255,.08);
+  transform: translateY(-1px);
+}
+
+/* ---------- Main “hero” (works even if you don’t edit HTML) ---------- */
+/* If your homepage has a first h1, we’ll style it like a hero */
+.page__content > h1:first-child{
+  padding: 1.4rem 1.4rem 1.15rem;
+  margin-top: 1.8rem;
+  border-radius: var(--r-xl);
+  border: 1px solid rgba(255,255,255,.14);
+  background:
+    radial-gradient(720px 240px at 16% 10%, color-mix(in srgb, var(--a1) 20%, transparent), transparent 62%),
+    radial-gradient(720px 240px at 86% 18%, color-mix(in srgb, var(--a2) 22%, transparent), transparent 62%),
+    linear-gradient(180deg, rgba(255,255,255,.09), rgba(255,255,255,.05));
+  box-shadow: var(--shadow);
   position: relative;
   overflow: hidden;
 }
-
-.btn:hover {
-  transform: translateY(-2px);
-  background: rgba(255,255,255,0.09);
-  box-shadow: 0 18px 50px rgba(0,0,0,0.35);
+.page__content > h1:first-child:after{
+  content:"";
+  position:absolute;
+  inset:-2px;
+  pointer-events:none;
+  background:
+    linear-gradient(90deg, transparent, rgba(86,240,255,.10), transparent);
+  transform: translateX(-60%);
+  animation: sheen 6.5s ease-in-out infinite;
+  opacity: .85;
+}
+@keyframes sheen{
+  0%{ transform: translateX(-60%); }
+  55%{ transform: translateX(60%); }
+  100%{ transform: translateX(60%); }
 }
 
-/* ---------- Back arrow -> animated ---------- */
-.back-arrow {
+/* ---------- Cards / project tiles (THIS is the big change) ---------- */
+/* Applies to common theme “cards”, and also to plain images + captions */
+.feature__wrapper, .grid__wrapper, .archive__item, .list__item, .card{
+  background: transparent !important;
+}
+
+/* If your projects are links with images, make them feel like product tiles */
+.page__content a img{
+  border-radius: var(--r-lg);
+  border: 1px solid rgba(255,255,255,.14);
+  box-shadow: var(--shadow2);
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease, filter .18s ease;
+}
+.page__content a:hover img{
+  transform: translateY(-3px);
+  border-color: color-mix(in srgb, var(--a1) 40%, rgba(255,255,255,.14));
+  box-shadow: 0 22px 55px rgba(0,0,0,.55);
+  filter: saturate(1.06) contrast(1.02);
+}
+
+/* If captions are below images, style them like labels */
+.page__content img + em,
+.page__content img + p em{
   display: inline-block;
-  font-size: 1.05em;
-  color: rgba(255,255,255,0.70);
-  text-decoration: none;
-  margin-bottom: 1em;
-  font-weight: 800;
-  transition: color 220ms var(--ease), transform 220ms var(--ease);
-  position: relative;
+  margin-top: .55rem;
+  padding: .38rem .65rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(255,255,255,.06);
+  color: var(--muted);
+  font-style: normal;
+  font-size: .92rem;
 }
 
-.back-arrow::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  width: 100%;
-  height: 2px;
-  border-radius: 2px;
-  background: linear-gradient(90deg, transparent, rgba(65,209,255,0.75), rgba(139,92,255,0.75), transparent);
-  opacity: 0;
-  transform: scaleX(0.7);
-  transition: opacity 220ms var(--ease), transform 220ms var(--ease);
+/* Make “sections” look like panels, not white rectangles */
+.page__content > h2{
+  display:flex;
+  align-items:center;
+  gap:.65rem;
+}
+.page__content > h2:before{
+  content:"";
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--a1), var(--a2));
+  box-shadow: 0 0 0 6px rgba(86,240,255,.08);
 }
 
-.back-arrow:hover {
-  color: rgba(255,255,255,0.92);
-  transform: translateX(-4px);
-}
-.back-arrow:hover::after { opacity: 1; transform: scaleX(1); }
-
-/* ---------- Code highlight stays readable ---------- */
-.highlight {
-  background-color: rgba(0,0,0,0.35);
-  color: rgba(255,255,255,0.90);
-  padding: 10px 12px;
-  margin-bottom: 10px;
-  border-radius: 16px;
-  overflow-x: auto;
-  border: 1px solid rgba(255,255,255,0.10);
+/* Give any generic “box” containers depth */
+.page__content > div,
+.page__content > section{
+  background: transparent;
 }
 
-/* ---------- Inline images (keep your SCSS nesting) ---------- */
-.inline-image {
-  max-width: 380px;
-  margin: 0px 25px 15px 25px;
-  vertical-align: top;
-
-  &-l {
-    @extend .inline-image;
-    float: left;
-    margin-left: 0;
-  }
-
-  &-r {
-    @extend .inline-image;
-    float: right;
-    margin-right: 0;
-  }
+/* ---------- Buttons (if theme uses them) ---------- */
+.btn, .button, .btn--primary, .btn--inverse{
+  border-radius: 999px !important;
+  border: 1px solid rgba(255,255,255,.16) !important;
+  background: rgba(255,255,255,.06) !important;
+  color: var(--text) !important;
+  box-shadow: 0 12px 28px rgba(0,0,0,.35);
+  transition: transform .18s ease, background .18s ease, border-color .18s ease, box-shadow .18s ease;
+}
+.btn:hover, .button:hover{
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--a1) 45%, rgba(255,255,255,.16)) !important;
+  background: rgba(255,255,255,.10) !important;
+  box-shadow: 0 18px 45px rgba(0,0,0,.48);
 }
 
-/* ---------- Reduced motion (keep accessibility) ---------- */
-@media (prefers-reduced-motion: reduce) {
-  * { transition-duration: 0.001ms !important; animation-duration: 0.001ms !important; }
-  body::before, body::after { animation: none !important; }
+/* ---------- Tables / code blocks for “engineer credibility” ---------- */
+table{
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(255,255,255,.05);
+}
+thead th{
+  background: rgba(255,255,255,.08);
+  color: var(--text);
+}
+tbody td, thead th{
+  border-bottom: 1px solid rgba(255,255,255,.10);
+}
+pre, code{
+  border-radius: var(--r-md);
+}
+pre{
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(255,255,255,.05);
 }
 
-/* ---------- BUT: force aurora even when Reduce Motion is on (so you see it) ---------- */
-@media (prefers-reduced-motion: reduce) {
-  body::before { animation: auroraDrift 18s var(--ease) infinite alternate !important; }
-  body::after  { animation: grainShift 10s linear infinite !important; }
+/* ---------- Footer ---------- */
+.page__footer{
+  background: transparent !important;
+  border-top: 1px solid rgba(255,255,255,.10);
+}
+.page__footer-follow, .page__footer-copyright{
+  color: var(--muted) !important;
+}
+
+/* ---------- Mobile tweaks ---------- */
+@media (max-width: 900px){
+  .page__content > h1:first-child{ padding: 1.15rem; }
+}
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce){
+  *{ animation: none !important; transition: none !important; }
 }
 
 
