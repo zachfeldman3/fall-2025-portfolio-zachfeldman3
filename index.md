@@ -37,7 +37,7 @@ permalink: /
         <span class="zf-tag">Manufacturing</span>
         <span class="zf-tag">Composites</span>
         <span class="zf-tag">Additive</span>
-        <span class="zf-tag">Product Design</span>
+        <span class="zf-tag">Design</span>
       </div>
     </a>
 
@@ -45,29 +45,27 @@ permalink: /
       <h3>Skills</h3>
       <div class="zf-tags">
         <span class="zf-tag">CAD</span>
-        <span class="zf-tag">DFM</span>
-        <span class="zf-tag">Prototyping</span>
-        <span class="zf-tag">Testing</span>
+        <span class="zf-tag">3D Printing</span>
+        <span class="zf-tag">Machining</span>
+        <span class="zf-tag">Manufacturing</span>
       </div>
     </a>
 
     <a class="zf-tile" href="{{ '/projects/' | relative_url }}">
       <h3>What I’m Doing Now</h3>
       <div class="zf-tags">
-        <span class="zf-tag">Cornell EV</span>
-        <span class="zf-tag">Chassis Lead</span>
-        <span class="zf-tag">Composites</span>
-        <span class="zf-tag">Manufacturing</span>
+        <span class="zf-tag">Cornell Elecric Vehicles Chassis Lead</span>
+        <span class="zf-tag">Composties Manufacturing</span>
+        <span class="zf-tag">Chassis Ansys Composites Prepost (ACP) and Finite Element Analysis (FEA)</span>
+        <span class="zf-tag">IBM Summer 2026</span>
       </div>
     </a>
 
     <a class="zf-tile" href="{{ '/cv/' | relative_url }}">
       <h3>What I’m Looking For</h3>
       <div class="zf-tags">
-        <span class="zf-tag">Hands-on</span>
-        <span class="zf-tag">Manufacturing</span>
-        <span class="zf-tag">R&amp;D</span>
-        <span class="zf-tag">Impact</span>
+        <span class="zf-tag">Spring 2027 Co-op</span>
+        <span class="zf-tag">Summer 2027 Full Time Engineering Position</span>
       </div>
     </a>
 
