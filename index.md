@@ -6,7 +6,6 @@ title: Zach Feldman
 ---
 layout: default
 title: Home
-permalink: /
 ---
 
 ## About Me
