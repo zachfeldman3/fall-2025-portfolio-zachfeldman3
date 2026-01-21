@@ -3,11 +3,6 @@ layout: default
 title: Zach Feldman
 ---
 
----
-layout: default
-title: Home
----
-
 ## About Me
 
 ![Profile Picture](https://zachfeldman3.github.io/fall-2025-portfolio-zachfeldman3/assets/images/zachpfp.jpeg)
