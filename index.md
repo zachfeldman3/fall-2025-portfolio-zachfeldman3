@@ -75,7 +75,7 @@ permalink: /
 
   <hr/>
 
-  # About Me
+  <h3>About Me</h3>
 
   My name is Zach Feldman, and I am a Mechanical Engineering student at Cornell University with interests in product design,
   manufacturing, and hands-on engineering projects. I enjoy creating practical, meaningful solutions—from carbon-fiber components
@@ -83,8 +83,6 @@ permalink: /
   engineering tools, building things that work, and continuously improving my technical skills.
 
   Take a look at <a href="{{ '/projects/' | relative_url }}">my projects</a> and <a href="{{ '/cv/' | relative_url }}">my CV</a>.
-
-</div>
 
 </div>
 
