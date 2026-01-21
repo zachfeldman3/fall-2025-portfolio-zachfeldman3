@@ -55,8 +55,8 @@ permalink: /
       <h3>What I’m Doing Now</h3>
       <div class="zf-tags">
         <span class="zf-tag">Cornell Elecric Vehicles Chassis Lead</span>
-        <span class="zf-tag">CEV Composties Manufacturing</span>
-        <span class="zf-tag"> CEV Chassis Ansys Analysis (ACP & FEA)</span>
+        <span class="zf-tag">Composties Manufacturing</span>
+        <span class="zf-tag">Chassis Ansys Analysis (ACP & FEA)</span>
         <span class="zf-tag">IBM Hardware Internship Summer 2026</span>
       </div>
     </a>
