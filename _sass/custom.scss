@@ -58,6 +58,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* IMPORTANT: make sure no wrapper paints over the body aurora */
+.page-content, .wrapper, main, .container, .post, .post-content, .page, .page__content {
+  background: transparent !important;
+}
+
 /* ---------- Animated aurora background (global) ---------- */
 body::before,
 body::after {
@@ -145,7 +150,7 @@ footer {
 
 /* ---------- Container: make it wider + more “portfolio” ---------- */
 .container {
-  max-width: 1100px; /* was 600px — this is why things looked cramped */
+  max-width: 1100px;
   padding: 0 18px;
 }
 
@@ -230,7 +235,7 @@ footer {
 
 .gallery-item img {
   width: 100%;
-  height: 210px; /* consistent, cinematic tiles */
+  height: 210px;
   display: block;
   object-fit: cover;
   object-position: center;
@@ -328,10 +333,16 @@ footer {
   }
 }
 
-/* ---------- Reduced motion ---------- */
+/* ---------- Reduced motion (keep accessibility) ---------- */
 @media (prefers-reduced-motion: reduce) {
   * { transition-duration: 0.001ms !important; animation-duration: 0.001ms !important; }
   body::before, body::after { animation: none !important; }
+}
+
+/* ---------- BUT: force aurora even when Reduce Motion is on (so you see it) ---------- */
+@media (prefers-reduced-motion: reduce) {
+  body::before { animation: auroraDrift 18s var(--ease) infinite alternate !important; }
+  body::after  { animation: grainShift 10s linear infinite !important; }
 }
 
 
