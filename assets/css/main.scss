@@ -1,9 +1,9 @@
 ---
-# Jekyll entry point (keep this tiny)
 ---
-
 $color_scheme: '{{ site.color_scheme | default: "default" }}';
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Merriweather:wght@400;700&display=swap");
+
+/* Import your real CSS from a partial */
 @import "custom";
 
