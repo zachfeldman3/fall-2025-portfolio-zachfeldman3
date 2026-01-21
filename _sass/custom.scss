@@ -1,12 +1,6 @@
----
----
-body {
-  background: hotpink !important;
-}
-
 /* =========================================================
    Zach Feldman Portfolio — “More” Theme + Animations (CSS Only)
-   Put this in: assets/css/_custom.scss
+   Put this in: assets/css/custom.scss
    ========================================================= */
 
 /* ---------- CSS Reset / Base ---------- */
@@ -31,6 +25,7 @@ body {
 img, svg, video { max-width: 100%; height: auto; display: block; }
 a { color: inherit; text-decoration: none; }
 
+/* ---------- Theme variables ---------- */
 :root {
   --bg: #060812;
   --panel: rgba(255, 255, 255, 0.05);
