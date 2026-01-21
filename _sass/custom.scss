@@ -517,7 +517,7 @@ pre{
   .page__content > h1:first-child{ padding: 1.15rem; }
 }
 
-/* ---------- Reduced motion ---------- 
+/* ---------- Reduced motion ---------- */
 @media (prefers-reduced-motion: reduce){
   *{ animation: none !important; transition: none !important; }
-}*/
+}
