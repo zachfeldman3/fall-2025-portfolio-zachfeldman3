@@ -76,40 +76,86 @@ permalink: /
 
 
 
-  <div class="zf-grid">
+ <img
+  src="{{ '/assets/images/2024chassis.png' | relative_url }}"
+  alt="Chassis"
+  style="
+    width: 100%;
+    max-width: 860px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 24px;
+    border: 1px solid rgba(255,255,255,.14);
+    box-shadow: 0 18px 55px rgba(0,0,0,.55);
+    margin: 1.5rem auto 1.2rem;
+    display: block;
+  "
+/>
 
-  <a class="zf-tile" href="{{ '/projects/vacuum-infused-baseplate/' | relative_url }}">
-    <img src="{{ '/assets/images/baseplate.jpg' | relative_url }}"
-         alt="Composite baseplate"
-         style="width:100%; height:180px; object-fit:cover; border-radius:14px; border:1px solid rgba(255,255,255,.10); margin-bottom:.7rem;" />
+<div style="display:grid; grid-template-columns: 1fr 1fr; gap:1.3rem; margin:1.4rem 0;">
 
-    <h3>Composite Baseplate</h3>
+  <img
+    src="{{ '/assets/images/sidepartmold.jpg' | relative_url }}"
+    alt="Mold"
+    style="
+      width:100%;
+      height:200px;
+      object-fit:cover;
+      border-radius:20px;
+      border:1px solid rgba(255,255,255,.14);
+      box-shadow: 0 14px 38px rgba(0,0,0,.45);
+    "
+  />
 
-    <div class="zf-tags">
-      <span class="zf-tag">Vacuum Infusion</span>
-      <span class="zf-tag">Divinycell Core</span>
-      <span class="zf-tag">0/±45/90</span>
-      <span class="zf-tag">Structural</span>
-    </div>
-  </a>
-
-  <a class="zf-tile" href="{{ '/projects/wet-layup/' | relative_url }}">
-    <img src="{{ '/assets/images/layup.jpg' | relative_url }}"
-         alt="Wet layup parts"
-         style="width:100%; height:180px; object-fit:cover; border-radius:14px; border:1px solid rgba(255,255,255,.10); margin-bottom:.7rem;" />
-
-    <h3>Wet Layup Components</h3>
-
-    <div class="zf-tags">
-      <span class="zf-tag">Carbon Fiber</span>
-      <span class="zf-tag">Fast Iteration</span>
-      <span class="zf-tag">Tooling</span>
-      <span class="zf-tag">Finish Quality</span>
-    </div>
-  </a>
+  <img
+    src="{{ '/assets/images/moldcoat.png' | relative_url }}"
+    alt="Moldcoat"
+    style="
+      width:100%;
+      height:200px;
+      object-fit:cover;
+      border-radius:20px;
+      border:1px solid rgba(255,255,255,.14);
+      box-shadow: 0 14px 38px rgba(0,0,0,.45);
+    "
+  />
 
 </div>
 
+<img
+  src="{{ '/assets/images/M-totaldeformation.png' | relative_url }}"
+  alt="FEA"
+  style="
+    width:100%;
+    max-width: 780px;
+    height: 220px;
+    object-fit: contain;
+    background: rgba(0,0,0,.15);
+    border-radius: 22px;
+    border:1px solid rgba(255,255,255,.14);
+    box-shadow: 0 14px 38px rgba(0,0,0,.45);
+    margin: 1.5rem auto 1.3rem;
+    display: block;
+  "
+/>
+
+<img
+  src="{{ '/assets/images/radio-machine-cad.jpg' | relative_url }}"
+  alt="CAD"
+  style="
+    width:100%;
+    max-width: 440px;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 20px;
+    border:1px solid rgba(255,255,255,.14);
+    box-shadow: 0 14px 38px rgba(0,0,0,.45);
+    float: right;
+    margin: .4rem 0 1rem 1.4rem;
+  "
+/>
+
+<div style="clear:both;"></div>
 
 
 
