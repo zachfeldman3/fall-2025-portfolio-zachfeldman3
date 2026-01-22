@@ -118,38 +118,24 @@ a:hover{ filter: brightness(1.08); }
   inset:-2px;
   pointer-events:none;
 
-  /* make the sheen band wider + easier to loop */
   background: linear-gradient(
     90deg,
     transparent 0%,
-    rgba(86,240,255,.10) 45%,
+    rgba(86,240,255,.12) 45%,
     rgba(139,92,246,.10) 55%,
     transparent 100%
   );
 
-  /* start off-screen left */
-  transform: translateX(-120%);
+  transform: translateX(-160%);
+  opacity: 0;
   animation: zf-sheen 10s linear infinite;
-  opacity: .85;
 }
-
-
-.zf-hero{
-  background-size: 220% 220%;
-  animation: hero-bg 28s linear infinite;
-}
-
-@keyframes hero-bg{
-  0%   { background-position: 0% 50%; }
-  100% { background-position: 200% 50%; }
-}
-
-
-
 
 @keyframes zf-sheen{
-  0%   { transform: translateX(-120%); }
-  100% { transform: translateX(120%); }
+  0%   { transform: translateX(-160%); opacity: 0; }
+  12%  { opacity: .85; }
+  88%  { opacity: .85; }
+  100% { transform: translateX(160%); opacity: 0; }
 }
 
 
