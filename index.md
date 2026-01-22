@@ -30,26 +30,31 @@ permalink: /
 
 
   <!-- =====================================================
-       Ghosted background behind the 4 tiles
+       Tiles with side-peeking ghost image
        ===================================================== -->
-  <div style="position:relative; border-radius:24px; overflow:hidden;">
+  <div style="position:relative; margin-top:1.6rem;">
 
+    <!-- peeking image -->
     <img
       src="{{ '/assets/images/2024chassis.png' | relative_url }}"
       alt=""
       style="
         position:absolute;
-        inset:0;
-        width:100%;
-        height:100%;
-        object-fit:cover;
-        opacity:.06;
-        filter: blur(2px);
-        pointer-events:none;
-        z-index:0;
+        top: 14%;
+        right: -120px;
+        width: 360px;
+        height: 240px;
+        object-fit: cover;
+        opacity: .18;
+        filter: blur(1px);
+        border-radius: 26px;
+        pointer-events: none;
+        z-index: 0;
+        box-shadow: 0 18px 55px rgba(0,0,0,.45);
       "
     />
 
+    <!-- actual tiles -->
     <div class="zf-grid" style="position:relative; z-index:1;">
 
       <a class="zf-tile" href="{{ '/about/' | relative_url }}">
@@ -98,27 +103,32 @@ permalink: /
 
 
   <!-- =====================================================
-       Ghosted background behind About Me
+       About section with side-peeking ghost image
        ===================================================== -->
-  <div style="position:relative; border-radius:24px; overflow:hidden; padding: .25rem 0;">
+  <div style="position:relative; margin-top:1.4rem;">
 
+    <!-- peeking image -->
     <img
       src="{{ '/assets/images/M-totaldeformation.png' | relative_url }}"
       alt=""
       style="
         position:absolute;
-        inset:0;
-        width:100%;
-        height:100%;
-        object-fit:contain;
-        opacity:.07;
-        filter: blur(1px);
-        pointer-events:none;
-        z-index:0;
+        top: 18%;
+        left: -140px;
+        width: 380px;
+        height: 260px;
+        object-fit: contain;
+        background: rgba(0,0,0,.18);
+        opacity: .22;
+        border-radius: 28px;
+        pointer-events: none;
+        z-index: 0;
+        box-shadow: 0 18px 55px rgba(0,0,0,.45);
       "
     />
 
-    <div style="position:relative; z-index:1; padding: 0.75rem 0;">
+    <div style="position:relative; z-index:1;">
+
       <h3>About Me</h3>
 
       <p>
@@ -131,6 +141,7 @@ permalink: /
       <p>
         Take a look at <a href="{{ '/projects/' | relative_url }}">my projects</a> and <a href="{{ '/cv/' | relative_url }}">my CV</a>.
       </p>
+
     </div>
 
   </div>
