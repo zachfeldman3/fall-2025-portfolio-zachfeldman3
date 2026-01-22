@@ -133,6 +133,20 @@ a:hover{ filter: brightness(1.08); }
   opacity: .85;
 }
 
+
+.zf-hero{
+  background-size: 220% 220%;
+  animation: hero-bg 28s linear infinite;
+}
+
+@keyframes hero-bg{
+  0%   { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+
+
+
 @keyframes zf-sheen{
   0%   { transform: translateX(-120%); }
   100% { transform: translateX(120%); }
