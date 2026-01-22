@@ -51,11 +51,8 @@ permalink: /
       </div>
     </a>
 
-   <a class="zf-tile" href="{{ '/projects/' | relative_url }}">
-  <img class="zf-tile-img" src="{{ '/assets/images/baseplate.jpg' | relative_url }}" alt="Composite baseplate" />
-
+  <a class="zf-tile" href="{{ '/projects/' | relative_url }}">
   <h3>What I’m Doing Now</h3>
-
   <div class="zf-tags">
     <span class="zf-tag">Cornell EV</span>
     <span class="zf-tag">Chassis Lead</span>
