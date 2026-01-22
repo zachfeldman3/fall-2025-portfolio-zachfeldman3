@@ -74,6 +74,35 @@ permalink: /
 
 
 
+
+
+
+<div class="zf-mosaic">
+
+  <a class="zf-mosaic-a" href="{{ '/projects/vacuum-infused-baseplate/' | relative_url }}">
+    <img src="{{ '/assets/images/baseplate.jpg' | relative_url }}" alt="Baseplate" />
+    <span>Baseplate</span>
+  </a>
+
+  <a class="zf-mosaic-b" href="{{ '/projects/wet-layup/' | relative_url }}">
+    <img src="{{ '/assets/images/layup.jpg' | relative_url }}" alt="Layup" />
+    <span>Layup</span>
+  </a>
+
+  <a class="zf-mosaic-c" href="{{ '/projects/' | relative_url }}">
+    <img src="{{ '/assets/images/tooling.jpg' | relative_url }}" alt="Tooling" />
+    <span>Tooling</span>
+  </a>
+
+</div>
+
+
+
+
+
+
+
+
   <hr/>
 
   <h3>About Me</h3>
