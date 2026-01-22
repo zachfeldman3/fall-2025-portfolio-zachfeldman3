@@ -117,17 +117,27 @@ a:hover{ filter: brightness(1.08); }
   position:absolute;
   inset:-2px;
   pointer-events:none;
-  background: linear-gradient(90deg, transparent, rgba(86,240,255,.10), transparent);
-  transform: translateX(-60%);
-  animation: zf-sheen 6.5s ease-in-out infinite;
+
+  /* make the sheen band wider + easier to loop */
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(86,240,255,.10) 45%,
+    rgba(139,92,246,.10) 55%,
+    transparent 100%
+  );
+
+  /* start off-screen left */
+  transform: translateX(-120%);
+  animation: zf-sheen 10s linear infinite;
   opacity: .85;
 }
 
 @keyframes zf-sheen{
-  0%{ transform: translateX(-60%); }
-  55%{ transform: translateX(60%); }
-  100%{ transform: translateX(60%); }
+  0%   { transform: translateX(-120%); }
+  100% { transform: translateX(120%); }
 }
+
 
 .zf-title{
   font-size: clamp(2.8rem, 5vw, 4.2rem);
