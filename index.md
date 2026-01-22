@@ -76,26 +76,39 @@ permalink: /
 
 
 
+  <div class="zf-grid">
 
-<div class="zf-mosaic">
+  <a class="zf-tile" href="{{ '/projects/vacuum-infused-baseplate/' | relative_url }}">
+    <img src="{{ '/assets/images/baseplate.jpg' | relative_url }}"
+         alt="Composite baseplate"
+         style="width:100%; height:180px; object-fit:cover; border-radius:14px; border:1px solid rgba(255,255,255,.10); margin-bottom:.7rem;" />
 
-  <a class="zf-mosaic-a" href="{{ '/projects/vacuum-infused-baseplate/' | relative_url }}">
-    <img src="{{ '/assets/images/baseplate.jpg' | relative_url }}" alt="Baseplate" />
-    <span>Baseplate</span>
+    <h3>Composite Baseplate</h3>
+
+    <div class="zf-tags">
+      <span class="zf-tag">Vacuum Infusion</span>
+      <span class="zf-tag">Divinycell Core</span>
+      <span class="zf-tag">0/±45/90</span>
+      <span class="zf-tag">Structural</span>
+    </div>
   </a>
 
-  <a class="zf-mosaic-b" href="{{ '/projects/wet-layup/' | relative_url }}">
-    <img src="{{ '/assets/images/layup.jpg' | relative_url }}" alt="Layup" />
-    <span>Layup</span>
-  </a>
+  <a class="zf-tile" href="{{ '/projects/wet-layup/' | relative_url }}">
+    <img src="{{ '/assets/images/layup.jpg' | relative_url }}"
+         alt="Wet layup parts"
+         style="width:100%; height:180px; object-fit:cover; border-radius:14px; border:1px solid rgba(255,255,255,.10); margin-bottom:.7rem;" />
 
-  <a class="zf-mosaic-c" href="{{ '/projects/' | relative_url }}">
-    <img src="{{ '/assets/images/tooling.jpg' | relative_url }}" alt="Tooling" />
-    <span>Tooling</span>
+    <h3>Wet Layup Components</h3>
+
+    <div class="zf-tags">
+      <span class="zf-tag">Carbon Fiber</span>
+      <span class="zf-tag">Fast Iteration</span>
+      <span class="zf-tag">Tooling</span>
+      <span class="zf-tag">Finish Quality</span>
+    </div>
   </a>
 
 </div>
-
 
 
 
