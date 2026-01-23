@@ -59,26 +59,24 @@ permalink: /
 
   <!-- INDEX-ONLY OVERRIDES -->
   <style>
-    /* HERO: remove dead space between text and image */
+    /* HERO: tighten dead space between text and image */
     .zf-hero.zf-hero-split{
       display:grid !important;
 
-      /* KEY CHANGE:
-         fixed image column (no giant fr-reserved space) */
+      /* fixed image column so it doesn't reserve a giant empty area */
       grid-template-columns: minmax(0, 1fr) 320px !important;
 
-      /* tighter spacing between columns */
-      column-gap: 0.9rem !important;
+      /* KEY CHANGE: add a bit more breathing room (matches “right side + a little”) */
+      column-gap: 1.35rem !important;
 
       align-items:center !important;
     }
 
     .zf-hero-text{
       max-width: none !important;
-      min-width: 0 !important; /* prevents overflow weirdness in grid */
+      min-width: 0 !important;
     }
 
-    /* KEY CHANGE: let the text actually expand */
     .zf-hero-body{
       margin-top: 1.15rem !important;
       max-width: none !important;
@@ -87,12 +85,12 @@ permalink: /
 
     .zf-hero-image{
       display:flex !important;
-      justify-content:flex-start !important; /* lets it sit closer to text */
+      justify-content:flex-start !important;
     }
 
-    /* subtle left pull without layout side-effects */
+    /* KEY CHANGE: gentler left pull than before (keeps margin feel) */
     .zf-hero-image img{
-      transform: translateX(-10px) !important;
+      transform: translateX(-6px) !important;
     }
 
     /* kill hover enlarge + blue highlight on the 4 tiles */
@@ -137,7 +135,7 @@ permalink: /
       <h3>Interests</h3>
       <div class="zf-tags">
         <span class="zf-tag">Manufacturing</span>
-        <span class="zf-tag">Testing</span>
+        <span class="zf-tag">Composites</span>
         <span class="zf-tag">Additive</span>
         <span class="zf-tag">Design</span>
       </div>
@@ -271,4 +269,44 @@ permalink: /
       View All Projects →
     </a>
 
+  </div>
+
+
+  <hr style="margin: 2.2rem 0;"/>
+
+
+  <!-- CONTACT (restored; the top button href="#contact" scrolls here) -->
+  <h3 id="contact" style="margin-bottom:.7rem;">Contact</h3>
+
+  <div class="zf-tile" style="padding: 1.2rem 1.2rem;">
+
+    <p style="margin: 0 0 1rem 0;">
+      Email me at
+      <a href="mailto:zlf3@cornell.edu">zlf3@cornell.edu</a><br/>
+      Call me at <a href="tel:19143567068">(914) 356-7068</a>
+    </p>
+
+    <div style="display:flex; gap:.9rem; align-items:center; flex-wrap:wrap;">
+
+      <a
+        href="https://www.linkedin.com/in/zlf3/"
+        target="_blank"
+        rel="noopener"
+        title="LinkedIn"
+        style="display:inline-flex; align-items:center; gap:.55rem;"
+      >
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M6.94 6.5A2.44 2.44 0 1 1 6.94 1.62a2.44 2.44 0 0 1 0 4.88Z" stroke="currentColor" stroke-width="1.8"/>
+          <path d="M2.8 22.5h4.3V8.6H2.8v13.9Z" stroke="currentColor" stroke-width="1.8"/>
+          <path d="M9.7 22.5h4.2v-7.1c0-1.9.4-3.8 2.8-3.8s2.4 2.2 2.4 3.9v7h4.2v-7.9c0-4-2.1-6.1-5.2-6.1-1.7 0-3 .9-3.6 1.8h-.1V8.6H9.7v13.9Z"
+                stroke="currentColor" stroke-width="1.8"/>
+        </svg>
+        <span>LinkedIn</span>
+      </a>
+
+    </div>
+
+  </div>
+
+</div>
 
