@@ -6,6 +6,49 @@ permalink: /
 
 <div class="zf-home">
 
+  <!-- INDEX-ONLY OVERRIDES -->
+  <style>
+    /* HERO: reduce dead space on left + make image feel centered */
+    .zf-hero.zf-hero-split{
+      grid-template-columns: 1.05fr 0.95fr !important;
+      gap: 2.0rem !important;
+    }
+    .zf-hero-text{
+      max-width: none !important;
+    }
+    .zf-hero-image{
+      justify-content: flex-end !important;
+    }
+
+    /* kill hover enlarge + blue highlight (tiles are not clickable) */
+    .zf-grid .zf-tile:hover{
+      transform: none !important;
+      border-color: rgba(255,255,255,.14) !important;
+      box-shadow: var(--shadow2) !important;
+    }
+    .zf-grid .zf-tile{
+      -webkit-tap-highlight-color: transparent;
+      cursor: default;
+    }
+
+    /* make tags less gray + slightly bolder */
+    .zf-grid .zf-tag{
+      color: rgba(234,240,255,.85) !important;
+      font-weight: 500 !important;
+    }
+
+    /* Mobile: keep hero stacked + centered */
+    @media (max-width: 900px){
+      .zf-hero.zf-hero-split{
+        grid-template-columns: 1fr !important;
+      }
+      .zf-hero-image{
+        justify-content: center !important;
+      }
+    }
+  </style>
+
+
   <div class="zf-hero zf-hero-split">
 
     <div class="zf-hero-text">
@@ -54,26 +97,6 @@ permalink: /
     </div>
 
   </div>
-
-
-  <!-- INDEX-ONLY OVERRIDE: kill hover enlarge + blue highlight -->
-  <style>
-    .zf-grid .zf-tile:hover{
-      transform: none !important;
-      border-color: rgba(255,255,255,.14) !important;
-      box-shadow: var(--shadow2) !important;
-    }
-    .zf-grid .zf-tile{
-      -webkit-tap-highlight-color: transparent;
-      cursor: default;
-    }
-
-    /* INDEX-ONLY OVERRIDE: make tags less gray + slightly bolder */
-    .zf-grid .zf-tag{
-      color: rgba(234,240,255,.85) !important;
-      font-weight: 500 !important;
-    }
-  </style>
 
 
   <div class="zf-grid">
@@ -260,4 +283,5 @@ permalink: /
   </div>
 
 </div>
+
 
