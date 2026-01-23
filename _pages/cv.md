@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Zach Feldman - Curriculum Vitae
-permalink: /Resume/
+permalink: /cv/
 ---
 ## Resume
 
