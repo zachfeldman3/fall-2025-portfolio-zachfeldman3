@@ -184,7 +184,8 @@ permalink: /
 
     <p style="margin: 0 0 1rem 0;">
       Email me at
-      <a href="mailto:YOUR_EMAIL@cornell.edu">YOUR_EMAIL@cornell.edu</a>
+      <a href="mailto:zlf3@cornell.edu">YOUR_EMAIL@cornell.edu</a>
+      Call me at <a href="mailto:9143567068">YOUR_EMAIL@cornell.edu</a>
     </p>
 
     <div style="display:flex; gap:.9rem; align-items:center; flex-wrap:wrap;">
