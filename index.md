@@ -137,7 +137,7 @@ permalink: /
       <h3>Interests</h3>
       <div class="zf-tags">
         <span class="zf-tag">Manufacturing</span>
-        <span class="zf-tag">Composites</span>
+        <span class="zf-tag">Testing</span>
         <span class="zf-tag">Additive</span>
         <span class="zf-tag">Design</span>
       </div>
