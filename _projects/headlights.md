@@ -1,9 +1,9 @@
 ---
 layout: default
 title: "Headlights & Taillights"
-description: CEV Lights Project
-category: class
-image: /assets/images/M-totaldeformation.png
+description: CEV Lights
+category: featured
+image: /assets/images/2024chassis.png
 ---
 
 
