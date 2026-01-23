@@ -143,21 +143,21 @@ permalink: /
     />
 
     <img
-      src="{{ '/assets/images/M-totaldeformation.png' | relative_url }}"
-      alt=""
-      style="
-        width:100%;
-        height:200px;
-        object-fit:contain;
-        background: rgba(0,0,0,.14);
-        border-radius:22px;
-        border:none;
-        display:block;
-        box-shadow:
-          0 0 38px rgba(86,240,255,.25),
-          0 0 18px rgba(139,92,246,.18);
-      "
-    />
+  src="{{ '/assets/images/M-totaldeformation.png' | relative_url }}"
+  alt=""
+  style="
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    border-radius:22px;
+    border:none;
+    display:block;
+    box-shadow:
+      0 0 38px rgba(86,240,255,.25),
+      0 0 18px rgba(139,92,246,.18);
+  "
+/>
+
 
   </div>
 
