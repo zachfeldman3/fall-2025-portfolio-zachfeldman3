@@ -57,40 +57,48 @@ permalink: /
   </div>
 
 
-  <!-- INDEX-ONLY OVERRIDES -->
+  <!-- INDEX-ONLY OVERRIDES (FORCE) -->
   <style>
-    /* HERO: tighten dead space between text and image */
-    .zf-hero.zf-hero-split{
-      display:grid !important;
+    /* ====== HERO LAYOUT FIX ====== */
 
-      /* fixed image column so it doesn't reserve a giant empty area */
-      grid-template-columns: minmax(0, 1fr) 320px !important;
-
-      /* KEY CHANGE: add a bit more breathing room (matches “right side + a little”) */
-      column-gap: 1.35rem !important;
-
-      align-items:center !important;
+    /* If your theme uses a container, it may be adding big side padding */
+    .zf-home .zf-hero{
+      width: 100% !important;
     }
 
-    .zf-hero-text{
+    /* Make the split tighter + predictable */
+    .zf-home .zf-hero.zf-hero-split{
+      display: grid !important;
+      grid-template-columns: minmax(0, 1fr) 320px !important;
+      column-gap: 1.55rem !important;  /* space between text and image */
+      align-items: center !important;
+    }
+
+    /* THIS is the “text too far right” fix:
+       pull the entire text block LEFT inside the hero */
+    .zf-home .zf-hero-text{
       max-width: none !important;
       min-width: 0 !important;
+      margin-left: -22px !important;  /* adjust: -16 to -32 depending on taste */
     }
 
-    .zf-hero-body{
+    /* Let the paragraphs expand */
+    .zf-home .zf-hero-body{
       margin-top: 1.15rem !important;
       max-width: none !important;
       width: 100% !important;
     }
 
-    .zf-hero-image{
-      display:flex !important;
-      justify-content:flex-start !important;
+    /* Keep image aligned nicely, with right-side breathing room */
+    .zf-home .zf-hero-image{
+      display: flex !important;
+      justify-content: flex-end !important;
+      padding-right: 6px !important;  /* matches the “right margin” feel */
     }
 
-    /* KEY CHANGE: gentler left pull than before (keeps margin feel) */
-    .zf-hero-image img{
-      transform: translateX(-6px) !important;
+    /* Pull the image slightly left so the gap doesn't look dead */
+    .zf-home .zf-hero-image img{
+      transform: translateX(-10px) !important;
     }
 
     /* kill hover enlarge + blue highlight on the 4 tiles */
@@ -112,17 +120,19 @@ permalink: /
 
     /* Mobile */
     @media (max-width: 900px){
-      .zf-hero.zf-hero-split{
+      .zf-home .zf-hero.zf-hero-split{
         grid-template-columns: 1fr !important;
         gap: 1.25rem !important;
       }
-      .zf-hero-text{
+      .zf-home .zf-hero-text{
         text-align:center !important;
+        margin-left: 0 !important;
       }
-      .zf-hero-image{
+      .zf-home .zf-hero-image{
         justify-content:center !important;
+        padding-right: 0 !important;
       }
-      .zf-hero-image img{
+      .zf-home .zf-hero-image img{
         transform: none !important;
       }
     }
@@ -252,7 +262,7 @@ permalink: /
         box-shadow:
           0 0 22px rgba(86,240,255,.35),
           0 0 12px rgba(139,92,246,.25),
-          0 16px 38px rgba(0,0,0,.55);
+          0 0 0 rgba(0,0,0,0);
         transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
       "
       onmouseover="
@@ -262,7 +272,7 @@ permalink: /
       "
       onmouseout="
         this.style.transform='none';
-        this.style.boxShadow='0 0 22px rgba(86,240,255,.35), 0 0 12px rgba(139,92,246,.25), 0 16px 38px rgba(0,0,0,.55)';
+        this.style.boxShadow='0 0 22px rgba(86,240,255,.35), 0 0 12px rgba(139,92,246,.25), 0 0 0 rgba(0,0,0,0)';
         this.style.filter='none';
       "
     >
@@ -275,7 +285,7 @@ permalink: /
   <hr style="margin: 2.2rem 0;"/>
 
 
-  <!-- CONTACT (restored; the top button href="#contact" scrolls here) -->
+  <!-- CONTACT (same simple structure as before, with id for scrolling) -->
   <h3 id="contact" style="margin-bottom:.7rem;">Contact</h3>
 
   <div class="zf-tile" style="padding: 1.2rem 1.2rem;">
@@ -309,4 +319,5 @@ permalink: /
   </div>
 
 </div>
+
 
