@@ -43,8 +43,8 @@ permalink: /
         src="{{ '/assets/images/zachpfp.jpeg' | relative_url }}"
         alt="Zach Feldman"
         style="
-          width: 260px;
-          height: 260px;
+          width: 300;
+          height: 400;
           object-fit: cover;
           border-radius: 22px;
           border: 1px solid rgba(255,255,255,.16);
