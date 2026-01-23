@@ -3,7 +3,7 @@ layout: default
 title: "Headlights & Taillights"
 description: CEV Lights
 category: featured
-image: /assets/images/2024chassis.png
+image: /assets/images/internalheadlight.png
 ---
 
 
