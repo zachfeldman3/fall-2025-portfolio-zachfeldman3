@@ -6,49 +6,6 @@ permalink: /
 
 <div class="zf-home">
 
-  <!-- INDEX-ONLY OVERRIDES -->
-  <style>
-    /* HERO: reduce dead space on left + make image feel centered */
-    .zf-hero.zf-hero-split{
-      grid-template-columns: 1.05fr 0.95fr !important;
-      gap: 2.0rem !important;
-    }
-    .zf-hero-text{
-      max-width: none !important;
-    }
-    .zf-hero-image{
-      justify-content: flex-end !important;
-    }
-
-    /* kill hover enlarge + blue highlight (tiles are not clickable) */
-    .zf-grid .zf-tile:hover{
-      transform: none !important;
-      border-color: rgba(255,255,255,.14) !important;
-      box-shadow: var(--shadow2) !important;
-    }
-    .zf-grid .zf-tile{
-      -webkit-tap-highlight-color: transparent;
-      cursor: default;
-    }
-
-    /* make tags less gray + slightly bolder */
-    .zf-grid .zf-tag{
-      color: rgba(234,240,255,.85) !important;
-      font-weight: 500 !important;
-    }
-
-    /* Mobile: keep hero stacked + centered */
-    @media (max-width: 900px){
-      .zf-hero.zf-hero-split{
-        grid-template-columns: 1fr !important;
-      }
-      .zf-hero-image{
-        justify-content: center !important;
-      }
-    }
-  </style>
-
-
   <div class="zf-hero zf-hero-split">
 
     <div class="zf-hero-text">
@@ -86,7 +43,7 @@ permalink: /
         src="{{ '/assets/images/zachpfp.jpeg' | relative_url }}"
         alt="Zach Feldman"
         style="
-          width: 300px;
+          width: 320px;
           height: 400px;
           object-fit: cover;
           border-radius: 22px;
@@ -97,6 +54,68 @@ permalink: /
     </div>
 
   </div>
+
+
+  <!-- INDEX-ONLY OVERRIDES -->
+  <style>
+    /* HERO: kill massive empty middle gap */
+    .zf-hero.zf-hero-split{
+      display: grid !important;
+      grid-template-columns: minmax(520px, 1fr) 24px minmax(300px, 360px) !important;
+      gap: 0 !important;
+      align-items: center !important;
+    }
+
+    .zf-hero-text{
+      max-width: 760px !important;
+    }
+
+    .zf-hero-image{
+      justify-content: flex-start !important;
+      padding-left: 0 !important;
+    }
+
+    .zf-hero-image img{
+      width: 320px !important;
+      height: 400px !important;
+      object-fit: cover !important;
+    }
+
+    /* kill hover enlarge + blue highlight */
+    .zf-grid .zf-tile:hover{
+      transform: none !important;
+      border-color: rgba(255,255,255,.14) !important;
+      box-shadow: var(--shadow2) !important;
+    }
+    .zf-grid .zf-tile{
+      -webkit-tap-highlight-color: transparent;
+      cursor: default;
+    }
+
+    /* make tags less gray + slightly bolder */
+    .zf-grid .zf-tag{
+      color: rgba(234,240,255,.85) !important;
+      font-weight: 500 !important;
+    }
+
+    /* Mobile fallback */
+    @media (max-width: 900px){
+      .zf-hero.zf-hero-split{
+        grid-template-columns: 1fr !important;
+      }
+
+      .zf-hero-text{
+        max-width: 60ch !important;
+        margin: 0 auto !important;
+        text-align: center !important;
+      }
+
+      .zf-hero-image{
+        justify-content: center !important;
+        margin-top: 1.3rem !important;
+      }
+    }
+  </style>
 
 
   <div class="zf-grid">
