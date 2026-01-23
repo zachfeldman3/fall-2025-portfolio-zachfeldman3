@@ -105,7 +105,53 @@ permalink: /
        ========================= -->
   <h3 style="margin-bottom: .9rem;">Highlighted Work</h3>
 
-  <div style="display:grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.2rem;">
+<div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem;">
+
+  <img
+    src="{{ '/assets/images/2024chassis.png' | relative_url }}"
+    alt=""
+    style="
+      width:100%;
+      height:190px;
+      object-fit:cover;
+      border-radius:18px;
+      border:none;
+      box-shadow: 0 18px 55px rgba(0,0,0,.38);
+      display:block;
+    "
+  />
+
+  <img
+    src="{{ '/assets/images/sidepartmold.jpg' | relative_url }}"
+    alt=""
+    style="
+      width:100%;
+      height:190px;
+      object-fit:cover;
+      border-radius:18px;
+      border:none;
+      box-shadow: 0 18px 55px rgba(0,0,0,.38);
+      display:block;
+    "
+  />
+
+  <img
+    src="{{ '/assets/images/M-totaldeformation.png' | relative_url }}"
+    alt=""
+    style="
+      width:100%;
+      height:190px;
+      object-fit:contain;
+      background: rgba(0,0,0,.16);
+      border-radius:18px;
+      border:none;
+      box-shadow: 0 18px 55px rgba(0,0,0,.38);
+      display:block;
+    "
+  />
+
+</div>
+
 
     <!-- Card 1 -->
     <a class="zf-tile" href="{{ '/projects/vacuum-infused-baseplate/' | relative_url }}" style="display:block;">
