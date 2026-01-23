@@ -21,7 +21,7 @@ permalink: /
         <a class="zf-btn" href="#contact">Contact</a>
       </div>
 
-      <div style="margin-top:1.3rem; max-width: 60ch;">
+      <div style="margin-top:1.3rem; max-width: 62ch;">
 
         <p style="margin: 0 0 .9rem 0;">
           My name is Zach Feldman, and I am a Mechanical Engineering student at Cornell University with interests in product design,
@@ -49,6 +49,7 @@ permalink: /
           border-radius: 22px;
           border: 1px solid rgba(255,255,255,.16);
           box-shadow: 0 18px 55px rgba(0,0,0,.55);
+          display:block;
         "
       />
     </div>
@@ -58,32 +59,31 @@ permalink: /
 
   <!-- INDEX-ONLY OVERRIDES -->
   <style>
-    /* HERO: kill massive empty middle gap */
+    /* HERO: remove dead space between text and image */
     .zf-hero.zf-hero-split{
-      display: grid !important;
-      grid-template-columns: minmax(520px, 1fr) 24px minmax(300px, 360px) !important;
-      gap: 0 !important;
-      align-items: center !important;
+      display:grid !important;
+      grid-template-columns: 1.55fr 0.85fr !important; /* tighter than before */
+      gap: 1.2rem !important;                          /* controls spacing */
+      align-items:center !important;
     }
 
     .zf-hero-text{
-      max-width: 760px !important;
+      max-width: none !important;  /* allow the column to use its full width */
     }
 
     .zf-hero-image{
-      justify-content: flex-start !important;
-      padding-left: 0 !important;
+      justify-content:flex-end !important; /* keeps image near right edge */
+      display:flex !important;
     }
 
+    /* If you still see a big gap, this pulls the image LEFT a bit */
     .zf-hero-image img{
-      width: 320px !important;
-      height: 400px !important;
-      object-fit: cover !important;
+      margin-left: -18px !important;
     }
 
-    /* kill hover enlarge + blue highlight */
+    /* kill hover enlarge + blue highlight on the 4 tiles */
     .zf-grid .zf-tile:hover{
-      transform: none !important;
+      transform:none !important;
       border-color: rgba(255,255,255,.14) !important;
       box-shadow: var(--shadow2) !important;
     }
@@ -98,21 +98,20 @@ permalink: /
       font-weight: 500 !important;
     }
 
-    /* Mobile fallback */
+    /* Mobile */
     @media (max-width: 900px){
       .zf-hero.zf-hero-split{
         grid-template-columns: 1fr !important;
+        gap: 1.25rem !important;
       }
-
       .zf-hero-text{
-        max-width: 60ch !important;
-        margin: 0 auto !important;
-        text-align: center !important;
+        text-align:center !important;
       }
-
       .zf-hero-image{
-        justify-content: center !important;
-        margin-top: 1.3rem !important;
+        justify-content:center !important;
+      }
+      .zf-hero-image img{
+        margin-left: 0 !important;
       }
     }
   </style>
@@ -234,11 +233,7 @@ permalink: /
         padding: .9rem 1.6rem;
         border-radius: 999px;
         border: 1px solid rgba(86,240,255,.45);
-        background: linear-gradient(
-          135deg,
-          rgba(86,240,255,.22),
-          rgba(139,92,246,.18)
-        );
+        background: linear-gradient(135deg, rgba(86,240,255,.22), rgba(139,92,246,.18));
         color: var(--text);
         font-weight: 600;
         letter-spacing: .02em;
@@ -268,7 +263,6 @@ permalink: /
   <hr style="margin: 2.2rem 0;"/>
 
 
-  <!-- CONTACT ANCHOR -->
   <h3 id="contact" style="margin-bottom:.7rem;">Contact</h3>
 
   <div class="zf-tile" style="padding: 1.2rem 1.2rem;">
