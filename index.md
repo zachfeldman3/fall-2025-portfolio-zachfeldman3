@@ -95,7 +95,7 @@ permalink: /
     <div class="zf-tile">
       <h3>What I’m Doing Now</h3>
       <div class="zf-tags">
-        <span class="zf-tag">CEV Chassis Lead</span>
+        <span class="zf-tag">Chassis Lead</span>
         <span class="zf-tag">Composites Manufacturing</span>
         <span class="zf-tag">Ansys ACP/FEA</span>
       </div>
