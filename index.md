@@ -67,6 +67,12 @@ permalink: /
       -webkit-tap-highlight-color: transparent;
       cursor: default;
     }
+
+    /* INDEX-ONLY OVERRIDE: make tags less gray + slightly bolder */
+    .zf-grid .zf-tag{
+      color: rgba(234,240,255,.85) !important;
+      font-weight: 500 !important;
+    }
   </style>
 
 
@@ -254,5 +260,4 @@ permalink: /
   </div>
 
 </div>
-
 
