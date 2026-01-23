@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Zach Feldman - Curriculum Vitae
+title: Zach Feldman - Resume
 permalink: /cv/
 ---
 ## Resume
