@@ -22,6 +22,7 @@ permalink: /
       </div>
 
       <div style="margin-top:1.3rem; max-width: 60ch;">
+
         <p style="margin: 0 0 .9rem 0;">
           My name is Zach Feldman, and I am a Mechanical Engineering student at Cornell University with interests in product design,
           manufacturing, and hands-on engineering projects.
@@ -32,6 +33,7 @@ permalink: /
           systems built in class and personal projects. I’m passionate about learning new engineering tools, building things that
           work, and continuously improving my technical skills.
         </p>
+
       </div>
 
     </div>
@@ -100,123 +102,69 @@ permalink: /
   <hr style="margin: 2.2rem 0;"/>
 
 
-  <!-- =========================
-       Highlighted Work
-       ========================= -->
   <h3 style="margin-bottom: .9rem;">Highlighted Work</h3>
 
-<div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem;">
+  <div style="
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+  ">
 
-  <img
-    src="{{ '/assets/images/2024chassis.png' | relative_url }}"
-    alt=""
-    style="
-      width:100%;
-      height:190px;
-      object-fit:cover;
-      border-radius:18px;
-      border:none;
-      box-shadow: 0 18px 55px rgba(0,0,0,.38);
-      display:block;
-    "
-  />
+    <img
+      src="{{ '/assets/images/2024chassis.png' | relative_url }}"
+      alt=""
+      style="
+        width:100%;
+        height:200px;
+        object-fit:cover;
+        border-radius:22px;
+        border:none;
+        display:block;
+        box-shadow:
+          0 0 38px rgba(86,240,255,.25),
+          0 0 18px rgba(139,92,246,.18);
+      "
+    />
 
-  <img
-    src="{{ '/assets/images/sidepartmold.jpg' | relative_url }}"
-    alt=""
-    style="
-      width:100%;
-      height:190px;
-      object-fit:cover;
-      border-radius:18px;
-      border:none;
-      box-shadow: 0 18px 55px rgba(0,0,0,.38);
-      display:block;
-    "
-  />
+    <img
+      src="{{ '/assets/images/sidepartmold.jpg' | relative_url }}"
+      alt=""
+      style="
+        width:100%;
+        height:200px;
+        object-fit:cover;
+        border-radius:22px;
+        border:none;
+        display:block;
+        box-shadow:
+          0 0 38px rgba(86,240,255,.25),
+          0 0 18px rgba(139,92,246,.18);
+      "
+    />
 
-  <img
-    src="{{ '/assets/images/M-totaldeformation.png' | relative_url }}"
-    alt=""
-    style="
-      width:100%;
-      height:190px;
-      object-fit:contain;
-      background: rgba(0,0,0,.16);
-      border-radius:18px;
-      border:none;
-      box-shadow: 0 18px 55px rgba(0,0,0,.38);
-      display:block;
-    "
-  />
+    <img
+      src="{{ '/assets/images/M-totaldeformation.png' | relative_url }}"
+      alt=""
+      style="
+        width:100%;
+        height:200px;
+        object-fit:contain;
+        background: rgba(0,0,0,.14);
+        border-radius:22px;
+        border:none;
+        display:block;
+        box-shadow:
+          0 0 38px rgba(86,240,255,.25),
+          0 0 18px rgba(139,92,246,.18);
+      "
+    />
 
-</div>
-
-
-    <!-- Card 1 -->
-    <a class="zf-tile" href="{{ '/projects/vacuum-infused-baseplate/' | relative_url }}" style="display:block;">
-      <img
-        src="{{ '/assets/images/2024chassis.png' | relative_url }}"
-        alt="Vacuum infused baseplate"
-        style="
-          width:100%;
-          height:170px;
-          object-fit:cover;
-          border-radius:16px;
-          border:1px solid rgba(255,255,255,.14);
-          margin-bottom:.8rem;
-        "
-      />
-    </a>
-
-    <!-- Card 2 -->
-    <a class="zf-tile" href="{{ '/projects/wet-layup/' | relative_url }}" style="display:block;">
-      <img
-        src="{{ '/assets/images/sidepartmold.jpg' | relative_url }}"
-        alt="Wet layup components"
-        style="
-          width:100%;
-          height:170px;
-          object-fit:cover;
-          border-radius:16px;
-          border:1px solid rgba(255,255,255,.14);
-          margin-bottom:.8rem;
-        "
-      />
-    </a>
-
-    <!-- Card 3 -->
-    <a class="zf-tile" href="{{ '/projects/' | relative_url }}" style="display:block;">
-      <img
-        src="{{ '/assets/images/M-totaldeformation.png' | relative_url }}"
-        alt="ANSYS FEA"
-        style="
-          width:100%;
-          height:170px;
-          object-fit:contain;
-          background: rgba(0,0,0,.14);
-          border-radius:16px;
-          border:1px solid rgba(255,255,255,.14);
-          margin-bottom:.8rem;
-        "
-      />
-    </a>
-
-  </div>
-
-  <div style="height: 18px;"></div>
-
-  <div class="zf-actions" style="justify-content:flex-start;">
-    <a class="zf-btn primary" href="{{ '/projects/' | relative_url }}">See all projects →</a>
   </div>
 
 
   <hr style="margin: 2.2rem 0;"/>
 
 
-  <!-- =========================
-       Contact + Socials
-       ========================= -->
   <h3 style="margin-bottom:.7rem;">Contact</h3>
 
   <div class="zf-tile" style="padding: 1.2rem 1.2rem;">
@@ -228,7 +176,6 @@ permalink: /
 
     <div style="display:flex; gap:.9rem; align-items:center; flex-wrap:wrap;">
 
-      <!-- LinkedIn -->
       <a
         href="https://www.linkedin.com/in/YOUR_LINKEDIN/"
         target="_blank"
@@ -245,7 +192,6 @@ permalink: /
         <span>LinkedIn</span>
       </a>
 
-      <!-- GitHub -->
       <a
         href="https://github.com/YOUR_GITHUB"
         target="_blank"
@@ -263,8 +209,6 @@ permalink: /
     </div>
 
   </div>
-
-  <div style="height: 10px;"></div>
 
 </div>
 
