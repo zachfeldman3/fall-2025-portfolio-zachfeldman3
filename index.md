@@ -21,7 +21,7 @@ permalink: /
         <a class="zf-btn" href="#contact">Contact</a>
       </div>
 
-      <div style="margin-top:1.3rem; max-width: 62ch;">
+      <div class="zf-hero-body">
 
         <p style="margin: 0 0 .9rem 0;">
           My name is Zach Feldman, and I am a Mechanical Engineering student at Cornell University with interests in product design,
@@ -62,23 +62,37 @@ permalink: /
     /* HERO: remove dead space between text and image */
     .zf-hero.zf-hero-split{
       display:grid !important;
-      grid-template-columns: 1.55fr 0.85fr !important; /* tighter than before */
-      gap: 1.2rem !important;                          /* controls spacing */
+
+      /* KEY CHANGE:
+         fixed image column (no giant fr-reserved space) */
+      grid-template-columns: minmax(0, 1fr) 320px !important;
+
+      /* tighter spacing between columns */
+      column-gap: 0.9rem !important;
+
       align-items:center !important;
     }
 
     .zf-hero-text{
-      max-width: none !important;  /* allow the column to use its full width */
+      max-width: none !important;
+      min-width: 0 !important; /* prevents overflow weirdness in grid */
+    }
+
+    /* KEY CHANGE: let the text actually expand */
+    .zf-hero-body{
+      margin-top: 1.15rem !important;
+      max-width: none !important;
+      width: 100% !important;
     }
 
     .zf-hero-image{
-      justify-content:flex-end !important; /* keeps image near right edge */
       display:flex !important;
+      justify-content:flex-start !important; /* lets it sit closer to text */
     }
 
-    /* If you still see a big gap, this pulls the image LEFT a bit */
+    /* subtle left pull without layout side-effects */
     .zf-hero-image img{
-      margin-left: -18px !important;
+      transform: translateX(-10px) !important;
     }
 
     /* kill hover enlarge + blue highlight on the 4 tiles */
@@ -111,7 +125,7 @@ permalink: /
         justify-content:center !important;
       }
       .zf-hero-image img{
-        margin-left: 0 !important;
+        transform: none !important;
       }
     }
   </style>
@@ -256,45 +270,5 @@ permalink: /
     >
       View All Projects →
     </a>
-
-  </div>
-
-
-  <hr style="margin: 2.2rem 0;"/>
-
-
-  <h3 id="contact" style="margin-bottom:.7rem;">Contact</h3>
-
-  <div class="zf-tile" style="padding: 1.2rem 1.2rem;">
-
-    <p style="margin: 0 0 1rem 0;">
-      Email me at
-      <a href="mailto:zlf3@cornell.edu">zlf3@cornell.edu</a><br/>
-      Call me at <a href="tel:19143567068">(914) 356-7068</a>
-    </p>
-
-    <div style="display:flex; gap:.9rem; align-items:center; flex-wrap:wrap;">
-
-      <a
-        href="https://www.linkedin.com/in/zlf3/"
-        target="_blank"
-        rel="noopener"
-        title="LinkedIn"
-        style="display:inline-flex; align-items:center; gap:.55rem;"
-      >
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M6.94 6.5A2.44 2.44 0 1 1 6.94 1.62a2.44 2.44 0 0 1 0 4.88Z" stroke="currentColor" stroke-width="1.8"/>
-          <path d="M2.8 22.5h4.3V8.6H2.8v13.9Z" stroke="currentColor" stroke-width="1.8"/>
-          <path d="M9.7 22.5h4.2v-7.1c0-1.9.4-3.8 2.8-3.8s2.4 2.2 2.4 3.9v7h4.2v-7.9c0-4-2.1-6.1-5.2-6.1-1.7 0-3 .9-3.6 1.8h-.1V8.6H9.7v13.9Z"
-                stroke="currentColor" stroke-width="1.8"/>
-        </svg>
-        <span>LinkedIn</span>
-      </a>
-
-    </div>
-
-  </div>
-
-</div>
 
 
