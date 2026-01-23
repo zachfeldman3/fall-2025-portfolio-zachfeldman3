@@ -43,8 +43,8 @@ permalink: /
         src="{{ '/assets/images/zachpfp.jpeg' | relative_url }}"
         alt="Zach Feldman"
         style="
-          width: 300;
-          height: 400;
+          width: 300px;
+          height: 400px;
           object-fit: cover;
           border-radius: 22px;
           border: 1px solid rgba(255,255,255,.16);
@@ -175,6 +175,49 @@ permalink: /
   </div>
 
 
+  <!-- GLOWY CTA BUTTON -->
+  <div style="display:flex; justify-content:center; margin-top: 1.6rem;">
+
+    <a
+      href="{{ '/projects/' | relative_url }}"
+      style="
+        display:inline-flex;
+        align-items:center;
+        gap:.6rem;
+        padding: .9rem 1.6rem;
+        border-radius: 999px;
+        border: 1px solid rgba(86,240,255,.45);
+        background: linear-gradient(
+          135deg,
+          rgba(86,240,255,.22),
+          rgba(139,92,246,.18)
+        );
+        color: var(--text);
+        font-weight: 600;
+        letter-spacing: .02em;
+        box-shadow:
+          0 0 22px rgba(86,240,255,.35),
+          0 0 12px rgba(139,92,246,.25),
+          0 16px 38px rgba(0,0,0,.55);
+        transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
+      "
+      onmouseover="
+        this.style.transform='translateY(-2px)';
+        this.style.boxShadow='0 0 32px rgba(86,240,255,.55), 0 0 18px rgba(139,92,246,.35), 0 22px 55px rgba(0,0,0,.65)';
+        this.style.filter='brightness(1.08)';
+      "
+      onmouseout="
+        this.style.transform='none';
+        this.style.boxShadow='0 0 22px rgba(86,240,255,.35), 0 0 12px rgba(139,92,246,.25), 0 16px 38px rgba(0,0,0,.55)';
+        this.style.filter='none';
+      "
+    >
+      View All Projects →
+    </a>
+
+  </div>
+
+
   <hr style="margin: 2.2rem 0;"/>
 
 
@@ -184,8 +227,8 @@ permalink: /
 
     <p style="margin: 0 0 1rem 0;">
       Email me at
-      <a href="mailto:zlf3@cornell.edu">YOUR_EMAIL@cornell.edu</a>
-      Call me at <a href="mailto:9143567068">YOUR_EMAIL@cornell.edu</a>
+      <a href="mailto:zlf3@cornell.edu">zlf3@cornell.edu</a><br/>
+      Call me at <a href="tel:19143567068">(914) 356-7068</a>
     </p>
 
     <div style="display:flex; gap:.9rem; align-items:center; flex-wrap:wrap;">
