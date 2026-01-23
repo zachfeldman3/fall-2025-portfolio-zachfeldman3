@@ -91,6 +91,116 @@ a{
 }
 a:hover{ filter: brightness(1.08); }
 
+
+
+
+
+
+
+/* =========================================================
+   Top Navigation Bar (Glass + Neon)
+   ========================================================= */
+
+.site-header,
+header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(15,18,30,.72),
+      rgba(8,10,18,.62)
+    );
+
+  border-bottom: 1px solid rgba(255,255,255,.14);
+
+  box-shadow:
+    0 10px 32px rgba(0,0,0,.45),
+    inset 0 -1px 0 rgba(86,240,255,.12);
+}
+
+/* inner layout */
+.site-header .container,
+header .container,
+nav {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 14px 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* site title */
+.site-header a,
+header a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.site-header .site-title,
+header .site-title,
+.site-header h1,
+header h1 {
+  font-family: "Merriweather", Georgia, serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: .01em;
+}
+
+/* nav links */
+.site-header nav a,
+header nav a {
+  margin-left: 1.4rem;
+  font-size: .95rem;
+  font-weight: 500;
+  color: rgba(234,240,255,.78);
+
+  position: relative;
+  transition: color .18s ease;
+}
+
+.site-header nav a:hover,
+header nav a:hover {
+  color: rgba(86,240,255,.95);
+}
+
+/* neon underline hover */
+.site-header nav a::after,
+header nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+
+  background: linear-gradient(
+    90deg,
+    rgba(86,240,255,.85),
+    rgba(139,92,246,.85)
+  );
+
+  border-radius: 999px;
+  transition: width .25s ease;
+}
+
+.site-header nav a:hover::after,
+header nav a:hover::after {
+  width: 100%;
+}
+
+
+
+
+
+
 /* =========================================================
    Homepage “awesome” layout (unchanged)
    ========================================================= */
