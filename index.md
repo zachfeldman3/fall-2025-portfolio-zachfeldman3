@@ -17,8 +17,8 @@ permalink: /
 
       <div class="zf-actions">
         <a class="zf-btn primary" href="{{ '/projects/' | relative_url }}">View Projects →</a>
-        <a class="zf-btn" href="{{ '/cv/' | relative_url }}">CV</a>
-        <a class="zf-btn" href="{{ '/about/' | relative_url }}">About</a>
+        <a class="zf-btn" href="{{ '/cv/' | relative_url }}">Resume</a>
+        <a class="zf-btn" href="#contact">Contact</a>
       </div>
 
       <div style="margin-top:1.3rem; max-width: 60ch;">
@@ -221,7 +221,8 @@ permalink: /
   <hr style="margin: 2.2rem 0;"/>
 
 
-  <h3 style="margin-bottom:.7rem;">Contact</h3>
+  <!-- CONTACT ANCHOR -->
+  <h3 id="contact" style="margin-bottom:.7rem;">Contact</h3>
 
   <div class="zf-tile" style="padding: 1.2rem 1.2rem;">
 
@@ -234,7 +235,7 @@ permalink: /
     <div style="display:flex; gap:.9rem; align-items:center; flex-wrap:wrap;">
 
       <a
-        href="https://www.linkedin.com/in/YOUR_LINKEDIN/"
+        href="https://www.linkedin.com/in/YOUR-LINKEDIN-URL/"
         target="_blank"
         rel="noopener"
         title="LinkedIn"
