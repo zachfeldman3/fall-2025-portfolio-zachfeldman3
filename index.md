@@ -235,7 +235,7 @@ permalink: /
     <div style="display:flex; gap:.9rem; align-items:center; flex-wrap:wrap;">
 
       <a
-        href="https://www.linkedin.com/in/YOUR-LINKEDIN-URL/"
+        href="https://www.linkedin.com/zlf3"
         target="_blank"
         rel="noopener"
         title="LinkedIn"
