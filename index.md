@@ -57,86 +57,85 @@ permalink: /
   </div>
 
 
-  <!-- INDEX-ONLY OVERRIDES (FORCE) -->
-  <style>
-    /* ====== HERO LAYOUT FIX ====== */
+ <style>
+  /* ====== HERO LAYOUT FIX ====== */
 
-    /* If your theme uses a container, it may be adding big side padding */
-    .zf-home .zf-hero{
-      width: 100% !important;
-    }
+  .zf-home .zf-hero{
+    width: 100% !important;
+  }
 
-    /* Make the split tighter + predictable */
+  .zf-home .zf-hero.zf-hero-split{
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) 320px !important;
+
+    /* KEY CHANGE: more breathing room between text + image */
+    column-gap: 2.25rem !important;
+
+    align-items: center !important;
+  }
+
+  .zf-home .zf-hero-text{
+    max-width: none !important;
+    min-width: 0 !important;
+
+    /* keep your text alignment exactly where it is now */
+    margin-left: -22px !important;
+  }
+
+  .zf-home .zf-hero-body{
+    margin-top: 1.15rem !important;
+    max-width: none !important;
+    width: 100% !important;
+  }
+
+  .zf-home .zf-hero-image{
+    display: flex !important;
+    justify-content: flex-end !important;
+    padding-right: 6px !important;
+  }
+
+  /* KEY CHANGE: undo some of the left pull on the photo */
+  .zf-home .zf-hero-image img{
+    transform: translateX(-2px) !important;
+  }
+
+  /* kill hover enlarge + blue highlight on the 4 tiles */
+  .zf-grid .zf-tile:hover{
+    transform:none !important;
+    border-color: rgba(255,255,255,.14) !important;
+    box-shadow: var(--shadow2) !important;
+  }
+  .zf-grid .zf-tile{
+    -webkit-tap-highlight-color: transparent;
+    cursor: default;
+  }
+
+  /* make tags less gray + slightly bolder */
+  .zf-grid .zf-tag{
+    color: rgba(234,240,255,.85) !important;
+    font-weight: 500 !important;
+  }
+
+  /* Mobile */
+  @media (max-width: 900px){
     .zf-home .zf-hero.zf-hero-split{
-      display: grid !important;
-      grid-template-columns: minmax(0, 1fr) 320px !important;
-      column-gap: 1.55rem !important;  /* space between text and image */
-      align-items: center !important;
+      grid-template-columns: 1fr !important;
+      gap: 1.25rem !important;
     }
-
-    /* THIS is the “text too far right” fix:
-       pull the entire text block LEFT inside the hero */
     .zf-home .zf-hero-text{
-      max-width: none !important;
-      min-width: 0 !important;
-      margin-left: -22px !important;  /* adjust: -16 to -32 depending on taste */
+      text-align:center !important;
+      margin-left: 0 !important;
     }
-
-    /* Let the paragraphs expand */
-    .zf-home .zf-hero-body{
-      margin-top: 1.15rem !important;
-      max-width: none !important;
-      width: 100% !important;
-    }
-
-    /* Keep image aligned nicely, with right-side breathing room */
     .zf-home .zf-hero-image{
-      display: flex !important;
-      justify-content: flex-end !important;
-      padding-right: 6px !important;  /* matches the “right margin” feel */
+      justify-content:center !important;
+      padding-right: 0 !important;
     }
-
-    /* Pull the image slightly left so the gap doesn't look dead */
     .zf-home .zf-hero-image img{
-      transform: translateX(-10px) !important;
+      transform: none !important;
     }
+  }
+</style>
 
-    /* kill hover enlarge + blue highlight on the 4 tiles */
-    .zf-grid .zf-tile:hover{
-      transform:none !important;
-      border-color: rgba(255,255,255,.14) !important;
-      box-shadow: var(--shadow2) !important;
-    }
-    .zf-grid .zf-tile{
-      -webkit-tap-highlight-color: transparent;
-      cursor: default;
-    }
-
-    /* make tags less gray + slightly bolder */
-    .zf-grid .zf-tag{
-      color: rgba(234,240,255,.85) !important;
-      font-weight: 500 !important;
-    }
-
-    /* Mobile */
-    @media (max-width: 900px){
-      .zf-home .zf-hero.zf-hero-split{
-        grid-template-columns: 1fr !important;
-        gap: 1.25rem !important;
-      }
-      .zf-home .zf-hero-text{
-        text-align:center !important;
-        margin-left: 0 !important;
-      }
-      .zf-home .zf-hero-image{
-        justify-content:center !important;
-        padding-right: 0 !important;
-      }
-      .zf-home .zf-hero-image img{
-        transform: none !important;
-      }
-    }
-  </style>
 
 
   <div class="zf-grid">
