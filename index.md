@@ -240,17 +240,13 @@ permalink: /
         title="LinkedIn"
         style="display:inline-flex; align-items:center; gap:.55rem;"
       >
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M6.94 6.5A2.44 2.44 0 1 1 6.94 1.62a2.44 2.44 0 0 1 0 4.88Z" stroke="currentColor" stroke-width="1.8"/>
+          <path d="M2.8 22.5h4.3V8.6H2.8v13.9Z" stroke="currentColor" stroke-width="1.8"/>
+          <path d="M9.7 22.5h4.2v-7.1c0-1.9.4-3.8 2.8-3.8s2.4 2.2 2.4 3.9v7h4.2v-7.9c0-4-2.1-6.1-5.2-6.1-1.7 0-3 .9-3.6 1.8h-.1V8.6H9.7v13.9Z"
+                stroke="currentColor" stroke-width="1.8"/>
+        </svg>
         <span>LinkedIn</span>
-      </a>
-
-      <a
-        href="https://github.com/YOUR_GITHUB"
-        target="_blank"
-        rel="noopener"
-        title="GitHub"
-        style="display:inline-flex; align-items:center; gap:.55rem;"
-      >
-        <span>GitHub</span>
       </a>
 
     </div>
