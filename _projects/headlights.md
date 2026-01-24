@@ -13,3 +13,7 @@ image: /assets/images/internalheadlight.png
         onload="renderMathInElement(document.body);"></script>
 
 # Headlight & Taillights 
+
+<img src="https://zachfeldman3.github.io/fall-2025-portfolio-zachfeldman3/assets/images/allheadlights.png" 
+     alt="Basic Design Concept"
+     style="max-width: 90%; height: auto; display: block; margin: auto;">
