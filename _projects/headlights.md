@@ -103,6 +103,18 @@ Because the full headlight assembly was large (approximately 3,000 in³) and fea
 
 This modular approach enabled rapid prototyping of complex geometry, ensured accurate assembly, and maintained the serviceability and structural robustness required for competition use.
 
+<div style="display:flex; gap:40px; justify-content:center; align-items:flex-start; margin:40px 0; flex-wrap:wrap;">
+
+  <!-- Image 1 -->
+  <div style="text-align:center; max-width:45%;">
+    <img src="{{ '/assets/images/headlightcurve.png' | relative_url }}"
+         style="max-width:100%; max-height:400px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
+    <p style="margin-top:10px; font-style:italic; color:#555;">
+      Headlights on Full Car 
+    </p>
+  </div>
+  </div>
+
 
 # Taillights 
 
