@@ -41,7 +41,7 @@ To resolve this, I designed a modular headlight housing system that mounts parti
     <img src="{{ '/assets/images/headlightnose.png' | relative_url }}"
          style="max-width:100%; max-height:350px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
     <p style="margin-top:10px; font-style:italic; color:#555;">
-      How Nose Detatches From Rest of Car
+      How Nose Interfaces With Rest of Car
     </p>
   </div>
 
