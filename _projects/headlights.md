@@ -103,3 +103,21 @@ Because the full headlight assembly was large (approximately 3,000 in³) and fea
 
 This modular approach enabled rapid prototyping of complex geometry, ensured accurate assembly, and maintained the serviceability and structural robustness required for competition use.
 
+
+# Taillights 
+
+In parallel with the headlight development, I designed a fully integrated taillight housing system to meet functional, packaging, and environmental requirements. Unlike the headlights—which were designed around a single high-intensity light source—the taillights needed to support distinct braking and turn-signal indicators, driving a more segmented internal layout.
+
+I used the same surface-driven workflow developed for the headlights, deriving geometry directly from the vehicle body using surface offsets, splitting tools, and Boolean combine/cut operations to ensure a seamless aerodynamic interface. However, the taillight geometry was more complex: the housing follows a continuously curved profile along its entire length, rather than transitioning from a curved surface to planar faces as in the headlight design.
+
+The taillight assembly consists of two primary components:
+1. a main structural housing that mounts directly to the baseplate, and
+2. a secondary retention frame secured via heat-set inserts.
+
+This frame captures a curved acrylic lens panel that slides into place, sealing and protecting the internal electronics from rain and debris—an environmental protection feature that was unnecessary for the internally mounted headlights.
+
+To ensure serviceability and structural robustness, the complete taillight module is fastened to the baseplate using five 1/4-20 screws, allowing for quick removal while maintaining precise alignment and load distribution. The external placement of the taillights was enabled by packaging clearance beneath the rear baseplate tail, allowing the assembly to remain fully flush with the vehicle body without protrusions.
+
+This design emphasized aerodynamic integration, manufacturability, environmental sealing, and modular service access, while maintaining visual consistency with the headlight architecture.
+
+
