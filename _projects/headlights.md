@@ -34,6 +34,27 @@ After finalizing the headlight geometry, I began designing the housing and mount
 
 To resolve this, I designed a modular headlight housing system that mounts partially to the removable nose and partially to the fixed baseplate. The nose-mounted portion of the headlight features a triangular sliding joint that interfaces with the remainder of the headlight assembly mounted to the baseplate. All lighting and electrical components are integrated into the baseplate-mounted portion, allowing the nose to be removed without disconnecting any wiring. This significantly improved serviceability, enabling quick access to the drivetrain and steering systems.
 
+<div style="display:flex; gap:40px; justify-content:center; align-items:flex-start; margin:40px 0; flex-wrap:wrap;">
+
+  <!-- Image 1 -->
+  <div style="text-align:center; max-width:45%;">
+    <img src="{{ '/assets/images/headlightnose.png' | relative_url }}"
+         style="max-width:100%; max-height:350px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
+    <p style="margin-top:10px; font-style:italic; color:#555;">
+      How Nose Detatches From Rest of Car
+    </p>
+  </div>
+
+  <!-- Image 2 -->
+  <div style="text-align:center; max-width:45%;">
+    <img src="{{ '/assets/images/headlightinterface.png' | relative_url }}"
+         style="max-width:100%; max-height:350px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
+    <p style="margin-top:10px; font-style:italic; color:#555;">
+      Sliding Joint Between Both Headlight Components
+    </p>
+  </div>
+</div>
+
 The triangular joint also serves as a locating feature, ensuring that the nose can be reinstalled in a repeatable, precise position without manual alignment. To achieve a smooth press-fit that was neither too tight nor too loose, I performed tolerance testing using scaled 3D-printed prototypes. By systematically varying hole sizes and clearances, I converged on a tolerance that produced a reliable, low-friction sliding fit suitable for repeated assembly and disassembly.
 
 Designing the interface between the headlight housing and the nose was the most technically challenging aspect of the project. The chassis and nose geometry were originally created in Autodesk Alias using surface modeling, resulting in complex 3D curves. In contrast, the headlight system was modeled in Fusion 360, which is better suited for solid modeling. Reconciling these two workflows required extensive use of surface-based cutting and splitting operations, using the Alias-derived nose surface as a trimming tool within Fusion 360.
