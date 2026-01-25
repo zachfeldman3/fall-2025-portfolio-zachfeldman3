@@ -107,7 +107,7 @@ This modular approach enabled rapid prototyping of complex geometry, ensured acc
 
   <!-- Image 1 -->
   <div style="text-align:center; max-width:45%;">
-    <img src="{{ '/assets/images/headlightcurve.png' | relative_url }}"
+    <img src="{{ '/assets/images/fullcarheadlights.png' | relative_url }}"
          style="max-width:100%; max-height:400px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
     <p style="margin-top:10px; font-style:italic; color:#555;">
       Headlights on Full Car 
@@ -132,4 +132,15 @@ To ensure serviceability and structural robustness, the complete taillight modul
 
 This design emphasized aerodynamic integration, manufacturability, environmental sealing, and modular service access, while maintaining visual consistency with the headlight architecture.
 
+<div style="display:flex; gap:40px; justify-content:center; align-items:flex-start; margin:40px 0; flex-wrap:wrap;">
+
+  <!-- Image 1 -->
+  <div style="text-align:center; max-width:45%;">
+    <img src="{{ '/assets/images/fullcartaillights.png' | relative_url }}"
+         style="max-width:100%; max-height:400px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
+    <p style="margin-top:10px; font-style:italic; color:#555;">
+      Taillights on Full Car
+    </p>
+  </div>
+  </div>
 
