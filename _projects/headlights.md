@@ -32,6 +32,18 @@ After iterative review with both the mechanical and electrical subteams, we sele
 
 After finalizing the headlight geometry, I began designing the housing and mounting system. Designing the interface between the headlight housing and the nose was the most technically challenging aspect of the project. The chassis and nose geometry were originally created in Autodesk Alias using surface modeling, resulting in complex 3D curves. In contrast, the headlight system was modeled in Fusion 360, which is better suited for solid modeling. Reconciling these two workflows required extensive use of surface-based cutting and splitting operations, using the Alias-derived nose surface as a trimming tool within Fusion 360.
 
+<div style="display:flex; gap:40px; justify-content:center; align-items:flex-start; margin:40px 0; flex-wrap:wrap;">
+
+  <!-- Image 1 -->
+  <div style="text-align:center; max-width:45%;">
+    <img src="{{ '/assets/images/headlightcurve.png' | relative_url }}"
+         style="max-width:100%; max-height:400px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
+    <p style="margin-top:10px; font-style:italic; color:#555;">
+      3D Sketch of Headlight Projected Onto Car Surface 
+    </p>
+  </div>
+  </div>
+
 This process was nontrivial due to frequent zero-intersection geometry errors and surface inconsistencies, which required iterative workarounds, alternate Boolean strategies, and carefully constructed lofts to transition between the curved surface interface and the rigid mounting geometry of the headlight housing. Once the nose interface was complete, I designed the remainder of the mounting system to secure the assembly at two structural points: the top of the wheel well and the underside of the baseplate, providing additional rigidity and load sharing.
 
 A major limitation of the previous lighting setup was poor serviceability. Because the LED strips were taped into cutouts in the nose while the main electrical systems were mounted to the bulkhead, removing the nose required unplugging the headlight wiring. This made routine access to the front of the vehicle difficult and increased the risk of damaging electrical connections during maintenance.
