@@ -24,11 +24,11 @@ Shell Eco-marathon rules specify that headlights must be positioned 300 mm from 
 
 Although the headlight design itself does not significantly affect aerodynamic or electrical performance, it plays a critical role in packaging, structural integration, and overall vehicle aesthetics. I developed 17 distinct headlight concepts in CAD, exploring variations in size, profile, and mounting geometry. Each design was evaluated for regulatory compliance, packaging feasibility within the carbon-fiber chassis, and visual coherence with the vehicle’s exterior.
 
-After iterative review with both the mechanical and electrical subteams, we selected Design 13 as the final concept. This design best balanced aesthetic appeal, compliance with the 300 mm placement rule, and integration constraints imposed by the chassis geometry and internal wiring routes.
-
 <img src="https://zachfeldman3.github.io/fall-2025-portfolio-zachfeldman3/assets/images/allheadlights.png" 
      alt="Basic Design Concept"
      style="max-width: 90%; height: auto; display: block; margin: auto;">
+
+After iterative review with both the mechanical and electrical subteams, we selected Design 13 as the final concept. This design best balanced aesthetic appeal, compliance with the 300 mm placement rule, and integration constraints imposed by the chassis geometry and internal wiring routes.
 
 After finalizing the headlight geometry, I began designing the housing and mounting system. A major limitation of the previous lighting setup was poor serviceability. Because the LED strips were taped into cutouts in the nose while the main electrical systems were mounted to the bulkhead, removing the nose required unplugging the headlight wiring. This made routine access to the front of the vehicle difficult and increased the risk of damaging electrical connections during maintenance.
 
