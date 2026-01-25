@@ -147,8 +147,8 @@ $$\delta = 0.567 \ \text{in}$$
 
 ## Engineering Drawing:
 
-<a href="https://zachfeldman3.github.io/fall-2025-portfolio-zachfeldman3/assets/images/TorqueWrench+Drawing.pdf" target="_blank">
-  <img src="https://zachfeldman3.github.io/fall-2025-portfolio-zachfeldman3/assets/images/TorqueWrench+Drawing.pdf"
+<a href="https://zachfeldman3.github.io/fall-2025-portfolio-zachfeldman3/assets/images/torquewrenchdrawing2.png" target="_blank">
+  <img src="https://zachfeldman3.github.io/fall-2025-portfolio-zachfeldman3/assets/images/torquewrenchdrawing2.png"
        alt="Engineering Drawing Preview"
        style="max-width: 90%; height: auto; display: block; margin: auto;">
 </a>
