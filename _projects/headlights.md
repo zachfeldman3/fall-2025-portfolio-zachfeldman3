@@ -75,5 +75,31 @@ The triangular joint also serves as a locating feature, ensuring that the nose c
 
 Because the full headlight assembly was large (approximately 3,000 in³) and featured complex geometry, it could not be 3D printed as a single part. To accommodate manufacturing constraints, I segmented the design into multiple interlocking components using a combination of sliding joints and pin-and-socket style alignment features. These features allowed the printed parts to be precisely assembled and permanently bonded, while preserving the press-fit triangular joints used for the removable nose interface.
 
+<div style="text-align:center; margin:40px 0;">
+
+  <!-- Images row -->
+  <div style="display:flex; gap:40px; justify-content:center; align-items:flex-start; flex-wrap:wrap;">
+
+    <!-- Image 1 -->
+    <div style="max-width:45%;">
+      <img src="{{ '/assets/images/headlightattachment1.png' | relative_url }}"
+           style="max-width:100%; max-height:350px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
+    </div>
+
+    <!-- Image 2 -->
+    <div style="max-width:45%;">
+      <img src="{{ '/assets/images/headlightattachment2.png' | relative_url }}"
+           style="max-width:100%; max-height:350px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
+    </div>
+
+  </div>
+
+  <!-- Combined caption -->
+  <p style="margin-top:12px; font-style:italic; color:#555;">
+    Interfacing of the Four Different Headlight Components
+  </p>
+
+</div>
+
 This modular approach enabled rapid prototyping of complex geometry, ensured accurate assembly, and maintained the serviceability and structural robustness required for competition use.
 
