@@ -84,7 +84,7 @@ After the reinforcement and core layers are placed, we apply a peel ply layer to
     <img src="{{ '/assets/images/cflayer.png' | relative_url }}"
          style="max-width:100%; max-height:350px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
     <p style="margin-top:10px; font-style:italic; color:#555;">
-      Fully Assembled Side Part Mold
+      Carbon Fiber Layer
     </p>
   </div>
 
@@ -93,7 +93,7 @@ After the reinforcement and core layers are placed, we apply a peel ply layer to
     <img src="{{ '/assets/images/peelplylayer.png' | relative_url }}"
          style="max-width:100%; max-height:350px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
     <p style="margin-top:10px; font-style:italic; color:#555;">
-      Mold Sprayed with Duratec Primer
+      Peel Ply Layer
     </p>
   </div>
 
@@ -102,7 +102,7 @@ After the reinforcement and core layers are placed, we apply a peel ply layer to
     <img src="{{ '/assets/images/breatherlayer.png' | relative_url }}"
          style="max-width:100%; max-height:350px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
     <p style="margin-top:10px; font-style:italic; color:#555;">
-      Mold Prepared with Release Agent
+      Breather Layer
     </p>
   </div>
 
