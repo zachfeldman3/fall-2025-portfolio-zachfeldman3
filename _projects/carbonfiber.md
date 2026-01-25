@@ -111,6 +111,18 @@ After the reinforcement and core layers are placed, we apply a peel ply layer to
 
 Finally, the entire mold is fully vacuum-sealed and placed under vacuum for the duration of the cure. Although vacuum consolidation is not strictly required for wet layups, applying vacuum significantly improves laminate quality by compacting the fiber stack, removing entrapped air, reducing void content, improving fiber-to-resin contact, and promoting more uniform thickness and surface finish. Vacuum pressure also helps minimize the risk of delamination and enhances overall mechanical performance. After the resin has fully cured, the part is carefully demolded and prepared for trimming and post-processing.
 
+<div style="display:flex; gap:40px; justify-content:center; align-items:flex-start; margin:40px 0; flex-wrap:wrap;">
+
+  <!-- Image 1 -->
+  <div style="text-align:center; max-width:45%;">
+    <img src="{{ '/assets/images/sidepartvacuum.png' | relative_url }}"
+         style="max-width:100%; max-height:400px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
+    <p style="margin-top:10px; font-style:italic; color:#555;">
+      Vacuum Set Up
+    </p>
+  </div>
+  </div>
+  
 # Vacuum Infusion 
 
 For primary structural components such as the vehicle baseplate and bulkheads, I lead the manufacturing process using vacuum infusion to achieve high fiber volume fraction, low void content, and consistent mechanical performance. These components carry the majority of the vehicle’s weight and global structural loads, making laminate quality and repeatability critical.
