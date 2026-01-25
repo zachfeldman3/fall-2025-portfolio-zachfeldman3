@@ -126,6 +126,18 @@ The taillight assembly consists of two primary components:
 1. a main structural housing that mounts directly to the baseplate, and
 2. a secondary retention frame secured via heat-set inserts.
 
+<div style="display:flex; gap:40px; justify-content:center; align-items:flex-start; margin:40px 0; flex-wrap:wrap;">
+
+  <!-- Image 1 -->
+  <div style="text-align:center; max-width:45%;">
+    <img src="{{ '/assets/images/2componentaillight.png' | relative_url }}"
+         style="max-width:100%; max-height:400px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
+    <p style="margin-top:10px; font-style:italic; color:#555;">
+      Taillight Split Into Both Components
+    </p>
+  </div>
+  </div>
+
 This frame captures a curved acrylic lens panel that slides into place, sealing and protecting the internal electronics from rain and debris—an environmental protection feature that was unnecessary for the internally mounted headlights.
 
 To ensure serviceability and structural robustness, the complete taillight module is fastened to the baseplate using five 1/4-20 screws, allowing for quick removal while maintaining precise alignment and load distribution. The external placement of the taillights was enabled by packaging clearance beneath the rear baseplate tail, allowing the assembly to remain fully flush with the vehicle body without protrusions.
