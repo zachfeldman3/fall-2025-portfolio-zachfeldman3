@@ -130,7 +130,7 @@ The taillight assembly consists of two primary components:
 
   <!-- Image 1 -->
   <div style="text-align:center; max-width:45%;">
-    <img src="{{ '/assets/images/2componentaillight.png' | relative_url }}"
+    <img src="{{ '/assets/images/2componenttaillight.png' | relative_url }}"
          style="max-width:100%; max-height:400px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
     <p style="margin-top:10px; font-style:italic; color:#555;">
       Taillight Split Into Both Components
