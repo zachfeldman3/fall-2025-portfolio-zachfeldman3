@@ -81,7 +81,7 @@ After the reinforcement and core layers are placed, we apply a peel ply layer to
 
   <!-- Image 1 -->
   <div style="text-align:center; max-width:30%;">
-    <img src="{{ '/assets/images/sidepartmold2.png' | relative_url }}"
+    <img src="{{ '/assets/images/cflayer.png' | relative_url }}"
          style="max-width:100%; max-height:350px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
     <p style="margin-top:10px; font-style:italic; color:#555;">
       Fully Assembled Side Part Mold
@@ -90,7 +90,7 @@ After the reinforcement and core layers are placed, we apply a peel ply layer to
 
   <!-- Image 2 -->
   <div style="text-align:center; max-width:30%;">
-    <img src="{{ '/assets/images/sidepartmoldspray.png' | relative_url }}"
+    <img src="{{ '/assets/images/peelplylayer.png' | relative_url }}"
          style="max-width:100%; max-height:350px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
     <p style="margin-top:10px; font-style:italic; color:#555;">
       Mold Sprayed with Duratec Primer
@@ -99,7 +99,7 @@ After the reinforcement and core layers are placed, we apply a peel ply layer to
 
   <!-- Image 3 -->
   <div style="text-align:center; max-width:30%;">
-    <img src="{{ '/assets/images/sidepartmoldrelease.png' | relative_url }}"
+    <img src="{{ '/assets/images/breatherlayer.png' | relative_url }}"
          style="max-width:100%; max-height:350px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
     <p style="margin-top:10px; font-style:italic; color:#555;">
       Mold Prepared with Release Agent
