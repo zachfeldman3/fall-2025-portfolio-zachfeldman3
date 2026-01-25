@@ -77,6 +77,38 @@ Once surface preparation is complete, the layup process begins. Because wet layu
 To support this, I implemented a standardized pre-cutting workflow in which all reinforcement plies are cut and staged prior to resin mixing. This eliminates time spent trimming fabric during layup and allows the team to focus exclusively on resin application and ply placement. For the side panel layup, the laminate schedule consists of two initial carbon fiber plies at 0° and 45°, followed by a Soric lightweight core layer for thickness and stiffness, then a symmetric 45° and 0° outer skin sequence.
 After the reinforcement and core layers are placed, we apply a peel ply layer to promote a clean surface finish and simplify secondary bonding operations. Next, I introduced the use of an unperforated release film—an addition to our previous wet layup process. This layer prevents excess resin from being drawn through the peel ply into the breather, ensuring the laminate does not become resin-starved and that the majority of the resin remains within the fiber architecture during cure. A breather layer is then applied to provide an air path for uniform vacuum distribution and to prevent localized pressure gradients across the laminate.
 
+<div style="display:flex; gap:40px; justify-content:center; align-items:flex-start; margin:40px 0; flex-wrap:wrap;">
+
+  <!-- Image 1 -->
+  <div style="text-align:center; max-width:30%;">
+    <img src="{{ '/assets/images/sidepartmold2.png' | relative_url }}"
+         style="max-width:100%; max-height:350px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
+    <p style="margin-top:10px; font-style:italic; color:#555;">
+      Fully Assembled Side Part Mold
+    </p>
+  </div>
+
+  <!-- Image 2 -->
+  <div style="text-align:center; max-width:30%;">
+    <img src="{{ '/assets/images/sidepartmoldspray.png' | relative_url }}"
+         style="max-width:100%; max-height:350px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
+    <p style="margin-top:10px; font-style:italic; color:#555;">
+      Mold Sprayed with Duratec Primer
+    </p>
+  </div>
+
+  <!-- Image 3 -->
+  <div style="text-align:center; max-width:30%;">
+    <img src="{{ '/assets/images/sidepartmoldrelease.png' | relative_url }}"
+         style="max-width:100%; max-height:350px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
+    <p style="margin-top:10px; font-style:italic; color:#555;">
+      Mold Prepared with Release Agent
+    </p>
+  </div>
+
+</div>
+
+
 Finally, the entire mold is fully vacuum-sealed and placed under vacuum for the duration of the cure. Although vacuum consolidation is not strictly required for wet layups, applying vacuum significantly improves laminate quality by compacting the fiber stack, removing entrapped air, reducing void content, improving fiber-to-resin contact, and promoting more uniform thickness and surface finish. Vacuum pressure also helps minimize the risk of delamination and enhances overall mechanical performance. After the resin has fully cured, the part is carefully demolded and prepared for trimming and post-processing.
 
 # Vacuum Infusion 
