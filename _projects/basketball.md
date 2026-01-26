@@ -36,6 +36,40 @@ Structural Housing:
 - Laser-cut acrylic side plates, base, and back wall form a rigid enclosure.
 - Interlocking “puzzle-joint” edges constrain orientation and simplify alignment during assembly.
 
+<div style="display:flex; gap:30px; justify-content:center; align-items:flex-start; margin:40px 0; flex-wrap:wrap;">
+
+  <!-- Image 1 -->
+  <div style="text-align:center; max-width:22%;">
+    <img src="{{ '/assets/images/drawing1.png' | relative_url }}"
+         style="max-width:100%; max-height:350px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
+  </div>
+
+  <!-- Image 2 -->
+  <div style="text-align:center; max-width:22%;">
+    <img src="{{ '/assets/images/drawing2.png' | relative_url }}"
+         style="max-width:100%; max-height:350px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
+  </div>
+
+  <!-- Image 3 -->
+  <div style="text-align:center; max-width:22%;">
+    <img src="{{ '/assets/images/drawing3.png' | relative_url }}"
+         style="max-width:100%; max-height:350px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
+  </div>
+
+  <!-- Image 4 -->
+  <div style="text-align:center; max-width:22%;">
+    <img src="{{ '/assets/images/drawing4.png' | relative_url }}"
+         style="max-width:100%; max-height:350px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
+  </div>
+
+</div>
+
+<!-- Single combined caption -->
+<p style="text-align:center; margin-top:12px; font-style:italic; color:#555;">
+  Drawings Of The Acrylic Housing
+</p>
+
+
 Controls & Feedback:
 - Manual speed control knob governs flywheel RPM.
 - LED lights embedded in the backboard flash when a shot is made, providing immediate visual feedback.
