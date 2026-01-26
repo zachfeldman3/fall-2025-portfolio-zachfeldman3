@@ -69,7 +69,7 @@ Structural Housing:
   </div>
 
   <!-- Image 4 -->
-  <div style="text-align:center; max-width:22%;">
+  <div style="text-align:center; max-width:100%;">
     <img src="{{ '/assets/images/drawing4.png' | relative_url }}"
          style="max-width:100%; max-height:350px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
   </div>
