@@ -32,6 +32,18 @@ Ball Handling & Return Mechanism:
 - Flywheels are driven by DC motors through a 100:12 gear reduction.
 - Return distance is adjustable via a speed control knob.
 
+<div style="display:flex; gap:40px; justify-content:center; align-items:flex-start; margin:40px 0; flex-wrap:wrap;">
+
+  <!-- Image 1 -->
+  <div style="text-align:center; max-width:45%;">
+    <img src="{{ '/assets/images/systemarchitecture.png' | relative_url }}"
+         style="max-width:100%; max-height:400px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
+    <p style="margin-top:10px; font-style:italic; color:#555;">
+      Ball Handling & Return Mechanism
+    </p>
+  </div>
+  </div>
+
 Structural Housing:
 - Laser-cut acrylic side plates, base, and back wall form a rigid enclosure.
 - Interlocking “puzzle-joint” edges constrain orientation and simplify alignment during assembly.
@@ -68,6 +80,18 @@ Structural Housing:
 <p style="text-align:center; margin-top:12px; font-style:italic; color:#555;">
   Drawings Of The Acrylic Housing
 </p>
+
+<div style="display:flex; gap:40px; justify-content:center; align-items:flex-start; margin:40px 0; flex-wrap:wrap;">
+
+  <!-- Image 1 -->
+  <div style="text-align:center; max-width:45%;">
+    <img src="{{ '/assets/images/acryllic.png' | relative_url }}"
+         style="max-width:100%; max-height:400px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
+    <p style="margin-top:10px; font-style:italic; color:#555;">
+      Final Laser Cut Acrylic Housing
+    </p>
+  </div>
+  </div>
 
 
 Controls & Feedback:
