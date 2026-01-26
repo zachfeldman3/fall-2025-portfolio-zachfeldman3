@@ -32,7 +32,7 @@ Ball Handling & Return Mechanism:
 - Flywheels are driven by DC motors through a 100:12 gear reduction.
 - Return distance is adjustable via a speed control knob.
 
-<div style="display:flex; gap:40px; justify-content:center; align-items:flex-start; margin:40px 0; flex-wrap:wrap;">
+<div style="display:flex; gap:40px; justify-content:left; align-items:flex-start; margin:40px 0; flex-wrap:wrap;">
 
   <!-- Image 1 -->
   <div style="text-align:center; max-width:45%;">
