@@ -112,19 +112,19 @@ I led the analysis of how the prototype would translate to scalable production:
 
 Flywheels:
 - 3D-printed PLA → rotationally molded polypropylene
-        -Faster production
-        -Improved mass consistency
-        -Lower unit cost
+  - Faster production
+  - Improved mass consistency
+  - Lower unit cost
   
 Gears:
 - Laser-cut acrylic → injection-molded acetal
-        -Improved tolerance control
-        -Better meshing and durability
+  - Improved tolerance control
+  - Better meshing and durability
   
 Ramp:
 - Laser-cut plywood → injection-molded polypropylene
-        -Thin-wall redesign
-        -Integrated mounting features
+  - Thin-wall redesign
+  - Integrated mounting features
   
 Axles:
 - Hand-sawed + belt-sanded steel → CNC-milled steel
