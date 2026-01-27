@@ -134,9 +134,3 @@ I was heavily involved in the end-to-end mechanical build and integration of the
 ##  Outcome
 
 The final prototype reliably returned the ball after made shots, supported adjustable launch distance, and provided interactive LED feedback. The system validated the mechanical concept while revealing key limitations tied to motor performance, gearing durability, and assembly complexity.
-
-## Future Considerations: 
-
-- Replace motors with faster spin-up units to enable sensor-based triggering
-- Injection-mold ramp and gears for durability and consistency
-- Integrate all mounts and electronics features directly into CAD
