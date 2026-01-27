@@ -98,7 +98,7 @@ Controls & Feedback:
 - Manual speed control knob governs flywheel RPM.
 - LED lights embedded in the backboard flash when a shot is made, providing immediate visual feedback.
 
-<div style="display:flex; justify-content:center; align-items:flex-start; margin:40px 0;">
+<div style="display:flex; justify-content:left; align-items:flex-start; margin:40px 0;">
 
   <div style="text-align:center; max-width:80%;">
 
@@ -107,7 +107,7 @@ Controls & Feedback:
       loop
       muted
       playsinline
-      style="max-width:100%; max-height:400px; border-radius:12px; display:block; margin:0 auto; justify-content:left;"
+      style="max-width:100%; max-height:400px; border-radius:12px; display:block; margin:0 auto;"
     >
       <source src="{{ '/assets/images/basketball-lights.mov' | relative_url }}" type="video/quicktime">
       Your browser does not support the video tag.
