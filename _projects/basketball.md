@@ -98,6 +98,30 @@ Controls & Feedback:
 - Manual speed control knob governs flywheel RPM.
 - LED lights embedded in the backboard flash when a shot is made, providing immediate visual feedback.
 
+<div style="display:flex; justify-content:center; align-items:flex-start; margin:40px 0;">
+
+  <div style="text-align:center; max-width:80%;">
+
+    <video
+      autoplay
+      loop
+      muted
+      playsinline
+      style="max-width:100%; max-height:400px; border-radius:12px; display:block; margin:0 auto;"
+    >
+      <source src="{{ '/assets/images/vacuum_infusion_demo.mov' | relative_url }}" type="video/quicktime">
+      Your browser does not support the video tag.
+    </video>
+
+    <p style="margin-top:10px; font-style:italic; color:#555; text-align:center;">
+      Vacuum infusion process demonstrating resin flow through carbon fiber layup
+    </p>
+
+  </div>
+
+</div>
+
+
 ## Design & Build Process
 I was heavily involved in the end-to-end mechanical build and integration of the prototype:
 - Hand calculations to size flywheels, gearing, and motor requirements
