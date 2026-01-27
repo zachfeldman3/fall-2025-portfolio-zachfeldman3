@@ -107,7 +107,7 @@ Controls & Feedback:
       loop
       muted
       playsinline
-      style="max-width:100%; max-height:400px; border-radius:12px; display:block; margin:0 auto;"
+      style="max-width:100%; max-height:400px; border-radius:12px; display:block; margin:0 auto; justify-content:left;"
     >
       <source src="{{ '/assets/images/basketball-lights.mov' | relative_url }}" type="video/quicktime">
       Your browser does not support the video tag.
