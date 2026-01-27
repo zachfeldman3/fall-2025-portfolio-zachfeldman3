@@ -134,3 +134,30 @@ I was heavily involved in the end-to-end mechanical build and integration of the
 ##  Outcome
 
 The final prototype reliably returned the ball after made shots, supported adjustable launch distance, and provided interactive LED feedback. The system validated the mechanical concept while revealing key limitations tied to motor performance, gearing durability, and assembly complexity.
+
+<div style="text-align:center; margin:40px 0;">
+
+  <!-- Images row -->
+  <div style="display:flex; gap:40px; justify-content:center; align-items:flex-start; flex-wrap:wrap;">
+
+    <!-- Image 1 -->
+    <div style="max-width:45%;">
+      <img src="{{ '/assets/images/basketballside.png' | relative_url }}"
+           style="max-width:100%; max-height:350px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
+    </div>
+
+    <!-- Image 2 -->
+    <div style="max-width:45%;">
+      <img src="{{ '/assets/images/basketballfront.png' | relative_url }}"
+           style="max-width:100%; max-height:350px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
+    </div>
+
+  </div>
+
+  <!-- Combined caption -->
+  <p style="margin-top:12px; font-style:italic; color:#555;">
+    Interfacing of the Four Different Headlight Components
+  </p>
+
+</div>
+
