@@ -3,7 +3,7 @@ layout: default
 title: "Falcon 9 Rocket Model"
 description: Falcon 9 Model Rocket 
 category: featured
-image: /assets/images/2024chassis.png
+image: /assets/images/falcon9tall.png
 ---
 
 Multi-Material IDEX CAD & Additive Manufacturing Project
