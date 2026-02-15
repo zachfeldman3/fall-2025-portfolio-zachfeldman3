@@ -77,7 +77,7 @@ The triangular joint also serves as a locating feature, ensuring that the nose c
 
   <!-- Image 1 -->
   <div style="text-align:center; max-width:45%;">
-    <img src="{{ '/assets/images/fullcarheadlights.png' | relative_url }}"
+    <img src="{{ '/assets/images/tolerance.png' | relative_url }}"
          style="max-width:100%; max-height:400px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
     <p style="margin-top:10px; font-style:italic; color:#555;">
       3D Print Tolerance Testing
