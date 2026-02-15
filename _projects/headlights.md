@@ -73,6 +73,18 @@ To resolve this, I designed a modular headlight housing system that mounts parti
 
 The triangular joint also serves as a locating feature, ensuring that the nose can be reinstalled in a repeatable, precise position without manual alignment. To achieve a smooth press-fit that was neither too tight nor too loose, I performed tolerance testing using scaled 3D-printed prototypes. By systematically varying hole sizes and clearances, I converged on a tolerance that produced a reliable, low-friction sliding fit suitable for repeated assembly and disassembly.
 
+<div style="display:flex; gap:40px; justify-content:center; align-items:flex-start; margin:40px 0; flex-wrap:wrap;">
+
+  <!-- Image 1 -->
+  <div style="text-align:center; max-width:45%;">
+    <img src="{{ '/assets/images/fullcarheadlights.png' | relative_url }}"
+         style="max-width:100%; max-height:400px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
+    <p style="margin-top:10px; font-style:italic; color:#555;">
+      3D Print Tolerance Testing
+    </p>
+  </div>
+  </div>
+
 Because the full headlight assembly was large (approximately 3,000 in³) and featured complex geometry, it could not be 3D printed as a single part. To accommodate manufacturing constraints, I segmented the design into multiple interlocking components using a combination of sliding joints and pin-and-socket style alignment features. These features allowed the printed parts to be precisely assembled and permanently bonded, while preserving the press-fit triangular joints used for the removable nose interface.
 
 <div style="text-align:center; margin:40px 0;">
