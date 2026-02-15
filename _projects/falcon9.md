@@ -1,4 +1,10 @@
-
+---
+layout: default
+title: "Falcon 9 Rocket Model"
+description: Falcon 9 Model Rocket 
+category: featured
+image: /assets/images/2024chassis.png
+---
 
 Multi-Material IDEX CAD & Additive Manufacturing Project
 1:144 Scale Modular Falcon-Style Rocket Assembly (Raise3D E2)
