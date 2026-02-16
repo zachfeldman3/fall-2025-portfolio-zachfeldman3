@@ -115,6 +115,38 @@ This module was printed using dual extrusion due to the external black structura
 
 The upper portion includes a reduced-diameter cylinder designed as a self-aligning press-fit interface to the interstage above.
 
+
+<div style="display:flex; gap:40px; justify-content:center; align-items:flex-start; margin:40px 0; flex-wrap:wrap;">
+
+  <!-- Image 1 -->
+  <div style="text-align:center; max-width:30%;">
+    <img src="{{ '/assets/images/cflayer.png' | relative_url }}"
+         style="max-width:100%; max-height:350px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
+    <p style="margin-top:10px; font-style:italic; color:#555;">
+      Carbon Fiber Layer
+    </p>
+  </div>
+
+  <!-- Image 2 -->
+  <div style="text-align:center; max-width:30%;">
+    <img src="{{ '/assets/images/peelplylayer.png' | relative_url }}"
+         style="max-width:100%; max-height:350px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
+    <p style="margin-top:10px; font-style:italic; color:#555;">
+      Peel Ply Layer
+    </p>
+  </div>
+
+  <!-- Image 3 -->
+  <div style="text-align:center; max-width:30%;">
+    <img src="{{ '/assets/images/breatherlayer.png' | relative_url }}"
+         style="max-width:100%; max-height:350px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
+    <p style="margin-top:10px; font-style:italic; color:#555;">
+      Breather Layer
+    </p>
+  </div>
+
+</div>
+
 ## 4. Interstage / Grid Fin Module 
 
 The upper black module houses the grid fin region, which was one of the most geometrically complex portions of the project. The grid fins were modeled using curved surfaces combined with repeated patterned cutting operations to achieve a realistic lattice structure while maintaining slicer-friendly thickness.
