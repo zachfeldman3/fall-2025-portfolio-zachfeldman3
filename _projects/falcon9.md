@@ -120,28 +120,28 @@ The upper portion includes a reduced-diameter cylinder designed as a self-aligni
 
   <!-- Image 1 -->
   <div style="text-align:center; max-width:30%;">
-    <img src="{{ '/assets/images/cflayer.png' | relative_url }}"
+    <img src="{{ '/assets/images/falcon9mainbody.png' | relative_url }}"
          style="max-width:100%; max-height:350px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
     <p style="margin-top:10px; font-style:italic; color:#555;">
-      Carbon Fiber Layer
+      Main Rocket Body
     </p>
   </div>
 
   <!-- Image 2 -->
   <div style="text-align:center; max-width:30%;">
-    <img src="{{ '/assets/images/peelplylayer.png' | relative_url }}"
+    <img src="{{ '/assets/images/falcon9interface.png' | relative_url }}"
          style="max-width:100%; max-height:350px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
     <p style="margin-top:10px; font-style:italic; color:#555;">
-      Peel Ply Layer
+      Bottom Hollow Cavity Interface with Rocket Base and Cyllinder 
     </p>
   </div>
 
   <!-- Image 3 -->
   <div style="text-align:center; max-width:30%;">
-    <img src="{{ '/assets/images/breatherlayer.png' | relative_url }}"
+    <img src="{{ '/assets/images/falcon9interface2.png' | relative_url }}"
          style="max-width:100%; max-height:350px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
     <p style="margin-top:10px; font-style:italic; color:#555;">
-      Breather Layer
+      Top Interface with Interstage
     </p>
   </div>
 
