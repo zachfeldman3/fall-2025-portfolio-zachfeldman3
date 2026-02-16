@@ -44,6 +44,27 @@ The design process began at the lowest section of the rocket with the Merlin eng
 
 Early prototypes revealed a major durability issue: the engines were initially connected only through a small tip interface and would snap off easily during handling. To solve this, I redesigned the base with a recessed engine seating indentation, allowing each Merlin to print into the structure rather than protruding as a fragile feature.
 
+<div style="display:flex; gap:40px; justify-content:center; align-items:flex-start; margin:40px 0; flex-wrap:wrap;">
+
+  <!-- Image 1 -->
+  <div style="text-align:center; max-width:45%;">
+    <img src="{{ '/assets/images/merlinindentations.png' | relative_url }}"
+         style="max-width:100%; max-height:350px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
+    <p style="margin-top:10px; font-style:italic; color:#555;">
+      Base Indentations for Merlin Engines
+    </p>
+  </div>
+
+  <!-- Image 2 -->
+  <div style="text-align:center; max-width:45%;">
+    <img src="{{ '/assets/images/mountedmerlins.png' | relative_url }}"
+         style="max-width:100%; max-height:350px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
+    <p style="margin-top:10px; font-style:italic; color:#555;">
+      Base of Rocket with Merlin Engines
+    </p>
+  </div>
+</div>
+
 This modification significantly improved robustness and made the engine cluster mechanically stable.
 
 Key improvements:
