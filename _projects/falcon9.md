@@ -102,7 +102,7 @@ The base of the rocket includes a hollow internal cavity and a cylindrical press
     <img src="{{ '/assets/images/falconcyllinder.png' | relative_url }}"
          style="max-width:100%; max-height:350px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
     <p style="margin-top:10px; font-style:italic; color:#555;">
-      Cyllindrical Press Fit Piece to Connect to Next Piece
+      Cyllindrical Press Fit Piece to Connect to Main Rocket Body
     </p>
   </div>
 </div>
