@@ -154,6 +154,38 @@ The upper black module houses the grid fin region, which was one of the most geo
 
 This module is hollow and also serves as an internal housing volume for the vacuum Merlin engine component of the upper stage.
 
+<div style="display:flex; gap:40px; justify-content:center; align-items:flex-start; margin:40px 0; flex-wrap:wrap;">
+
+  <!-- Image 1 -->
+  <div style="text-align:center;">
+    <img src="{{ '/assets/images/interstage.png' | relative_url }}"
+         style="height:350px; width:auto; border-radius:12px; display:block; margin:0 auto;" />
+    <p style="margin-top:10px; font-style:italic; color:#555;">
+      Interstage
+    </p>
+  </div>
+
+  <!-- Image 2 (Middle - wider automatically) -->
+  <div style="text-align:center;">
+    <img src="{{ '/assets/images/interstage2.png' | relative_url }}"
+         style="height:350px; width:auto; border-radius:12px; display:block; margin:0 auto;" />
+    <p style="margin-top:10px; font-style:italic; color:#555;">
+      Interstage / Grid Fins 
+    </p>
+  </div>
+
+  <!-- Image 3 -->
+  <div style="text-align:center;">
+    <img src="{{ '/assets/images/gridfin.png' | relative_url }}"
+         style="height:350px; width:auto; border-radius:12px; display:block; margin:0 auto;" />
+    <p style="margin-top:10px; font-style:italic; color:#555;">
+      Grid Fin 
+    </p>
+  </div>
+
+</div>
+
+
 ## 5. Upper Stage Module (Vacuum Merlin + Second Stage)
    
 The top stage includes a vacuum Merlin engine printed in gray, integrated into a white fairing/body structure. The interface was designed with smooth press-fit tolerances, allowing the entire upper engine module to be removed and reinserted cleanly.
