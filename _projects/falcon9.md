@@ -154,7 +154,7 @@ The upper black module houses the grid fin region, which was one of the most geo
 
 This module is hollow and also serves as an internal housing volume for the vacuum Merlin engine component of the upper stage.
 
-5. Upper Stage Module (Vacuum Merlin + Second Stage)
+## 5. Upper Stage Module (Vacuum Merlin + Second Stage)
    
 The top stage includes a vacuum Merlin engine printed in gray, integrated into a white fairing/body structure. The interface was designed with smooth press-fit tolerances, allowing the entire upper engine module to be removed and reinserted cleanly.
 
