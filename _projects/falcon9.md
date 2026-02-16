@@ -85,6 +85,28 @@ The base of the rocket includes a hollow internal cavity and a cylindrical press
 - Repeatable alignment for stacking the next stage
 - A clean modular interface without fasteners or adhesives
 
+
+<div style="display:flex; gap:40px; justify-content:center; align-items:flex-start; margin:40px 0; flex-wrap:wrap;">
+
+  <!-- Image 1 -->
+  <div style="text-align:center; max-width:45%;">
+    <img src="{{ '/assets/images/basecavity.png' | relative_url }}"
+         style="max-width:100%; max-height:350px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
+    <p style="margin-top:10px; font-style:italic; color:#555;">
+      Hollow Internal Cavity in Rocket Base 
+    </p>
+  </div>
+
+  <!-- Image 2 -->
+  <div style="text-align:center; max-width:45%;">
+    <img src="{{ '/assets/images/falconcyllinder.png' | relative_url }}"
+         style="max-width:100%; max-height:350px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
+    <p style="margin-top:10px; font-style:italic; color:#555;">
+      Cyllindrical Press Fit Piece to Connect to Next Piece
+    </p>
+  </div>
+</div>
+
 # 3. Main Rocket Body + Landing Legs
 
 The central body section incorporates the landing leg geometry, modeled once and repeated symmetrically using circular patterning.
