@@ -30,6 +30,18 @@ A key design constraint was limiting each printed module to a maximum of two col
 
 The design process began at the lowest section of the rocket with the Merlin engine cluster. A single engine was modeled and duplicated into a full nine-engine array using the circular pattern tool.
 
+<div style="display:flex; gap:40px; justify-content:center; align-items:flex-start; margin:40px 0; flex-wrap:wrap;">
+
+  <!-- Image 1 -->
+  <div style="text-align:center; max-width:45%;">
+    <img src="{{ '/assets/images/merlinengines.png' | relative_url }}"
+         style="max-width:100%; max-height:400px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
+    <p style="margin-top:10px; font-style:italic; color:#555;">
+      9 Merlin Engines 
+    </p>
+  </div>
+  </div>
+
 Early prototypes revealed a major durability issue: the engines were initially connected only through a small tip interface and would snap off easily during handling. To solve this, I redesigned the base with a recessed engine seating indentation, allowing each Merlin to print into the structure rather than protruding as a fragile feature.
 
 This modification significantly improved robustness and made the engine cluster mechanically stable.
