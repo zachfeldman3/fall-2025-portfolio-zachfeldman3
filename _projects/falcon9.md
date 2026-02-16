@@ -6,20 +6,26 @@ category: featured
 image: /assets/images/falcon9tall4.png
 ---
 
-Multi-Material IDEX CAD & Additive Manufacturing Project
-1:144 Scale Modular Falcon-Style Rocket Assembly (Raise3D E2)
+# Multi-Material IDEX CAD & Additive Manufacturing Project 
+## 1:144 Scale Modular Falcon-Style Rocket Assembly 
 This project involved the complete CAD design and multi-material additive manufacturing of a 1:144 scale Falcon-style rocket assembly, developed specifically around the constraints and capabilities of an Independent Dual Extruder (IDEX) 3D printing workflow. The objective was to create a highly repeatable, support-free, press-fit model that could be produced as an essentially finished part directly off the printer—eliminating the need for painting, heavy post-processing, or permanent bonding.
+
 The final design was optimized for manufacturability, modular replacement, and repeatable production, using only four primary printed components with clean mechanical interfaces. Total material cost was approximately $10, demonstrating an efficient, low-cost, high-quality prototyping workflow.
-Printing Platform and Manufacturing Constraints
-Printer: Raise3D E2 (IDEX dual extruder system)
-Material: PETG (all components)
-Nozzle Diameter: 0.4 mm
-Layer Height: 0.10 mm (high-resolution finish)
-Multi-material process: Purge tower used for clean transitions
-Support strategy: Entire assembly designed to print without supports
-Total print time: < 24 hours across all modules
+
+### Printing Platform and Manufacturing Constraints
+- Printer: Raise3D E2 (IDEX dual extruder system)
+- Slicer: ideaMaker
+- Material: PLA (all components)
+- Nozzle Diameter: 0.4 mm
+- Layer Height: 0.10 mm (high-resolution finish)
+- Multi-material process: Purge tower used for clean transitions
+- Support strategy: Entire assembly designed to print without supports
+- Total print time: < 24 hours across all modules
+  
 A key design constraint was limiting each printed module to a maximum of two colors per part, while still achieving clear visual and functional separation between engine hardware, structural features, and airframe surfaces.
-Bottom-Up System Architecture and Design Development
+
+## Bottom-Up System Architecture and Design Development
+
 1. Engine Base Module (Merlin Cluster + Structural Reinforcement)
 The design process began at the lowest section of the rocket with the Merlin engine cluster. A single engine was modeled and duplicated into a full nine-engine array using the circular pattern tool.
 Early prototypes revealed a major durability issue: the engines were initially connected only through a small tip interface and would snap off easily during handling. To solve this, I redesigned the base with a recessed engine seating indentation, allowing each Merlin to print into the structure rather than protruding as a fragile feature.
