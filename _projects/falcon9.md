@@ -119,33 +119,34 @@ The upper portion includes a reduced-diameter cylinder designed as a self-aligni
 <div style="display:flex; gap:40px; justify-content:center; align-items:flex-start; margin:40px 0; flex-wrap:wrap;">
 
   <!-- Image 1 -->
-  <div style="text-align:center; max-width:30%;">
+  <div style="text-align:center;">
     <img src="{{ '/assets/images/falcon9mainbody.png' | relative_url }}"
-         style="max-width:100%; max-height:350px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
+         style="height:350px; width:auto; border-radius:12px; display:block; margin:0 auto;" />
     <p style="margin-top:10px; font-style:italic; color:#555;">
       Main Rocket Body
     </p>
   </div>
 
-  <!-- Image 2 -->
-  <div style="text-align:center; max-width:30%;">
+  <!-- Image 2 (Middle - wider automatically) -->
+  <div style="text-align:center;">
     <img src="{{ '/assets/images/falcon9interface.png' | relative_url }}"
-         style="max-width:100%; max-height:350px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
+         style="height:350px; width:auto; border-radius:12px; display:block; margin:0 auto;" />
     <p style="margin-top:10px; font-style:italic; color:#555;">
-      Bottom Hollow Cavity Interface with Rocket Base and Cyllinder 
+      Bottom Hollow Cavity Interface with Rocket Base and Cylinder
     </p>
   </div>
 
   <!-- Image 3 -->
-  <div style="text-align:center; max-width:30%;">
+  <div style="text-align:center;">
     <img src="{{ '/assets/images/falcon9interface2.png' | relative_url }}"
-         style="max-width:100%; max-height:350px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
+         style="height:350px; width:auto; border-radius:12px; display:block; margin:0 auto;" />
     <p style="margin-top:10px; font-style:italic; color:#555;">
       Top Interface with Interstage
     </p>
   </div>
 
 </div>
+
 
 ## 4. Interstage / Grid Fin Module 
 
