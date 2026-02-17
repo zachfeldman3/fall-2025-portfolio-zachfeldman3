@@ -242,3 +242,15 @@ Skills demonstrated:
 - Multi-material IDEX process planning and calibration
 - Press-fit tolerance engineering and iterative prototyping
 - Complex surface + lattice modeling for grid fin and other structures
+
+  <div style="display:flex; gap:40px; justify-content:center; align-items:flex-start; margin:40px 0; flex-wrap:wrap;">
+
+  <!-- Image 1 -->
+  <div style="text-align:center; max-width:100%;">
+    <img src="{{ '/assets/images/merlinengines.png' | relative_url }}"
+         style="max-width:100%; max-height:400px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
+    <p style="margin-top:10px; font-style:italic; color:#555;">
+      Final Model
+    </p>
+  </div>
+  </div>
