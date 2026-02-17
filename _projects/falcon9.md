@@ -248,7 +248,7 @@ Skills demonstrated:
   <!-- Image 1 -->
   <div style="text-align:center; max-width:100%;">
     <img src="{{ '/assets/images/finalfalcon9.png' | relative_url }}"
-         style="max-width:100%; max-height:1000px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
+         style="max-width:100%; max-height:650px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
     <p style="margin-top:10px; font-style:italic; color:#555;">
       Final Falcon 9 Assembly Model
     </p>
