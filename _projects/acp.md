@@ -39,11 +39,18 @@ I first performed hand calculations to estimate the compressive stress beneath t
 
 The calculations showed that the preload required for proper bolt pretension would induce core compressive stresses well above the 203 psi crush limit, meaning the core would fail in local crushing long before reaching the necessary clamp force.
 
-<a href="https://zachfeldman3.github.io/fall-2025-portfolio-zachfeldman3/assets/images/baseplatecalcs.pdf" target="_blank">
-  <img src="https://zachfeldman3.github.io/fall-2025-portfolio-zachfeldman3/assets/images/baseplatecalcs.pdf.png"
-       alt="Engineering Drawing Preview"
-       style="max-width: 90%; height: auto; display: block; margin: auto;">
-</a>
+  <div style="display:flex; gap:40px; justify-content:center; align-items:flex-start; margin:40px 0; flex-wrap:wrap;">
+
+  <!-- Image 1 -->
+  <div style="text-align:center; max-width:100%;">
+    <img src="{{ '/assets/images/baseplatecalcs2.png' | relative_url }}"
+         style="max-width:100%; max-height:650px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
+    <p style="margin-top:10px; font-style:italic; color:#555;">
+      Hand Calculations
+    </p>
+  </div>
+  </div>
+
 
 ## ANSYS ACP Validation
 
