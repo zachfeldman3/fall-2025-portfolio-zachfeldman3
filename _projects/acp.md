@@ -44,7 +44,7 @@ The calculations showed that the preload required for proper bolt pretension wou
   <!-- Image 1 -->
   <div style="text-align:center; max-width:100%;">
     <img src="{{ '/assets/images/baseplatecalcs2.png' | relative_url }}"
-         style="max-width:100%; max-height:650px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
+         style="max-width:100%; max-height:1200px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
     <p style="margin-top:10px; font-style:italic; color:#555;">
       Hand Calculations
     </p>
