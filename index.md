@@ -166,6 +166,7 @@ permalink: /
         <span class="zf-tag">Chassis Lead</span>
         <span class="zf-tag">Composites Manufacturing</span>
         <span class="zf-tag">Ansys ACP/FEA</span>
+        <span class="zf-tag">Ansys LPBF Research</span>
       </div>
     </div>
 
