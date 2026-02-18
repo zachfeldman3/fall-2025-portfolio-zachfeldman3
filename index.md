@@ -206,9 +206,9 @@ permalink: /
           0 0 18px rgba(139,92,246,.18);
       "
     />
-
+    
     <img
-      src="{{ '/assets/images/sidepartmold.jpg' | relative_url }}"
+      src="{{ '/assets/images/internalheadlight.png' | relative_url }}"
       alt=""
       style="
         width:100%;
