@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Carbon Fiber Manufacturing"
-description: CEV Carbon Fiber
+title: "Chassis Structural Analysis"
+description: ACP
 category: featured
 image: /assets/images/2024chassis.png
 ---
