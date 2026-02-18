@@ -39,6 +39,12 @@ I first performed hand calculations to estimate the compressive stress beneath t
 
 The calculations showed that the preload required for proper bolt pretension would induce core compressive stresses well above the 203 psi crush limit, meaning the core would fail in local crushing long before reaching the necessary clamp force.
 
+<a href="https://zachfeldman3.github.io/fall-2025-portfolio-zachfeldman3/assets/images/baseplatecalcs.pdf" target="_blank">
+  <img src="https://zachfeldman3.github.io/fall-2025-portfolio-zachfeldman3/assets/images/baseplatecalcs.pdf.png"
+       alt="Engineering Drawing Preview"
+       style="max-width: 90%; height: auto; display: block; margin: auto;">
+</a>
+
 ## ANSYS ACP Validation
 
 To validate the analytical results, we modeled the bolted region directly in ACP. The clamp load was applied through a representative washer diameter (≈0.75 in), and the through-thickness compressive stress in the foam core was evaluated under increasing preload.
