@@ -58,6 +58,12 @@ To validate the analytical results, we modeled the bolted region directly in ACP
 
 A baseline preload of 1000 N was applied and scaled upward to determine the maximum allowable clamp force before core crushing occurred. The ACP failure results showed that core crushing began at approximately ~2000 N maximum allowable preload This value remains far below the force required to properly pretension a 1/2–20 bolt, confirming the hand-calculation conclusion.
 
+## FEM Model with Loads and Boundary Conditions
+
+<img src="https://zachfeldman3.github.io/fall-2025-portfolio-zachfeldman3/assets/images/acpforces.png" 
+     alt="Basic Design Concept"
+     style="max-width: 90%; height: auto; display: block; margin: auto;">
+
 ## Engineering Conclusion
 This study demonstrated that direct bolt pretensioning into a sandwich baseplate is not structurally viable without additional reinforcement. The governing failure mode is local foam core crushing, not facesheet tensile failure.
 
