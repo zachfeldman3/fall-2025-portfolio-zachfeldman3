@@ -183,7 +183,7 @@ After the resin has fully infused and cured at room temperature, the part is dem
 
   <!-- Image 1 -->
   <div style="text-align:center; max-width:100%;">
-    <img src="{{ '/assets/images/rearhatchfinal.jpg' | relative_url }}"
+    <img src="{{ '/assets/images/rearhatchfinal2.png' | relative_url }}"
          style="max-width:100%; max-height:800px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
     <p style="margin-top:10px; font-style:italic; color:#555;">
       Final Carbon Fiber Part
