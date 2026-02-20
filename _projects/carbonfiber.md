@@ -66,6 +66,7 @@ Finally, I investigated whether we could stop sanding at a lower grit while stil
   </div>
   </div>
 
+
 # Wet Layup 
 
 Within Cornell Electric Vehicles (CEV), we use wet layup manufacturing for smaller, non-structural composite components. While wet layups generally produce reduced mechanical performance compared to our vacuum infusion parts, they are well-suited for low-load components and offer greater flexibility for complex geometries and large molds. Many of our “small” parts are still physically large, so we select an extra-slow-curing epoxy system to provide sufficient working time during layup. A representative application of this process is the vehicle side panels, which experience minimal structural loading.
@@ -119,6 +120,20 @@ Finally, the entire mold is fully vacuum-sealed and placed under vacuum for the 
          style="max-width:100%; max-height:400px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
     <p style="margin-top:10px; font-style:italic; color:#555;">
       Vacuum Set Up
+    </p>
+  </div>
+  </div>
+
+After the resin has fully cured, the part is demolded and is sanded and polished prior to being integrating into the rest of the car.
+
+  <div style="display:flex; gap:40px; justify-content:center; align-items:flex-start; margin:40px 0; flex-wrap:wrap;">
+
+  <!-- Image 1 -->
+  <div style="text-align:center; max-width:100%;">
+    <img src="{{ '/assets/images/sidepartfinal.png' | relative_url }}"
+         style="max-width:100%; max-height:800px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
+    <p style="margin-top:10px; font-style:italic; color:#555;">
+      Final Carbon Fiber Part
     </p>
   </div>
   </div>
