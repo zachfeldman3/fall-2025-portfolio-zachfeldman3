@@ -32,18 +32,5 @@ As part of the group, I contributed to the analysis, discussions, and video asse
      alt="Basic Design Concept"
      style="max-width: 50%; height: auto; display: block; margin: auto;">
 
-## Group Video
-
-<div style="display: flex; justify-content: center; margin: 20px 0;">
-  <iframe 
-      src="https://www.youtube.com/embed/1bhQ_YkF6kU?si=8CrhWAXdHjIyZJet"
-      title="YouTube video player"
-      style="width: 100%; max-width: 1200px; height: 675px; border: none; border-radius: 8px;"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      referrerpolicy="strict-origin-when-cross-origin"
-      allowfullscreen>
-  </iframe>
-</div>
-
 
 
