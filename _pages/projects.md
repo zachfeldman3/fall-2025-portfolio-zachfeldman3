@@ -4,6 +4,81 @@ title: Projects
 permalink: /projects/ 
 --- 
 
+<div class="zf-note">
+  <div class="zf-note-dot" aria-hidden="true"></div>
+  <div class="zf-note-text">
+    <strong>Work in progress:</strong> I’m actively adding past and current projects to this page.
+  </div>
+</div>
+
+<style>
+/* Portfolio WIP note — themed + subtle animation */
+.zf-note{
+  display:flex;
+  align-items:center;
+  gap:.75rem;
+  padding: .95rem 1.05rem;
+  margin: 1.0rem 0 1.4rem 0;
+  border-radius: 18px;
+  border: 1px solid rgba(86,240,255,.38);
+  background: linear-gradient(135deg, rgba(86,240,255,.12), rgba(139,92,246,.10));
+  box-shadow:
+    0 0 20px rgba(86,240,255,.18),
+    0 0 12px rgba(139,92,246,.14);
+  color: rgba(234,240,255,.92);
+  position: relative;
+  overflow: hidden;
+}
+
+.zf-note-dot{
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(86,240,255,.95);
+  box-shadow: 0 0 14px rgba(86,240,255,.65);
+  flex: 0 0 auto;
+  animation: zfNotePulse 1.9s ease-in-out infinite;
+}
+
+.zf-note-text{
+  line-height: 1.25;
+  font-size: .98rem;
+}
+
+/* soft moving sheen */
+.zf-note::after{
+  content:"";
+  position:absolute;
+  inset: -40% -30%;
+  background: linear-gradient(90deg,
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,.08) 45%,
+    rgba(255,255,255,0) 70%);
+  transform: rotate(12deg) translateX(-40%);
+  animation: zfNoteSheen 3.8s ease-in-out infinite;
+  pointer-events:none;
+}
+
+@keyframes zfNotePulse{
+  0%, 100% { transform: scale(1); opacity: .85; }
+  50%      { transform: scale(1.25); opacity: 1; }
+}
+
+@keyframes zfNoteSheen{
+  0%   { transform: rotate(12deg) translateX(-55%); opacity: .0; }
+  15%  { opacity: .9; }
+  40%  { opacity: .0; }
+  100% { transform: rotate(12deg) translateX(55%); opacity: .0; }
+}
+
+/* Mobile spacing */
+@media (max-width: 900px){
+  .zf-note{ margin-top: .8rem; }
+  .zf-note-text{ font-size: .95rem; }
+}
+</style>
+
+
 ## Featured Engineering Projects 
 
 <div class="gallery-container w-100"> 
