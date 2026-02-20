@@ -6,7 +6,7 @@ category: featured
 image: /assets/images/2024chassis.png
 ---
 # Carbon Fiber Manufacturing 
-When I first joined the team, I noticed that although our composite layups were producing solid results, many steps in the mold preparation process were unnecessarily time-consuming, tedious, or inefficient. I took initiative to analyze the workflow, identify bottlenecks, and implement process improvements to reduce labor time while maintaining—or improving—surface quality and part release performance.
+When I first joined the team, I noticed that although our composite layups were producing solid results, many steps in the mold preparation process were unnecessarily time-consuming, tedious, or inefficient. I took initiative to analyze the workflow, identify bottlenecks, and implement process improvements to reduce labor time while improving—surface quality and part release performance.
 
 # Streamlining Mold Preparation Process
 
