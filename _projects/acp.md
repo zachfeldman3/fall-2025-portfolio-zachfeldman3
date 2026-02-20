@@ -35,15 +35,17 @@ The joint under evaluation used a:
 - The Divinycell foam core had a compressive crush strength of approximately: 203 psi
 
 ## Hand Calculation Approach
-I first performed hand calculations to estimate the compressive stress beneath the washer footprint using an effective diameter load-spreading model. The analysis focused on determining whether the required bolt preload could be achieved without exceeding the allowable compressive stress of the foam core.
 
-The calculations showed that the preload required for proper bolt pretension would induce core compressive stresses well above the 203 psi crush limit, meaning the core would fail in local crushing long before reaching the necessary clamp force.
+This analysis was performed to determine the maximum allowable bolt preload in the carbon-fiber sandwich baseplate without causing core crushing or local facesheet failure. Because the structure consists of carbon facesheets bonded to a 0.5-inch Divinycell core, bolt pretension introduces a localized compressive load path through the washer, facesheet, and core. To model this, a 45-degree load-spreading assumption was used to calculate an effective compression diameter beneath the washer, reflecting how compressive forces distribute through the core thickness. The corresponding annular area resisting compression was then determined, excluding the bolt hole.
+
+The compressed core region was modeled as a short column in axial compression, and its stiffness was calculated using the classical relation k = AE/L, where A is the effective area, E is the core’s compressive modulus, and L is the core thickness. An allowable compression displacement was defined based on strain limits, and the maximum preload was computed using the linear elastic relation P = kΔ. A secondary stress check under the facesheet was performed using force divided by area to ensure local compressive stresses remained below allowable values. The resulting preload was then applied in ANSYS ACP to validate that no composite failure indices exceeded limits, confirming the analytical model.
+
 
   <div style="display:flex; gap:40px; justify-content:center; align-items:flex-start; margin:40px 0; flex-wrap:wrap;">
 
   <!-- Image 1 -->
   <div style="text-align:center; max-width:100%;">
-    <img src="{{ '/assets/images/baseplatecalcs2.png' | relative_url }}"
+    <img src="{{ '/assets/images/acphandcalcs2.png' | relative_url }}"
          style="max-width:100%; max-height:1200px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
     <p style="margin-top:10px; font-style:italic; color:#555;">
       Hand Calculations
