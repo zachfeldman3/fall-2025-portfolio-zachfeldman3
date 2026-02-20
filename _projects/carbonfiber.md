@@ -134,29 +134,29 @@ Prior to infusion, all reinforcement plies and core layers are pre-cut and stage
 <div style="display:flex; gap:40px; justify-content:center; align-items:flex-start; margin:40px 0; flex-wrap:wrap;">
 
   <!-- Image 1 -->
-  <div style="text-align:center; max-width:30%;">
+  <div style="text-align:center;">
     <img src="{{ '/assets/images/rearhatchcarbon.png' | relative_url }}"
-         style="max-width:100%; max-height:350px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
+         style="height:350px; width:auto; border-radius:12px; display:block; margin:0 auto;" />
     <p style="margin-top:10px; font-style:italic; color:#555;">
       Carbon Fiber Layer
     </p>
   </div>
 
-  <!-- Image 2 -->
-  <div style="text-align:center; max-width:30%;">
+  <!-- Image 2 (Middle - wider automatically) -->
+  <div style="text-align:center;">
     <img src="{{ '/assets/images/rearhatchpeelply.png' | relative_url }}"
-         style="max-width:100%; max-height:350px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
+         style="height:350px; width:auto; border-radius:12px; display:block; margin:0 auto;" />
     <p style="margin-top:10px; font-style:italic; color:#555;">
-      Peel Ply Layer
+      Peel Ply Layer 
     </p>
   </div>
 
   <!-- Image 3 -->
-  <div style="text-align:center; max-width:30%;">
+  <div style="text-align:center;">
     <img src="{{ '/assets/images/rearhatchmesh.png' | relative_url }}"
-         style="max-width:100%; max-height:350px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
+         style="height:350px; width:auto; border-radius:12px; display:block; margin:0 auto;" />
     <p style="margin-top:10px; font-style:italic; color:#555;">
-      Perforated Releasee Film Layer
+      Perforated Releasee Film (Green Mesh) Layer 
     </p>
   </div>
 
