@@ -226,7 +226,7 @@ permalink: /
     <div class="zf-tile">
       <h3>What I’m Looking For</h3>
       <div class="zf-tags">
-        <span class="zf-tag">Mechanical Engineering / Manufacutring Job Opportunities/span>
+        <span class="zf-tag">Mechanical Engineering Job Opportunities/span>
       </div>
     </div>
 
