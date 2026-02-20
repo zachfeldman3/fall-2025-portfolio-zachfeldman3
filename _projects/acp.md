@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chassis Structural Analysis"
+title: "Chassis Structural Analysis (Unfinished)"
 description: ACP
 category: featured
 image: /assets/images/acpdeformation2.png
