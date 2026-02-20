@@ -131,7 +131,62 @@ We use a one-sided vacuum infusion process with INF-114 epoxy resin cured at roo
 
 Prior to infusion, all reinforcement plies and core layers are pre-cut and staged to minimize handling time and ensure accurate fiber orientation and alignment. After stacking the dry laminate, I install peel ply and green flow media to promote even in-plane resin distribution, followed by spiral wrap inlet lines and strategically placed resin distribution lines to control the flow front and reduce the risk of race-tracking. A dedicated catch pot is integrated into the system to protect the vacuum pump from excess resin during infusion.
 
-Because of the large mold size, full vacuum is not achievable; however, I tune the vacuum level as close to full vacuum as possible to maximize compaction pressure and minimize void formation. During infusion, vacuum consolidation draws resin uniformly through the laminate, removing entrapped air, improving fiber wet-out, and producing a dense, well-consolidated sandwich panel. Compared to wet layup, this process significantly improves fiber-to-resin ratio, thickness uniformity, and interlaminar bonding, resulting in stronger, lighter, and more repeatable structural components.
+<div style="display:flex; gap:40px; justify-content:center; align-items:flex-start; margin:40px 0; flex-wrap:wrap;">
+
+  <!-- Image 1 -->
+  <div style="text-align:center; max-width:30%;">
+    <img src="{{ '/assets/images/rearhatchcarbon.png' | relative_url }}"
+         style="max-width:100%; max-height:350px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
+    <p style="margin-top:10px; font-style:italic; color:#555;">
+      Carbon Fiber Layer
+    </p>
+  </div>
+
+  <!-- Image 2 -->
+  <div style="text-align:center; max-width:30%;">
+    <img src="{{ '/assets/images/rearhatchpeelply.png' | relative_url }}"
+         style="max-width:100%; max-height:350px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
+    <p style="margin-top:10px; font-style:italic; color:#555;">
+      Peel Ply Layer
+    </p>
+  </div>
+
+  <!-- Image 3 -->
+  <div style="text-align:center; max-width:30%;">
+    <img src="{{ '/assets/images/rearhatchmesh.png' | relative_url }}"
+         style="max-width:100%; max-height:350px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
+    <p style="margin-top:10px; font-style:italic; color:#555;">
+      Perforated Releasee Film Layer
+    </p>
+  </div>
+
+</div>
+
+During infusion, vacuum consolidation draws resin uniformly through the laminate, removing entrapped air, improving fiber wet-out, and producing a dense, well-consolidated sandwich panel. Compared to wet layup, this process significantly improves fiber-to-resin ratio, thickness uniformity, and interlaminar bonding, resulting in stronger, lighter, and more repeatable structural components.
+
+<div style="display:flex; gap:40px; justify-content:center; align-items:flex-start; margin:40px 0; flex-wrap:wrap;">
+
+  <!-- Image 1 -->
+  <div style="text-align:center; max-width:45%;">
+    <img src="{{ '/assets/images/rearhatchvacuum.png' | relative_url }}"
+         style="max-width:100%; max-height:400px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
+    <p style="margin-top:10px; font-style:italic; color:#555;">
+      Vacuum-bagged Part
+    </p>
+  </div>
+  </div>
 
 After the resin has fully infused and cured at room temperature, the part is demolded and prepared for trimming, machining, and final integration into the vehicle chassis.
 
+
+<div style="display:flex; gap:40px; justify-content:center; align-items:flex-start; margin:40px 0; flex-wrap:wrap;">
+
+  <!-- Image 1 -->
+  <div style="text-align:center; max-width:45%;">
+    <img src="{{ '/assets/images/rearhatchfinal.png' | relative_url }}"
+         style="max-width:100%; max-height:400px; height:auto; border-radius:12px; display:block; margin:0 auto;" />
+    <p style="margin-top:10px; font-style:italic; color:#555;">
+      Final Carbon Fiber Part
+    </p>
+  </div>
+  </div>
