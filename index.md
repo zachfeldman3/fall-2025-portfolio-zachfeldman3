@@ -321,3 +321,44 @@ permalink: /
 </div>
 
 
+
+
+
+
+
+
+
+
+
+</div>
+
+<style>
+/* MOBILE ONLY: fix centering on iOS without touching desktop */
+@media (max-width: 768px) {
+  .mobile-center-wrap {
+    /* make the whole hero/content block center reliably */
+    width: min(92vw, 560px);
+    margin-left: auto;
+    margin-right: auto;
+
+    /* prevent “shifted left/right” layouts */
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;
+
+    /* nice breathing room on iOS + safe areas */
+    padding-left: max(16px, env(safe-area-inset-left));
+    padding-right: max(16px, env(safe-area-inset-right));
+    box-sizing: border-box;
+  }
+
+  /* If any inner container is using 100vw or fixed widths, keep it from overflowing */
+  .mobile-center-wrap * {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+}
+</style>
+
+
