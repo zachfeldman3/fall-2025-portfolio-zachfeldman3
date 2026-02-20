@@ -118,20 +118,68 @@ permalink: /
 
   /* Mobile */
   @media (max-width: 900px){
+
+    /* ===== iOS / MOBILE TRUE-CENTER FIX (ONLY MOBILE) ===== */
+
+    html, body{
+      overflow-x: hidden !important; /* prevents iOS 100vw horizontal drift */
+    }
+
+    /* force a centered “page column” so the hero/card cannot drift */
+    .zf-home{
+      width: 100% !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      padding-left: max(16px, env(safe-area-inset-left)) !important;
+      padding-right: max(16px, env(safe-area-inset-right)) !important;
+      box-sizing: border-box !important;
+    }
+
+    /* hard-center the hero grid as a single column with a stable max-width */
     .zf-home .zf-hero.zf-hero-split{
       grid-template-columns: 1fr !important;
       gap: 1.25rem !important;
+
+      width: 100% !important;
+      max-width: 560px !important;     /* this is the “centered column” */
+      margin-left: auto !important;
+      margin-right: auto !important;
+
+      justify-items: center !important; /* centers image/text blocks */
+      align-items: center !important;
     }
+
+    /* ensure text block is centered and not offset by desktop negative margin */
     .zf-home .zf-hero-text{
-      text-align:center !important;
+      text-align: center !important;
       margin-left: 0 !important;
+      width: 100% !important;
+      max-width: 100% !important;
+
+      /* kill any transform/positioning that could be inherited */
+      left: auto !important;
+      right: auto !important;
+      transform: none !important;
+      position: relative !important;
     }
+
     .zf-home .zf-hero-image{
-      justify-content:center !important;
+      justify-content: center !important;
       padding-right: 0 !important;
+      width: 100% !important;
     }
+
+    /* make the photo responsive so it never “pushes” the layout sideways */
     .zf-home .zf-hero-image img{
       transform: none !important;
+
+      width: min(320px, 100%) !important;
+      height: auto !important;
+      aspect-ratio: 4 / 5;            /* keeps your 320x400 feel */
+      object-fit: cover !important;
+      display: block !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
     }
   }
 </style>
@@ -319,46 +367,3 @@ permalink: /
   </div>
 
 </div>
-
-
-
-
-
-
-
-
-
-
-
-</div>
-
-<style>
-/* MOBILE ONLY: fix centering on iOS without touching desktop */
-@media (max-width: 768px) {
-  .mobile-center-wrap {
-    /* make the whole hero/content block center reliably */
-    width: min(92vw, 560px);
-    margin-left: auto;
-    margin-right: auto;
-
-    /* prevent “shifted left/right” layouts */
-    position: relative !important;
-    left: auto !important;
-    right: auto !important;
-    transform: none !important;
-
-    /* nice breathing room on iOS + safe areas */
-    padding-left: max(16px, env(safe-area-inset-left));
-    padding-right: max(16px, env(safe-area-inset-right));
-    box-sizing: border-box;
-  }
-
-  /* If any inner container is using 100vw or fixed widths, keep it from overflowing */
-  .mobile-center-wrap * {
-    max-width: 100%;
-    box-sizing: border-box;
-  }
-}
-</style>
-
-
