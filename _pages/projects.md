@@ -7,7 +7,7 @@ permalink: /projects/
 <div class="zf-note">
   <div class="zf-note-dot" aria-hidden="true"></div>
   <div class="zf-note-text">
-    <strong>Work in progress:</strong> I’m actively adding past and current projects to this page.
+    <strong>Note:</strong> Additional past projects are still being documented and will be added soon
   </div>
 </div>
 
