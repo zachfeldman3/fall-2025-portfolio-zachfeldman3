@@ -181,6 +181,11 @@ permalink: /
       margin-left: auto !important;
       margin-right: auto !important;
     }
+
+    /* Highlighted Work mobile stack */
+  .zf-highlight-grid{
+  grid-template-columns: 1fr !important;
+    }
   }
 </style>
 
@@ -234,11 +239,11 @@ permalink: /
 
   <h3 style="margin-bottom: .9rem;">Highlighted Work</h3>
 
-  <div style="
-    display:grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.2rem;
-  ">
+  <div class="zf-highlight-grid" style="
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+">
 
     <img
       src="{{ '/assets/images/2024chassis.png' | relative_url }}"
