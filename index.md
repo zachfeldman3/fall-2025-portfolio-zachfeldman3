@@ -226,8 +226,7 @@ permalink: /
     <div class="zf-tile">
       <h3>What I’m Looking For</h3>
       <div class="zf-tags">
-        <span class="zf-tag">Spring 2027 Co-op</span>
-        <span class="zf-tag">Summer 2027 Full Time Engineering Position</span>
+        <span class="zf-tag">Mechanical Engineering / Manufacutring Job Opportunities/span>
       </div>
     </div>
 
