@@ -6,9 +6,11 @@ category: class
 image: /assets/images/Problem_set_3.pdf
 ---
 
+<img src="https://zachfeldman3.github.io/fall-2025-portfolio-zachfeldman3/assets/images/Problem_set_3.pdf" 
+     alt="Basic Design Concept"
+     style="max-width: 90%; height: auto; display: block; margin: auto;">
 
-# Fluid Mechanical Speaker Dissection
+# Heat Transfer Problem Set 3
 
-### Speaker Dissection Project — My Role and CAD Contribution
 One of the most useful assignments I did was Problem Set 3, especially the long rod and composite wall problems. What stood out to me was that I couldn’t just jump into equations: I actually had to slow down and figure out what was physically happening first. For the rod problem, setting up the energy balance from a control volume and accounting for conduction, heat generation, and convection along the surface made it clear how the full equation comes together. It wasn’t just plugging into a formula anymore, it was building it from scratch, which was definitely harder but way more helpful.
 The composite wall problem reinforced that even more, since I had to connect two different regions and make sure things matched at the interface. Getting the boundary conditions right was honestly the hardest part, but once that was set up, everything else made more sense. This assignment will be useful going forward because it helped me get better at setting up problems instead of just solving them. In real engineering problems, you don’t get a clean equation handed to you, so being able to break a system down and model it properly is something I’ll definitely need.
