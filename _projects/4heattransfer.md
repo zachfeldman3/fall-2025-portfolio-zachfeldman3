@@ -6,6 +6,8 @@ category: class
 image: /assets/images/Problem_set_3.pdf
 ---
 
+# Heat Transfer Problem Set 3
+
 <iframe 
     src="https://zachfeldman3.github.io/fall-2025-portfolio-zachfeldman3/assets/images/Problem_set_3.pdf"
     width="100%" 
@@ -13,7 +15,8 @@ image: /assets/images/Problem_set_3.pdf
     style="border: none;">
 </iframe>
 
-# Heat Transfer Problem Set 3
+
+## Reflection
 
 One of the most useful assignments I did was Problem Set 3, especially the long rod and composite wall problems. What stood out to me was that I couldn’t just jump into equations: I actually had to slow down and figure out what was physically happening first. For the rod problem, setting up the energy balance from a control volume and accounting for conduction, heat generation, and convection along the surface made it clear how the full equation comes together. It wasn’t just plugging into a formula anymore, it was building it from scratch, which was definitely harder but way more helpful.
 
