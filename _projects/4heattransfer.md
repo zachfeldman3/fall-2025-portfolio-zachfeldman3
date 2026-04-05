@@ -6,8 +6,12 @@ category: class
 image: /assets/images/Problem_set_3.pdf
 ---
 
-<img src="https://zachfeldman3.github.io/fall-2025-portfolio-zachfeldman3/assets/images/Problem_set_3.pdf"
-     style="max-width: 90%; height: auto; display: block; margin: auto; filter: invert(1) hue-rotate(180deg);">
+<iframe 
+    src="https://zachfeldman3.github.io/fall-2025-portfolio-zachfeldman3/assets/images/Problem_set_3.pdf"
+    width="100%" 
+    height="800px"
+    style="border: none;">
+</iframe>
 
 # Heat Transfer Problem Set 3
 
