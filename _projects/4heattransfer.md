@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Heat Transfer HW 3"
-Heat Transfer 
+description: Heat Transfer 
 category: class
 image: /assets/images/Problem_set_3.pdf
 ---
