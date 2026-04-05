@@ -3,7 +3,7 @@ layout: default
 title: "Heat Transfer HW 3"
 Heat Transfer 
 category: class
-image: /assets/images/speaker3.png
+image: /assets/images/Problem_set_3.pdf
 ---
 
 
